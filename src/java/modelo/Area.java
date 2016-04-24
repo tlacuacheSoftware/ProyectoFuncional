@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 12:26:03 AM by Hibernate Tools 4.3.1
+// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -12,7 +12,7 @@ public class Area  implements java.io.Serializable {
 
 
      private int idArea;
-     private String AArea;
+     private String SArea;
      private Set<Actividad> actividads = new HashSet<Actividad>(0);
 
     public Area() {
@@ -22,9 +22,9 @@ public class Area  implements java.io.Serializable {
     public Area(int idArea) {
         this.idArea = idArea;
     }
-    public Area(int idArea, String AArea, Set<Actividad> actividads) {
+    public Area(int idArea, String SArea, Set<Actividad> actividads) {
        this.idArea = idArea;
-       this.AArea = AArea;
+       this.SArea = SArea;
        this.actividads = actividads;
     }
    
@@ -35,12 +35,12 @@ public class Area  implements java.io.Serializable {
     public void setIdArea(int idArea) {
         this.idArea = idArea;
     }
-    public String getAArea() {
-        return this.AArea;
+    public String getSArea() {
+        return this.SArea;
     }
     
-    public void setAArea(String AArea) {
-        this.AArea = AArea;
+    public void setSArea(String SArea) {
+        this.SArea = SArea;
     }
     public Set<Actividad> getActividads() {
         return this.actividads;

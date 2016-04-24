@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 23/04/2016 12:26:03 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 23/04/2016 11:31:46 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="modelo.Tipo" table="tipo" schema="public" optimistic-lock="version">
         <id name="idTipo" type="int">
             <column name="id_tipo" />
             <generator class="assigned" />
         </id>
-        <property name="ATipo" type="string">
-            <column name="a_tipo" length="32" />
+        <property name="STipo" type="string">
+            <column name="s_tipo" length="32" />
         </property>
         <set name="actividads" table="actividad" inverse="true" lazy="true" fetch="select">
             <key>

@@ -8,7 +8,7 @@ package bean;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
-import Dao.ClasesDao;
+import Dao.AlumnoDao;
 
 /**
  *
@@ -21,10 +21,10 @@ public class AlumnoBean {
      private String ANombre;
      private String AContrasenha;
      private String ACorreo;
-     private ClasesDao c;
+     private AlumnoDao c;
 
     public AlumnoBean() {
-        c = new ClasesDao();
+        c = new AlumnoDao();
     }
 
     public int getIdAlumno() {
