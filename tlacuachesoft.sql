@@ -54,7 +54,7 @@ CREATE TABLE ACTIVIDAD(
  insert into actividad (id_Actividad ,id_Profesor ,id_Tipo,id_Area,i_CupoMaximo,s_Descripciom)values(1,1,2,3,5,'gente para metricas');
  insert into actividad (id_Actividad ,id_Profesor ,id_Tipo,id_Area,i_CupoMaximo,s_Descripciom)values(2,1,1,1,3,'gente para automtas');
  
-SELECT s_nombre from actividad natural join profesor natural join tipo natural join area;
+--SELECT s_nombre from actividad natural join profesor natural join tipo natural join area;
 CREATE TABLE SOLICITUD(
 	id_Solicitud SERIAL primary key,
 	id_Actividad integer references ACTIVIDAD(id_Actividad) ,
