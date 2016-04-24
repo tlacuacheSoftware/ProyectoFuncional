@@ -6,7 +6,7 @@
     <class name="modelo.Actividad" table="actividad" schema="public" optimistic-lock="version">
         <id name="idActividad" type="int">
             <column name="id_actividad" />
-            <generator class="assigned" />
+            <generator class="increment" />
         </id>
         <many-to-one name="area" class="modelo.Area" fetch="select">
             <column name="id_area" />

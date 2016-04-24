@@ -31,7 +31,7 @@ public class AlumnoDao {
             session.save(n);
             session.getTransaction().commit();
         } catch (Exception e) {
-            System.out.println("error del dao");
+            System.out.println("Error del dao de Alumno");
             session.getTransaction().rollback();
         }
     }

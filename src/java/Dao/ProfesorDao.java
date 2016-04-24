@@ -29,7 +29,7 @@ public class ProfesorDao {
             session.save(n);
             session.getTransaction().commit();
         } catch (Exception e) {
-            System.out.println("error del dao");
+            System.out.println("Error del dao de profesor");
             session.getTransaction().rollback();
         }
     }

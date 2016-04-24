@@ -61,7 +61,7 @@ public class AlumnoBean {
 
     public String guardarAlumno(){
         c.indroducirAlumno(ANombre, AContrasenha, ACorreo);
-        return "index";
+        return "faces/index";
     }
 
 }
