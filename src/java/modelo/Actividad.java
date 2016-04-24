@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 12:26:03 AM by Hibernate Tools 4.3.1
+// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -16,7 +16,7 @@ public class Actividad  implements java.io.Serializable {
      private Profesor profesor;
      private Tipo tipo;
      private Integer ICupomaximo;
-     private String ADescripciom;
+     private String SDescripciom;
      private Set<Solicitud> solicituds = new HashSet<Solicitud>(0);
 
     public Actividad() {
@@ -26,13 +26,13 @@ public class Actividad  implements java.io.Serializable {
     public Actividad(int idActividad) {
         this.idActividad = idActividad;
     }
-    public Actividad(int idActividad, Area area, Profesor profesor, Tipo tipo, Integer ICupomaximo, String ADescripciom, Set<Solicitud> solicituds) {
+    public Actividad(int idActividad, Area area, Profesor profesor, Tipo tipo, Integer ICupomaximo, String SDescripciom, Set<Solicitud> solicituds) {
        this.idActividad = idActividad;
        this.area = area;
        this.profesor = profesor;
        this.tipo = tipo;
        this.ICupomaximo = ICupomaximo;
-       this.ADescripciom = ADescripciom;
+       this.SDescripciom = SDescripciom;
        this.solicituds = solicituds;
     }
    
@@ -71,12 +71,12 @@ public class Actividad  implements java.io.Serializable {
     public void setICupomaximo(Integer ICupomaximo) {
         this.ICupomaximo = ICupomaximo;
     }
-    public String getADescripciom() {
-        return this.ADescripciom;
+    public String getSDescripciom() {
+        return this.SDescripciom;
     }
     
-    public void setADescripciom(String ADescripciom) {
-        this.ADescripciom = ADescripciom;
+    public void setSDescripciom(String SDescripciom) {
+        this.SDescripciom = SDescripciom;
     }
     public Set<Solicitud> getSolicituds() {
         return this.solicituds;

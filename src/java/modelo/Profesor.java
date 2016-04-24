@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 12:26:03 AM by Hibernate Tools 4.3.1
+// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -12,9 +12,9 @@ public class Profesor  implements java.io.Serializable {
 
 
      private int idProfesor;
-     private String PNombre;
-     private String PContrasenha;
-     private String PCorreo;
+     private String SNombre;
+     private String SContrasenha;
+     private String SCorreo;
      private Set<Solicitud> solicituds = new HashSet<Solicitud>(0);
      private Set<Actividad> actividads = new HashSet<Actividad>(0);
 
@@ -25,11 +25,11 @@ public class Profesor  implements java.io.Serializable {
     public Profesor(int idProfesor) {
         this.idProfesor = idProfesor;
     }
-    public Profesor(int idProfesor, String PNombre, String PContrasenha, String PCorreo, Set<Solicitud> solicituds, Set<Actividad> actividads) {
+    public Profesor(int idProfesor, String SNombre, String SContrasenha, String SCorreo, Set<Solicitud> solicituds, Set<Actividad> actividads) {
        this.idProfesor = idProfesor;
-       this.PNombre = PNombre;
-       this.PContrasenha = PContrasenha;
-       this.PCorreo = PCorreo;
+       this.SNombre = SNombre;
+       this.SContrasenha = SContrasenha;
+       this.SCorreo = SCorreo;
        this.solicituds = solicituds;
        this.actividads = actividads;
     }
@@ -41,26 +41,26 @@ public class Profesor  implements java.io.Serializable {
     public void setIdProfesor(int idProfesor) {
         this.idProfesor = idProfesor;
     }
-    public String getPNombre() {
-        return this.PNombre;
+    public String getSNombre() {
+        return this.SNombre;
     }
     
-    public void setPNombre(String PNombre) {
-        this.PNombre = PNombre;
+    public void setSNombre(String SNombre) {
+        this.SNombre = SNombre;
     }
-    public String getPContrasenha() {
-        return this.PContrasenha;
-    }
-    
-    public void setPContrasenha(String PContrasenha) {
-        this.PContrasenha = PContrasenha;
-    }
-    public String getPCorreo() {
-        return this.PCorreo;
+    public String getSContrasenha() {
+        return this.SContrasenha;
     }
     
-    public void setPCorreo(String PCorreo) {
-        this.PCorreo = PCorreo;
+    public void setSContrasenha(String SContrasenha) {
+        this.SContrasenha = SContrasenha;
+    }
+    public String getSCorreo() {
+        return this.SCorreo;
+    }
+    
+    public void setSCorreo(String SCorreo) {
+        this.SCorreo = SCorreo;
     }
     public Set<Solicitud> getSolicituds() {
         return this.solicituds;

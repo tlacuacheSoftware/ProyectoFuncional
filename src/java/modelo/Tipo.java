@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 12:26:03 AM by Hibernate Tools 4.3.1
+// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -12,7 +12,7 @@ public class Tipo  implements java.io.Serializable {
 
 
      private int idTipo;
-     private String ATipo;
+     private String STipo;
      private Set<Actividad> actividads = new HashSet<Actividad>(0);
 
     public Tipo() {
@@ -22,9 +22,9 @@ public class Tipo  implements java.io.Serializable {
     public Tipo(int idTipo) {
         this.idTipo = idTipo;
     }
-    public Tipo(int idTipo, String ATipo, Set<Actividad> actividads) {
+    public Tipo(int idTipo, String STipo, Set<Actividad> actividads) {
        this.idTipo = idTipo;
-       this.ATipo = ATipo;
+       this.STipo = STipo;
        this.actividads = actividads;
     }
    
@@ -35,12 +35,12 @@ public class Tipo  implements java.io.Serializable {
     public void setIdTipo(int idTipo) {
         this.idTipo = idTipo;
     }
-    public String getATipo() {
-        return this.ATipo;
+    public String getSTipo() {
+        return this.STipo;
     }
     
-    public void setATipo(String ATipo) {
-        this.ATipo = ATipo;
+    public void setSTipo(String STipo) {
+        this.STipo = STipo;
     }
     public Set<Actividad> getActividads() {
         return this.actividads;

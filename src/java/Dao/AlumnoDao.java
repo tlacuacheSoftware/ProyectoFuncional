@@ -14,28 +14,7 @@ import modelo.Alumno;
  *
  * @author luis
  */
-public class ClasesDao {
-
-
-    public void indroducirAlumno(int idAlumno, String nombre, String contrasena, String correo) {
-
-        Session session = confHibenate.getSessionFactory().getCurrentSession();
-
-        Alumno n = new Alumno();
-        n.setIdAlumno(idAlumno);
-        n.setANombre(nombre);
-        n.setAContrasenha(contrasena);
-        n.setACorreo(correo);
-
-        try {
-            session.beginTransaction();
-            session.save(n);
-            session.getTransaction().commit();
-        } catch (Exception e) {
-            System.out.println("error del dao");
-            session.getTransaction().rollback();
-        }
-    }
+public class AlumnoDao {
 
     public void indroducirAlumno(String nombre, String contrasena, String correo) {
 
@@ -43,9 +22,9 @@ public class ClasesDao {
 
         Alumno n = new Alumno();
 
-        n.setANombre(nombre);
-        n.setAContrasenha(contrasena);
-        n.setACorreo(correo);
+        n.setSNombre(nombre);
+        n.setSContrasenha(contrasena);
+        n.setSCorreo(correo);
 
         try {
             session.beginTransaction();

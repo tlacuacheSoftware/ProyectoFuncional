@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 12:26:03 AM by Hibernate Tools 4.3.1
+// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -12,25 +12,23 @@ public class Alumno  implements java.io.Serializable {
 
 
      private int idAlumno;
-     private String ANombre;
-     private String AContrasenha;
-     private String ACorreo;
+     private String SNombre;
+     private String SContrasenha;
+     private String SCorreo;
      private Set<Solicitud> solicituds = new HashSet<Solicitud>(0);
 
     public Alumno() {
     }
 
 	
-    public Alumno(int idAlumno, String AContrasenha, String ACorreo) {
+    public Alumno(int idAlumno) {
         this.idAlumno = idAlumno;
-        this.AContrasenha = AContrasenha;
-        this.ACorreo = ACorreo;
     }
-    public Alumno(int idAlumno, String ANombre, String AContrasenha, String ACorreo, Set<Solicitud> solicituds) {
+    public Alumno(int idAlumno, String SNombre, String SContrasenha, String SCorreo, Set<Solicitud> solicituds) {
        this.idAlumno = idAlumno;
-       this.ANombre = ANombre;
-       this.AContrasenha = AContrasenha;
-       this.ACorreo = ACorreo;
+       this.SNombre = SNombre;
+       this.SContrasenha = SContrasenha;
+       this.SCorreo = SCorreo;
        this.solicituds = solicituds;
     }
    
@@ -41,26 +39,26 @@ public class Alumno  implements java.io.Serializable {
     public void setIdAlumno(int idAlumno) {
         this.idAlumno = idAlumno;
     }
-    public String getANombre() {
-        return this.ANombre;
+    public String getSNombre() {
+        return this.SNombre;
     }
     
-    public void setANombre(String ANombre) {
-        this.ANombre = ANombre;
+    public void setSNombre(String SNombre) {
+        this.SNombre = SNombre;
     }
-    public String getAContrasenha() {
-        return this.AContrasenha;
-    }
-    
-    public void setAContrasenha(String AContrasenha) {
-        this.AContrasenha = AContrasenha;
-    }
-    public String getACorreo() {
-        return this.ACorreo;
+    public String getSContrasenha() {
+        return this.SContrasenha;
     }
     
-    public void setACorreo(String ACorreo) {
-        this.ACorreo = ACorreo;
+    public void setSContrasenha(String SContrasenha) {
+        this.SContrasenha = SContrasenha;
+    }
+    public String getSCorreo() {
+        return this.SCorreo;
+    }
+    
+    public void setSCorreo(String SCorreo) {
+        this.SCorreo = SCorreo;
     }
     public Set<Solicitud> getSolicituds() {
         return this.solicituds;
