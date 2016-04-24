@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="formRegistrar">
+        <h3>Bienvenido al sistema</h3>
+        <p>Ingrese sus datos</p>
+        <p>Usuario<h:inputText id="SNombreIT" value="#{beanRegistro.SNombre}" /></p>
+        <p>Apellido Paterno<h:inputText id="SAppaterno" value="#{beanRegistro.SAppaterno}" /></p>
+        <p>Apellido Materno<h:inputText id="SApmaterno" value="#{beanRegistro.SApmaterno}" /></p>
+        <p>Correo<h:inputText id="SCorreo" value="#{beanRegistro.SCorreo}" /></p>
+        <p>Contraseña<h:inputSecret id="SContrasenha" value="#{beanRegistro.SContrasenha}" /></p>
+        <p>RFC<h:inputText id="SRfc" value="#{beanRegistro.SRfc}" /></p>
+        <h:commandButton id="registrarCB" value="Registrar" action="#{beanRegistro.registrar()}"  />
+      </h:form>
+    </h:body>
+</html>
+
