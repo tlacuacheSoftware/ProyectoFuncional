@@ -62,7 +62,7 @@ public class ProfesorBean {
 
     public String guardarProfesor(){
         c.indroducirProfesor(ANombre, AContrasenha, ACorreo);
-        return "faces/index";
+        return "index";
     }
     
 }
