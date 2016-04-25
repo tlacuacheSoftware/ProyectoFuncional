@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 24, 2016 2:06:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="modelo.Area" optimistic-lock="version" schema="public" table="area">
+    <id name="idArea" type="int">
+      <column name="id_area"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="SArea" type="string">
+      <column length="32" name="s_area"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="actividads" table="actividad">
+      <key>
+        <column name="id_area"/>
+      </key>
+      <one-to-many class="modelo.Actividad"/>
+    </set>
+  </class>
+</hibernate-mapping>

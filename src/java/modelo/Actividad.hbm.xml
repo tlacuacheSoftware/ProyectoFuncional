@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 24, 2016 2:06:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class name="modelo.Actividad" optimistic-lock="version" schema="public" table="actividad">
+    <id name="idActividad" type="int">
+      <column name="id_actividad"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="modelo.Area" fetch="select" name="area">
+      <column name="id_area"/>
+    </many-to-one>
+    <many-to-one class="modelo.Profesor" fetch="select" name="profesor">
+      <column name="id_profesor"/>
+    </many-to-one>
+    <many-to-one class="modelo.Tipo" fetch="select" name="tipo">
+      <column name="id_tipo"/>
+    </many-to-one>
+    <property name="ICupomaximo" type="java.lang.Integer">
+      <column name="i_cupomaximo"/>
+    </property>
+    <property name="SDescripciom" type="string">
+      <column length="128" name="s_descripciom"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="solicituds" table="solicitud">
+      <key>
+        <column name="id_actividad"/>
+      </key>
+      <one-to-many class="modelo.Solicitud"/>
+    </set>
+  </class>
+</hibernate-mapping>
