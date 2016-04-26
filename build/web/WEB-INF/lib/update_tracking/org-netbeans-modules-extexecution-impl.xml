@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.extexecution.impl">
-    <module_version install_time="1446476536604" last="true" origin="installer" specification_version="1.24.1">
-        <file crc="985526827" name="config/Modules/org-netbeans-modules-extexecution-impl.xml"/>
-        <file crc="375935105" name="modules/org-netbeans-modules-extexecution-impl.jar"/>
-    </module_version>
-</module>
