@@ -8,7 +8,8 @@
     <h:body>
         <h:form id="formInicioProfesor">
             <p><h:outputLabel value="Ingreso con el usuario: "/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold"/></p>
-            <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSession()}"/> 
+             <a href="faces/modificarProfesor.xhtml">Modificar Perfil</a>
+            <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSessiones()}"/> 
       </h:form>
     </h:body>
 </html>
