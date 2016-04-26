@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.bugtracking.bridge">
+    <module_version install_time="1446479116279" last="true" origin="installer" specification_version="1.44.1">
+        <file crc="337954893" name="config/Modules/org-netbeans-modules-bugtracking-bridge.xml"/>
+        <file crc="455727241" name="modules/locale/org-netbeans-modules-bugtracking-bridge_ca.jar"/>
+        <file crc="2148317443" name="modules/locale/org-netbeans-modules-bugtracking-bridge_de.jar"/>
+        <file crc="861927714" name="modules/locale/org-netbeans-modules-bugtracking-bridge_es.jar"/>
+        <file crc="3253849104" name="modules/locale/org-netbeans-modules-bugtracking-bridge_fr.jar"/>
+        <file crc="1090389307" name="modules/locale/org-netbeans-modules-bugtracking-bridge_gl_ES.jar"/>
+        <file crc="583764523" name="modules/locale/org-netbeans-modules-bugtracking-bridge_it.jar"/>
+        <file crc="748203244" name="modules/locale/org-netbeans-modules-bugtracking-bridge_ko.jar"/>
+        <file crc="3206767533" name="modules/locale/org-netbeans-modules-bugtracking-bridge_nl_NL.jar"/>
+        <file crc="2783877726" name="modules/locale/org-netbeans-modules-bugtracking-bridge_sv.jar"/>
+        <file crc="3795837074" name="modules/locale/org-netbeans-modules-bugtracking-bridge_tr.jar"/>
+        <file crc="2124361074" name="modules/org-netbeans-modules-bugtracking-bridge.jar"/>
+    </module_version>
+</module>

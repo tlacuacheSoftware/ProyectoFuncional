@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.properties/1">
+    <module_version install_time="1446477311224" last="true" origin="installer" specification_version="1.53.1">
+        <file crc="2183385895" name="config/Modules/org-netbeans-modules-properties.xml"/>
+        <file crc="3558808194" name="modules/locale/org-netbeans-modules-properties_ca.jar"/>
+        <file crc="1083045050" name="modules/locale/org-netbeans-modules-properties_de.jar"/>
+        <file crc="2646330161" name="modules/locale/org-netbeans-modules-properties_es.jar"/>
+        <file crc="3535906928" name="modules/locale/org-netbeans-modules-properties_fr.jar"/>
+        <file crc="493882354" name="modules/locale/org-netbeans-modules-properties_gl_ES.jar"/>
+        <file crc="2517988823" name="modules/locale/org-netbeans-modules-properties_it.jar"/>
+        <file crc="770038359" name="modules/locale/org-netbeans-modules-properties_ko.jar"/>
+        <file crc="2562010712" name="modules/locale/org-netbeans-modules-properties_nl_NL.jar"/>
+        <file crc="1308950492" name="modules/locale/org-netbeans-modules-properties_sv.jar"/>
+        <file crc="869605634" name="modules/locale/org-netbeans-modules-properties_tr.jar"/>
+        <file crc="2691877000" name="modules/locale/org-netbeans-modules-properties_zh_TW.jar"/>
+        <file crc="2625956746" name="modules/org-netbeans-modules-properties.jar"/>
+    </module_version>
+</module>

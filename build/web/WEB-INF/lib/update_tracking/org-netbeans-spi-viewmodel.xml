@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.spi.viewmodel/2">
+    <module_version install_time="1446476353790" last="false" origin="installer" specification_version="1.50.1">
+        <file crc="2737119136" name="config/Modules/org-netbeans-spi-viewmodel.xml"/>
+        <file crc="272719589" name="modules/locale/org-netbeans-spi-viewmodel_ca.jar"/>
+        <file crc="1776410800" name="modules/locale/org-netbeans-spi-viewmodel_de.jar"/>
+        <file crc="736961161" name="modules/locale/org-netbeans-spi-viewmodel_es.jar"/>
+        <file crc="2811014416" name="modules/locale/org-netbeans-spi-viewmodel_fr.jar"/>
+        <file crc="1504516324" name="modules/locale/org-netbeans-spi-viewmodel_gl_ES.jar"/>
+        <file crc="2369694229" name="modules/locale/org-netbeans-spi-viewmodel_it.jar"/>
+        <file crc="1898119997" name="modules/locale/org-netbeans-spi-viewmodel_ko.jar"/>
+        <file crc="1863229069" name="modules/locale/org-netbeans-spi-viewmodel_nl_NL.jar"/>
+        <file crc="1781373413" name="modules/locale/org-netbeans-spi-viewmodel_sv.jar"/>
+        <file crc="3452905122" name="modules/locale/org-netbeans-spi-viewmodel_tr.jar"/>
+        <file crc="447765578" name="modules/locale/org-netbeans-spi-viewmodel_zh_TW.jar"/>
+        <file crc="2716458531" name="modules/org-netbeans-spi-viewmodel.jar"/>
+    </module_version>
+    <module_version install_time="1460519037730" last="true" origin="NetBeans Distribution" specification_version="1.50.2">
+        <file crc="2737119136" name="config/Modules/org-netbeans-spi-viewmodel.xml"/>
+        <file crc="1522126442" name="modules/locale/org-netbeans-spi-viewmodel_ja.jar"/>
+        <file crc="1938531717" name="modules/locale/org-netbeans-spi-viewmodel_pt_BR.jar"/>
+        <file crc="3017567235" name="modules/locale/org-netbeans-spi-viewmodel_ru.jar"/>
+        <file crc="3969227361" name="modules/locale/org-netbeans-spi-viewmodel_zh_CN.jar"/>
+        <file crc="238609644" name="modules/org-netbeans-spi-viewmodel.jar"/>
+    </module_version>
+</module>

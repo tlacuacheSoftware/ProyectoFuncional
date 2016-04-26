@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.spi.navigator/1">
+    <module_version install_time="1446476302045" last="true" origin="installer" specification_version="1.36.1">
+        <file crc="489298949" name="config/Modules/org-netbeans-spi-navigator.xml"/>
+        <file crc="4186417445" name="modules/locale/org-netbeans-spi-navigator_ca.jar"/>
+        <file crc="416392753" name="modules/locale/org-netbeans-spi-navigator_de.jar"/>
+        <file crc="4096512915" name="modules/locale/org-netbeans-spi-navigator_es.jar"/>
+        <file crc="3743636010" name="modules/locale/org-netbeans-spi-navigator_fr.jar"/>
+        <file crc="1236133640" name="modules/locale/org-netbeans-spi-navigator_gl_ES.jar"/>
+        <file crc="2206690972" name="modules/locale/org-netbeans-spi-navigator_it.jar"/>
+        <file crc="3052280018" name="modules/locale/org-netbeans-spi-navigator_ko.jar"/>
+        <file crc="304335992" name="modules/locale/org-netbeans-spi-navigator_nl_NL.jar"/>
+        <file crc="403525539" name="modules/locale/org-netbeans-spi-navigator_sv.jar"/>
+        <file crc="1857331493" name="modules/locale/org-netbeans-spi-navigator_tr.jar"/>
+        <file crc="2002644117" name="modules/locale/org-netbeans-spi-navigator_zh_TW.jar"/>
+        <file crc="1632810544" name="modules/org-netbeans-spi-navigator.jar"/>
+    </module_version>
+</module>

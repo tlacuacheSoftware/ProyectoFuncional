@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml">
+    <module_version install_time="1446477576915" last="true" origin="installer" specification_version="1.30.1">
+        <file crc="4280234301" name="config/Modules/org-netbeans-modules-xml.xml"/>
+        <file crc="1553485519" name="modules/locale/org-netbeans-modules-xml_ca.jar"/>
+        <file crc="3896959515" name="modules/locale/org-netbeans-modules-xml_de.jar"/>
+        <file crc="3265563268" name="modules/locale/org-netbeans-modules-xml_es.jar"/>
+        <file crc="2623928862" name="modules/locale/org-netbeans-modules-xml_fr.jar"/>
+        <file crc="2326415651" name="modules/locale/org-netbeans-modules-xml_gl_ES.jar"/>
+        <file crc="2526156100" name="modules/locale/org-netbeans-modules-xml_it.jar"/>
+        <file crc="2296105424" name="modules/locale/org-netbeans-modules-xml_ko.jar"/>
+        <file crc="1347138559" name="modules/locale/org-netbeans-modules-xml_nl_NL.jar"/>
+        <file crc="1468475271" name="modules/locale/org-netbeans-modules-xml_sv.jar"/>
+        <file crc="2521280584" name="modules/locale/org-netbeans-modules-xml_tr.jar"/>
+        <file crc="2556639156" name="modules/locale/org-netbeans-modules-xml_zh_TW.jar"/>
+        <file crc="2610849106" name="modules/org-netbeans-modules-xml.jar"/>
+    </module_version>
+</module>

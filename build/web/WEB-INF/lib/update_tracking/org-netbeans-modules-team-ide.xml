@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.team.ide">
+    <module_version install_time="1446479128613" last="true" origin="installer" specification_version="1.12.1">
+        <file crc="2935218928" name="config/Modules/org-netbeans-modules-team-ide.xml"/>
+        <file crc="1468261805" name="modules/org-netbeans-modules-team-ide.jar"/>
+    </module_version>
+</module>

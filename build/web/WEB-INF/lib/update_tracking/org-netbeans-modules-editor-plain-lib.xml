@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.editor.plain.lib/1">
+    <module_version install_time="1446475669200" last="true" origin="installer" specification_version="1.32.1">
+        <file crc="387640368" name="config/Modules/org-netbeans-modules-editor-plain-lib.xml"/>
+        <file crc="3661660854" name="modules/locale/org-netbeans-modules-editor-plain-lib_ca.jar"/>
+        <file crc="911043129" name="modules/locale/org-netbeans-modules-editor-plain-lib_de.jar"/>
+        <file crc="908153862" name="modules/locale/org-netbeans-modules-editor-plain-lib_es.jar"/>
+        <file crc="4277535778" name="modules/locale/org-netbeans-modules-editor-plain-lib_fr.jar"/>
+        <file crc="267693833" name="modules/locale/org-netbeans-modules-editor-plain-lib_gl_ES.jar"/>
+        <file crc="3652591551" name="modules/locale/org-netbeans-modules-editor-plain-lib_it.jar"/>
+        <file crc="585203539" name="modules/locale/org-netbeans-modules-editor-plain-lib_ko.jar"/>
+        <file crc="3205909716" name="modules/locale/org-netbeans-modules-editor-plain-lib_nl_NL.jar"/>
+        <file crc="3338383240" name="modules/locale/org-netbeans-modules-editor-plain-lib_sv.jar"/>
+        <file crc="828673550" name="modules/locale/org-netbeans-modules-editor-plain-lib_tr.jar"/>
+        <file crc="1865074596" name="modules/locale/org-netbeans-modules-editor-plain-lib_zh_TW.jar"/>
+        <file crc="2440976783" name="modules/org-netbeans-modules-editor-plain-lib.jar"/>
+    </module_version>
+</module>

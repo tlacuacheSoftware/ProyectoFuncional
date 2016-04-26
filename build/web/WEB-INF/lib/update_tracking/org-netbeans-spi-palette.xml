@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.spi.palette/1">
+    <module_version install_time="1446476337083" last="true" origin="installer" specification_version="1.45.1">
+        <file crc="168146510" name="config/ModuleAutoDeps/org-netbeans-spi-palette.xml"/>
+        <file crc="643103640" name="config/Modules/org-netbeans-spi-palette.xml"/>
+        <file crc="4061061892" name="modules/locale/org-netbeans-spi-palette_ca.jar"/>
+        <file crc="3118959876" name="modules/locale/org-netbeans-spi-palette_de.jar"/>
+        <file crc="1531407300" name="modules/locale/org-netbeans-spi-palette_es.jar"/>
+        <file crc="992413110" name="modules/locale/org-netbeans-spi-palette_fr.jar"/>
+        <file crc="3538418369" name="modules/locale/org-netbeans-spi-palette_gl_ES.jar"/>
+        <file crc="2170095324" name="modules/locale/org-netbeans-spi-palette_it.jar"/>
+        <file crc="502193207" name="modules/locale/org-netbeans-spi-palette_ko.jar"/>
+        <file crc="2400733075" name="modules/locale/org-netbeans-spi-palette_nl_NL.jar"/>
+        <file crc="3585865996" name="modules/locale/org-netbeans-spi-palette_sv.jar"/>
+        <file crc="2855197379" name="modules/locale/org-netbeans-spi-palette_tr.jar"/>
+        <file crc="3601052945" name="modules/locale/org-netbeans-spi-palette_zh_TW.jar"/>
+        <file crc="1713284726" name="modules/org-netbeans-spi-palette.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.db.mysql">
+    <module_version install_time="1446477209519" last="true" origin="installer" specification_version="0.27.1.2">
+        <file crc="934439921" name="config/Modules/org-netbeans-modules-db-mysql.xml"/>
+        <file crc="3342576084" name="modules/locale/org-netbeans-modules-db-mysql_ca.jar"/>
+        <file crc="765317455" name="modules/locale/org-netbeans-modules-db-mysql_de.jar"/>
+        <file crc="2908597084" name="modules/locale/org-netbeans-modules-db-mysql_es.jar"/>
+        <file crc="1734391728" name="modules/locale/org-netbeans-modules-db-mysql_fr.jar"/>
+        <file crc="1601611035" name="modules/locale/org-netbeans-modules-db-mysql_gl_ES.jar"/>
+        <file crc="2535406757" name="modules/locale/org-netbeans-modules-db-mysql_it.jar"/>
+        <file crc="1936894966" name="modules/locale/org-netbeans-modules-db-mysql_ko.jar"/>
+        <file crc="141949776" name="modules/locale/org-netbeans-modules-db-mysql_nl_NL.jar"/>
+        <file crc="1256700881" name="modules/locale/org-netbeans-modules-db-mysql_sv.jar"/>
+        <file crc="2147404834" name="modules/locale/org-netbeans-modules-db-mysql_tr.jar"/>
+        <file crc="2650999921" name="modules/locale/org-netbeans-modules-db-mysql_zh_TW.jar"/>
+        <file crc="2123974930" name="modules/org-netbeans-modules-db-mysql.jar"/>
+    </module_version>
+</module>

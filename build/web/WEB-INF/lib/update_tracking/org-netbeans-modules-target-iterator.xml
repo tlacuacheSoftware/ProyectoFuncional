@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.target.iterator/1">
+    <module_version install_time="1446476428643" last="true" origin="installer" specification_version="1.23.1">
+        <file crc="4049777741" name="config/Modules/org-netbeans-modules-target-iterator.xml"/>
+        <file crc="4235075505" name="modules/locale/org-netbeans-modules-target-iterator_ca.jar"/>
+        <file crc="663257738" name="modules/locale/org-netbeans-modules-target-iterator_de.jar"/>
+        <file crc="575912796" name="modules/locale/org-netbeans-modules-target-iterator_es.jar"/>
+        <file crc="909391966" name="modules/locale/org-netbeans-modules-target-iterator_fr.jar"/>
+        <file crc="1749334080" name="modules/locale/org-netbeans-modules-target-iterator_gl_ES.jar"/>
+        <file crc="320297775" name="modules/locale/org-netbeans-modules-target-iterator_it.jar"/>
+        <file crc="236028506" name="modules/locale/org-netbeans-modules-target-iterator_ko.jar"/>
+        <file crc="2618158965" name="modules/locale/org-netbeans-modules-target-iterator_nl_NL.jar"/>
+        <file crc="109523354" name="modules/locale/org-netbeans-modules-target-iterator_sv.jar"/>
+        <file crc="3366915442" name="modules/locale/org-netbeans-modules-target-iterator_tr.jar"/>
+        <file crc="3061608584" name="modules/org-netbeans-modules-target-iterator.jar"/>
+    </module_version>
+</module>

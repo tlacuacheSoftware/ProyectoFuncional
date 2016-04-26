@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.ide.kit">
+    <module_version install_time="1446478234898" last="true" origin="installer" specification_version="1.32.1">
+        <file crc="1996629787" name="VERSION.txt"/>
+        <file crc="3987904659" name="config/ModuleAutoDeps/org-netbeans-modules-ide-kit.xml"/>
+        <file crc="3415496542" name="config/Modules/org-netbeans-modules-ide-kit.xml"/>
+        <file crc="4251193513" name="modules/locale/org-netbeans-modules-ide-kit_ca.jar"/>
+        <file crc="3111185580" name="modules/locale/org-netbeans-modules-ide-kit_de.jar"/>
+        <file crc="1946375664" name="modules/locale/org-netbeans-modules-ide-kit_es.jar"/>
+        <file crc="2580716946" name="modules/locale/org-netbeans-modules-ide-kit_fr.jar"/>
+        <file crc="1411178443" name="modules/locale/org-netbeans-modules-ide-kit_gl_ES.jar"/>
+        <file crc="1634261889" name="modules/locale/org-netbeans-modules-ide-kit_it.jar"/>
+        <file crc="1878011747" name="modules/locale/org-netbeans-modules-ide-kit_ko.jar"/>
+        <file crc="2247702087" name="modules/locale/org-netbeans-modules-ide-kit_nl_NL.jar"/>
+        <file crc="3547048780" name="modules/locale/org-netbeans-modules-ide-kit_sv.jar"/>
+        <file crc="3693418199" name="modules/locale/org-netbeans-modules-ide-kit_tr.jar"/>
+        <file crc="548533492" name="modules/locale/org-netbeans-modules-ide-kit_zh_TW.jar"/>
+        <file crc="1317971718" name="modules/org-netbeans-modules-ide-kit.jar"/>
+    </module_version>
+</module>

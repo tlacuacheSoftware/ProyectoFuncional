@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml.xdm/1">
+    <module_version install_time="1446476150914" last="true" origin="installer" specification_version="1.32.1.1">
+        <file crc="1060261276" name="config/Modules/org-netbeans-modules-xml-xdm.xml"/>
+        <file crc="3668338412" name="modules/locale/org-netbeans-modules-xml-xdm_ca.jar"/>
+        <file crc="4254104467" name="modules/locale/org-netbeans-modules-xml-xdm_de.jar"/>
+        <file crc="3370686872" name="modules/locale/org-netbeans-modules-xml-xdm_es.jar"/>
+        <file crc="2814925015" name="modules/locale/org-netbeans-modules-xml-xdm_fr.jar"/>
+        <file crc="612840241" name="modules/locale/org-netbeans-modules-xml-xdm_gl_ES.jar"/>
+        <file crc="1763590712" name="modules/locale/org-netbeans-modules-xml-xdm_it.jar"/>
+        <file crc="600330746" name="modules/locale/org-netbeans-modules-xml-xdm_ko.jar"/>
+        <file crc="317825642" name="modules/locale/org-netbeans-modules-xml-xdm_nl_NL.jar"/>
+        <file crc="1422951917" name="modules/locale/org-netbeans-modules-xml-xdm_sv.jar"/>
+        <file crc="1626011767" name="modules/locale/org-netbeans-modules-xml-xdm_tr.jar"/>
+        <file crc="2732001454" name="modules/locale/org-netbeans-modules-xml-xdm_zh_TW.jar"/>
+        <file crc="617902245" name="modules/org-netbeans-modules-xml-xdm.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.project.libraries/1">
+    <module_version install_time="1446475313462" last="true" origin="installer" specification_version="1.52.1">
+        <file crc="604614102" name="config/ModuleAutoDeps/org-netbeans-modules-project-libraries.xml"/>
+        <file crc="2974763789" name="config/Modules/org-netbeans-modules-project-libraries.xml"/>
+        <file crc="2276742324" name="modules/locale/org-netbeans-modules-project-libraries_ca.jar"/>
+        <file crc="2433462772" name="modules/locale/org-netbeans-modules-project-libraries_de.jar"/>
+        <file crc="3647309180" name="modules/locale/org-netbeans-modules-project-libraries_es.jar"/>
+        <file crc="1224727401" name="modules/locale/org-netbeans-modules-project-libraries_fr.jar"/>
+        <file crc="1832466568" name="modules/locale/org-netbeans-modules-project-libraries_gl_ES.jar"/>
+        <file crc="2284200635" name="modules/locale/org-netbeans-modules-project-libraries_it.jar"/>
+        <file crc="2820373098" name="modules/locale/org-netbeans-modules-project-libraries_ko.jar"/>
+        <file crc="2103990836" name="modules/locale/org-netbeans-modules-project-libraries_nl_NL.jar"/>
+        <file crc="1144506338" name="modules/locale/org-netbeans-modules-project-libraries_sv.jar"/>
+        <file crc="1605223944" name="modules/locale/org-netbeans-modules-project-libraries_tr.jar"/>
+        <file crc="3723679733" name="modules/locale/org-netbeans-modules-project-libraries_zh_TW.jar"/>
+        <file crc="2181038117" name="modules/org-netbeans-modules-project-libraries.jar"/>
+    </module_version>
+</module>

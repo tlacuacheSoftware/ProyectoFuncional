@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.properties.syntax/1">
+    <module_version install_time="1446477319664" last="true" origin="installer" specification_version="1.49.1">
+        <file crc="3912872678" name="config/Modules/org-netbeans-modules-properties-syntax.xml"/>
+        <file crc="177112560" name="modules/locale/org-netbeans-modules-properties-syntax_ca.jar"/>
+        <file crc="4090408271" name="modules/locale/org-netbeans-modules-properties-syntax_de.jar"/>
+        <file crc="2991205948" name="modules/locale/org-netbeans-modules-properties-syntax_es.jar"/>
+        <file crc="143122957" name="modules/locale/org-netbeans-modules-properties-syntax_fr.jar"/>
+        <file crc="3892622022" name="modules/locale/org-netbeans-modules-properties-syntax_gl_ES.jar"/>
+        <file crc="1221556031" name="modules/locale/org-netbeans-modules-properties-syntax_it.jar"/>
+        <file crc="1507686152" name="modules/locale/org-netbeans-modules-properties-syntax_ko.jar"/>
+        <file crc="980529846" name="modules/locale/org-netbeans-modules-properties-syntax_nl_NL.jar"/>
+        <file crc="3313026601" name="modules/locale/org-netbeans-modules-properties-syntax_sv.jar"/>
+        <file crc="4280287821" name="modules/locale/org-netbeans-modules-properties-syntax_tr.jar"/>
+        <file crc="658375263" name="modules/locale/org-netbeans-modules-properties-syntax_zh_TW.jar"/>
+        <file crc="3190442366" name="modules/org-netbeans-modules-properties-syntax.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.tasklist.projectint/1">
+    <module_version install_time="1446476413012" last="true" origin="installer" specification_version="1.28.1">
+        <file crc="3766441604" name="config/Modules/org-netbeans-modules-tasklist-projectint.xml"/>
+        <file crc="474588837" name="modules/locale/org-netbeans-modules-tasklist-projectint_ca.jar"/>
+        <file crc="2790523654" name="modules/locale/org-netbeans-modules-tasklist-projectint_de.jar"/>
+        <file crc="1338509770" name="modules/locale/org-netbeans-modules-tasklist-projectint_es.jar"/>
+        <file crc="1210452312" name="modules/locale/org-netbeans-modules-tasklist-projectint_fr.jar"/>
+        <file crc="2607351055" name="modules/locale/org-netbeans-modules-tasklist-projectint_gl_ES.jar"/>
+        <file crc="392152836" name="modules/locale/org-netbeans-modules-tasklist-projectint_it.jar"/>
+        <file crc="2975252219" name="modules/locale/org-netbeans-modules-tasklist-projectint_ko.jar"/>
+        <file crc="1843357403" name="modules/locale/org-netbeans-modules-tasklist-projectint_nl_NL.jar"/>
+        <file crc="1217711622" name="modules/locale/org-netbeans-modules-tasklist-projectint_sv.jar"/>
+        <file crc="4052688875" name="modules/locale/org-netbeans-modules-tasklist-projectint_tr.jar"/>
+        <file crc="3304536194" name="modules/org-netbeans-modules-tasklist-projectint.jar"/>
+    </module_version>
+</module>

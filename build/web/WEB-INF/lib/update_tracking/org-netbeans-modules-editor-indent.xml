@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.editor.indent/2">
+    <module_version install_time="1446475442412" last="true" origin="installer" specification_version="1.42.1">
+        <file crc="3980616695" name="config/ModuleAutoDeps/org-netbeans-modules-editor-indent.xml"/>
+        <file crc="915460559" name="config/Modules/org-netbeans-modules-editor-indent.xml"/>
+        <file crc="2567093251" name="modules/locale/org-netbeans-modules-editor-indent_ca.jar"/>
+        <file crc="1937691880" name="modules/locale/org-netbeans-modules-editor-indent_de.jar"/>
+        <file crc="3483231368" name="modules/locale/org-netbeans-modules-editor-indent_es.jar"/>
+        <file crc="1444383979" name="modules/locale/org-netbeans-modules-editor-indent_fr.jar"/>
+        <file crc="3467573277" name="modules/locale/org-netbeans-modules-editor-indent_gl_ES.jar"/>
+        <file crc="1372744763" name="modules/locale/org-netbeans-modules-editor-indent_it.jar"/>
+        <file crc="4269866970" name="modules/locale/org-netbeans-modules-editor-indent_ko.jar"/>
+        <file crc="1027127046" name="modules/locale/org-netbeans-modules-editor-indent_nl_NL.jar"/>
+        <file crc="3480838527" name="modules/locale/org-netbeans-modules-editor-indent_sv.jar"/>
+        <file crc="3901276860" name="modules/locale/org-netbeans-modules-editor-indent_tr.jar"/>
+        <file crc="197124937" name="modules/locale/org-netbeans-modules-editor-indent_zh_TW.jar"/>
+        <file crc="3035440995" name="modules/org-netbeans-modules-editor-indent.jar"/>
+    </module_version>
+</module>

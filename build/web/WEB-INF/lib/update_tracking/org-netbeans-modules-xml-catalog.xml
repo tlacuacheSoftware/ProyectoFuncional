@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml.catalog/2">
+    <module_version install_time="1446474952783" last="true" origin="installer" specification_version="3.2.1.4">
+        <file crc="104624930" name="config/ModuleAutoDeps/org-netbeans-modules-xml-catalog.xml"/>
+        <file crc="4257896318" name="config/Modules/org-netbeans-modules-xml-catalog.xml"/>
+        <file crc="1073800185" name="modules/locale/org-netbeans-modules-xml-catalog_ca.jar"/>
+        <file crc="1655500336" name="modules/locale/org-netbeans-modules-xml-catalog_de.jar"/>
+        <file crc="83715906" name="modules/locale/org-netbeans-modules-xml-catalog_es.jar"/>
+        <file crc="1020204948" name="modules/locale/org-netbeans-modules-xml-catalog_fr.jar"/>
+        <file crc="1665978148" name="modules/locale/org-netbeans-modules-xml-catalog_gl_ES.jar"/>
+        <file crc="1818613387" name="modules/locale/org-netbeans-modules-xml-catalog_it.jar"/>
+        <file crc="3207182353" name="modules/locale/org-netbeans-modules-xml-catalog_ko.jar"/>
+        <file crc="3274255591" name="modules/locale/org-netbeans-modules-xml-catalog_nl_NL.jar"/>
+        <file crc="2205724681" name="modules/locale/org-netbeans-modules-xml-catalog_sv.jar"/>
+        <file crc="1900797402" name="modules/locale/org-netbeans-modules-xml-catalog_tr.jar"/>
+        <file crc="2164530554" name="modules/locale/org-netbeans-modules-xml-catalog_zh_TW.jar"/>
+        <file crc="1247343509" name="modules/org-netbeans-modules-xml-catalog.jar"/>
+    </module_version>
+</module>

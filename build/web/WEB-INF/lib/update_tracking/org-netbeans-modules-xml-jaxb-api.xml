@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.xml.jaxb.api/1">
+    <module_version install_time="1446474717439" last="true" origin="installer" specification_version="1.25.1">
+        <file crc="3368585658" name="config/Modules/org-netbeans-modules-xml-jaxb-api.xml"/>
+        <file crc="3649618722" name="modules/ext/jaxb/activation.jar"/>
+        <file crc="1814215215" name="modules/ext/jaxb/api/jaxb-api.jar"/>
+        <file crc="2450274063" name="modules/ext/jaxb/api/jsr173_1.0_api.jar"/>
+        <file crc="483784291" name="modules/locale/org-netbeans-modules-xml-jaxb-api_ca.jar"/>
+        <file crc="3661266823" name="modules/locale/org-netbeans-modules-xml-jaxb-api_de.jar"/>
+        <file crc="1341204567" name="modules/locale/org-netbeans-modules-xml-jaxb-api_es.jar"/>
+        <file crc="3415985309" name="modules/locale/org-netbeans-modules-xml-jaxb-api_fr.jar"/>
+        <file crc="1739776804" name="modules/locale/org-netbeans-modules-xml-jaxb-api_gl_ES.jar"/>
+        <file crc="398219357" name="modules/locale/org-netbeans-modules-xml-jaxb-api_it.jar"/>
+        <file crc="3299409541" name="modules/locale/org-netbeans-modules-xml-jaxb-api_ko.jar"/>
+        <file crc="316139396" name="modules/locale/org-netbeans-modules-xml-jaxb-api_nl_NL.jar"/>
+        <file crc="845443303" name="modules/locale/org-netbeans-modules-xml-jaxb-api_sv.jar"/>
+        <file crc="1558636502" name="modules/locale/org-netbeans-modules-xml-jaxb-api_tr.jar"/>
+        <file crc="883822834" name="modules/org-netbeans-modules-xml-jaxb-api.jar"/>
+    </module_version>
+</module>

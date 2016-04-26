@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.web.common">
+    <module_version install_time="1446477960916" last="false" origin="installer" specification_version="1.90.1">
+        <file crc="842111795" name="config/Modules/org-netbeans-modules-web-common.xml"/>
+        <file crc="2405330647" name="modules/locale/org-netbeans-modules-web-common_ca.jar"/>
+        <file crc="381349354" name="modules/locale/org-netbeans-modules-web-common_de.jar"/>
+        <file crc="2283141922" name="modules/locale/org-netbeans-modules-web-common_es.jar"/>
+        <file crc="3931935558" name="modules/locale/org-netbeans-modules-web-common_fr.jar"/>
+        <file crc="2374963758" name="modules/locale/org-netbeans-modules-web-common_gl_ES.jar"/>
+        <file crc="1598961634" name="modules/locale/org-netbeans-modules-web-common_it.jar"/>
+        <file crc="3261797440" name="modules/locale/org-netbeans-modules-web-common_ko.jar"/>
+        <file crc="1310552449" name="modules/locale/org-netbeans-modules-web-common_nl_NL.jar"/>
+        <file crc="2453468240" name="modules/locale/org-netbeans-modules-web-common_sv.jar"/>
+        <file crc="1585300475" name="modules/locale/org-netbeans-modules-web-common_tr.jar"/>
+        <file crc="2650800182" name="modules/org-netbeans-modules-web-common.jar"/>
+    </module_version>
+    <module_version install_time="1460519039619" last="true" origin="NetBeans Distribution" specification_version="1.90.2">
+        <file crc="842111795" name="config/Modules/org-netbeans-modules-web-common.xml"/>
+        <file crc="234386081" name="modules/locale/org-netbeans-modules-web-common_ja.jar"/>
+        <file crc="144876887" name="modules/locale/org-netbeans-modules-web-common_pt_BR.jar"/>
+        <file crc="1426364203" name="modules/locale/org-netbeans-modules-web-common_ru.jar"/>
+        <file crc="192798831" name="modules/locale/org-netbeans-modules-web-common_zh_CN.jar"/>
+        <file crc="1246977184" name="modules/org-netbeans-modules-web-common.jar"/>
+    </module_version>
+</module>

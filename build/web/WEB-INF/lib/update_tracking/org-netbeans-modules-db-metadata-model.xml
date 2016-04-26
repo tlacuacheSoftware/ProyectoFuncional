@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.db.metadata.model/1">
+    <module_version install_time="1446475061024" last="true" origin="installer" specification_version="1.10.1">
+        <file crc="3021893472" name="config/Modules/org-netbeans-modules-db-metadata-model.xml"/>
+        <file crc="4101725286" name="modules/locale/org-netbeans-modules-db-metadata-model_ca.jar"/>
+        <file crc="1614067113" name="modules/locale/org-netbeans-modules-db-metadata-model_de.jar"/>
+        <file crc="4213023188" name="modules/locale/org-netbeans-modules-db-metadata-model_es.jar"/>
+        <file crc="1091916644" name="modules/locale/org-netbeans-modules-db-metadata-model_fr.jar"/>
+        <file crc="3178535441" name="modules/locale/org-netbeans-modules-db-metadata-model_gl_ES.jar"/>
+        <file crc="582101279" name="modules/locale/org-netbeans-modules-db-metadata-model_it.jar"/>
+        <file crc="1138351940" name="modules/locale/org-netbeans-modules-db-metadata-model_ko.jar"/>
+        <file crc="1695930266" name="modules/locale/org-netbeans-modules-db-metadata-model_nl_NL.jar"/>
+        <file crc="894598801" name="modules/locale/org-netbeans-modules-db-metadata-model_sv.jar"/>
+        <file crc="1525719570" name="modules/locale/org-netbeans-modules-db-metadata-model_tr.jar"/>
+        <file crc="3805840435" name="modules/locale/org-netbeans-modules-db-metadata-model_zh_TW.jar"/>
+        <file crc="893028698" name="modules/org-netbeans-modules-db-metadata-model.jar"/>
+    </module_version>
+</module>

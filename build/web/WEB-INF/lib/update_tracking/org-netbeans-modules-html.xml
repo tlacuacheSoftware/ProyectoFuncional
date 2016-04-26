@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.html/1">
+    <module_version install_time="1446478101026" last="true" origin="installer" specification_version="1.60.1">
+        <file crc="3327855974" name="config/Modules/org-netbeans-modules-html.xml"/>
+        <file crc="2472134447" name="modules/locale/org-netbeans-modules-html_ca.jar"/>
+        <file crc="2853624256" name="modules/locale/org-netbeans-modules-html_de.jar"/>
+        <file crc="2885408526" name="modules/locale/org-netbeans-modules-html_es.jar"/>
+        <file crc="4207698863" name="modules/locale/org-netbeans-modules-html_fr.jar"/>
+        <file crc="2570168759" name="modules/locale/org-netbeans-modules-html_gl_ES.jar"/>
+        <file crc="1255241177" name="modules/locale/org-netbeans-modules-html_it.jar"/>
+        <file crc="355291991" name="modules/locale/org-netbeans-modules-html_ko.jar"/>
+        <file crc="1476803296" name="modules/locale/org-netbeans-modules-html_nl_NL.jar"/>
+        <file crc="2133442326" name="modules/locale/org-netbeans-modules-html_sv.jar"/>
+        <file crc="2287268548" name="modules/locale/org-netbeans-modules-html_tr.jar"/>
+        <file crc="311506191" name="modules/locale/org-netbeans-modules-html_zh_TW.jar"/>
+        <file crc="3208731496" name="modules/org-netbeans-modules-html.jar"/>
+    </module_version>
+</module>

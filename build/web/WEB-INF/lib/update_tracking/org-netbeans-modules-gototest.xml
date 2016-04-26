@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.gototest/1">
+    <module_version install_time="1446478431785" last="true" origin="installer" specification_version="1.32.1">
+        <file crc="1907751588" name="config/Modules/org-netbeans-modules-gototest.xml"/>
+        <file crc="3060320287" name="modules/locale/org-netbeans-modules-gototest_ca.jar"/>
+        <file crc="1963581127" name="modules/locale/org-netbeans-modules-gototest_de.jar"/>
+        <file crc="3905001939" name="modules/locale/org-netbeans-modules-gototest_es.jar"/>
+        <file crc="3340565193" name="modules/locale/org-netbeans-modules-gototest_fr.jar"/>
+        <file crc="52221530" name="modules/locale/org-netbeans-modules-gototest_gl_ES.jar"/>
+        <file crc="1538863776" name="modules/locale/org-netbeans-modules-gototest_it.jar"/>
+        <file crc="2110330700" name="modules/locale/org-netbeans-modules-gototest_ko.jar"/>
+        <file crc="143896968" name="modules/locale/org-netbeans-modules-gototest_nl_NL.jar"/>
+        <file crc="4080101029" name="modules/locale/org-netbeans-modules-gototest_sv.jar"/>
+        <file crc="570584700" name="modules/locale/org-netbeans-modules-gototest_tr.jar"/>
+        <file crc="2718897143" name="modules/locale/org-netbeans-modules-gototest_zh_TW.jar"/>
+        <file crc="3701447120" name="modules/org-netbeans-modules-gototest.jar"/>
+    </module_version>
+</module>

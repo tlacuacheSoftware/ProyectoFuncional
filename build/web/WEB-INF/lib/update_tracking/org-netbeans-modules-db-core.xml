@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.db.core">
+    <module_version install_time="1446477179344" last="true" origin="installer" specification_version="1.35.1">
+        <file crc="3235026915" name="config/Modules/org-netbeans-modules-db-core.xml"/>
+        <file crc="3127766543" name="modules/locale/org-netbeans-modules-db-core_ca.jar"/>
+        <file crc="348498140" name="modules/locale/org-netbeans-modules-db-core_de.jar"/>
+        <file crc="1387912348" name="modules/locale/org-netbeans-modules-db-core_es.jar"/>
+        <file crc="3424680405" name="modules/locale/org-netbeans-modules-db-core_fr.jar"/>
+        <file crc="1994467777" name="modules/locale/org-netbeans-modules-db-core_gl_ES.jar"/>
+        <file crc="826813957" name="modules/locale/org-netbeans-modules-db-core_it.jar"/>
+        <file crc="2063171809" name="modules/locale/org-netbeans-modules-db-core_ko.jar"/>
+        <file crc="2702441948" name="modules/locale/org-netbeans-modules-db-core_nl_NL.jar"/>
+        <file crc="3342282824" name="modules/locale/org-netbeans-modules-db-core_sv.jar"/>
+        <file crc="3461726442" name="modules/locale/org-netbeans-modules-db-core_tr.jar"/>
+        <file crc="178179339" name="modules/locale/org-netbeans-modules-db-core_zh_TW.jar"/>
+        <file crc="1289676358" name="modules/org-netbeans-modules-db-core.jar"/>
+    </module_version>
+</module>

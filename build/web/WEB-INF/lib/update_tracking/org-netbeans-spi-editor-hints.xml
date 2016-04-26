@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.spi.editor.hints/0">
+    <module_version install_time="1446476115010" last="true" origin="installer" specification_version="1.39.1.7.44">
+        <file crc="2723969626" name="config/Modules/org-netbeans-spi-editor-hints.xml"/>
+        <file crc="3541440717" name="modules/locale/org-netbeans-spi-editor-hints_ca.jar"/>
+        <file crc="1277089741" name="modules/locale/org-netbeans-spi-editor-hints_de.jar"/>
+        <file crc="2724505792" name="modules/locale/org-netbeans-spi-editor-hints_es.jar"/>
+        <file crc="2149143726" name="modules/locale/org-netbeans-spi-editor-hints_fr.jar"/>
+        <file crc="2613705050" name="modules/locale/org-netbeans-spi-editor-hints_gl_ES.jar"/>
+        <file crc="3016652035" name="modules/locale/org-netbeans-spi-editor-hints_it.jar"/>
+        <file crc="335219273" name="modules/locale/org-netbeans-spi-editor-hints_ko.jar"/>
+        <file crc="2104451018" name="modules/locale/org-netbeans-spi-editor-hints_nl_NL.jar"/>
+        <file crc="3880423455" name="modules/locale/org-netbeans-spi-editor-hints_sv.jar"/>
+        <file crc="2499995073" name="modules/locale/org-netbeans-spi-editor-hints_tr.jar"/>
+        <file crc="2768687569" name="modules/locale/org-netbeans-spi-editor-hints_zh_TW.jar"/>
+        <file crc="2027458586" name="modules/org-netbeans-spi-editor-hints.jar"/>
+    </module_version>
+</module>

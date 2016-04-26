@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.db.sql.editor">
+    <module_version install_time="1446477640602" last="true" origin="installer" specification_version="1.35.1.30">
+        <file crc="512497951" name="config/Modules/org-netbeans-modules-db-sql-editor.xml"/>
+        <file crc="2375277937" name="modules/locale/org-netbeans-modules-db-sql-editor_ca.jar"/>
+        <file crc="1815390441" name="modules/locale/org-netbeans-modules-db-sql-editor_de.jar"/>
+        <file crc="4008358841" name="modules/locale/org-netbeans-modules-db-sql-editor_es.jar"/>
+        <file crc="952427645" name="modules/locale/org-netbeans-modules-db-sql-editor_fr.jar"/>
+        <file crc="3060579975" name="modules/locale/org-netbeans-modules-db-sql-editor_gl_ES.jar"/>
+        <file crc="2490862259" name="modules/locale/org-netbeans-modules-db-sql-editor_it.jar"/>
+        <file crc="1209690371" name="modules/locale/org-netbeans-modules-db-sql-editor_ko.jar"/>
+        <file crc="1878971289" name="modules/locale/org-netbeans-modules-db-sql-editor_nl_NL.jar"/>
+        <file crc="3653449898" name="modules/locale/org-netbeans-modules-db-sql-editor_sv.jar"/>
+        <file crc="2368852422" name="modules/locale/org-netbeans-modules-db-sql-editor_tr.jar"/>
+        <file crc="976501551" name="modules/locale/org-netbeans-modules-db-sql-editor_zh_TW.jar"/>
+        <file crc="666664675" name="modules/org-netbeans-modules-db-sql-editor.jar"/>
+    </module_version>
+</module>
