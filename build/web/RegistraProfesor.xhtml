@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Registro de Profesores</title>
+    </h:head>
+    <h:body>
+        <h:graphicImage value ="encabezado-unam.gif" />
+        <br></br>
+         <h:form>
+             <a href="faces/index.xhtml">Volver a la Página Principal</a>
+             <br></br>
+          <h:outputText value="Introduce tu nombre: "/> &nbsp;
+          <h:inputText value="#{profesorBean.ANombre}"/> <br/>
+            <h:outputText value="Introduce tu correo: "/> &nbsp;
+            <h:inputText value="#{profesorBean.ACorreo}"/> <br/>
+            <h:outputText value="Introduce tu contraseña: "/> &nbsp;
+            <h:inputSecret value="#{profesorBean.AContrasenha}"/> <br/>
+
+            <h:commandButton action="#{profesorBean.guardarProfesor()}" value="Registarse"/>
+
+        </h:form>
+    </h:body>
+</html>
+
