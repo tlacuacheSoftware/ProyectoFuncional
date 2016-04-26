@@ -5,6 +5,7 @@
  */
 package Dao;
 
+import java.util.List;
 import org.hibernate.Session;
 
 import logica.HibernateUtil;
@@ -71,7 +72,7 @@ public class ProfesorDao {
     
     public void indroducirProfesor(String nombre, String contrasena, String correo) {
 
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        session = HibernateUtil.getSessionFactory().openSession();
 
         Profesor n = new Profesor();
 
@@ -88,4 +89,90 @@ public class ProfesorDao {
             session.getTransaction().rollback();
         }
     }
+    
+    
+    public List<Profesor> getAll(){
+        List<Profesor> list = null;
+        try{
+            init();
+            String s = "from Profesor";
+            Query query = session.createQuery(s);
+            list = query.list();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+    
+        public boolean update(Profesor obj){
+            boolean b = false;
+            try{
+                init();
+                session.update(obj);
+                tx.commit();
+                b = true;
+            }catch(Exception e){
+                session.getTransaction().rollback();
+            
+                
+            }
+            return b;
+        }
+    
+    
+    public boolean delete(Profesor obj){
+        boolean b = false;
+        try{
+            init();
+            session.delete(obj);
+            tx.commit();
+            b = true;
+        }catch(Exception e){
+            rollback();
+        
+            
+        }
+        return b;
+    }
+    
+    public Profesor getByID(int id){
+        Profesor p = null;
+        List<Profesor> list = null;
+        session.getTransaction().begin();
+        try{
+//            init();
+            String s = "FROM Profesor WHERE id_Profesor=" + id;
+            Query query = session.createQuery(s);
+            if(!query.list().isEmpty()){
+                p=(Profesor)query.list().get(0);
+             }  
+            }catch(Exception e){
+                throw e;
+            }
+            session.getTransaction().commit();
+            System.out.println(p.getIdProfesor()+" "+p.getSNombre()+p.getSCorreo()+p.getSContrasenha());
+            return p;
+    }
+    
+//    public List<Profesor> getByNameAppApm(String crit){
+//        List<Profesor> list = null;
+//        try{
+//            init();
+//            String s = crit;
+//            Query query = session.createQuery(s);
+//            list = query.list();
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
+//        return list;
+//    }
+    
+//    public boolean actulizar(Profesor profesor){
+//        boolean bolean;
+//        Configuration configuracion = new Configuration();
+//        SessionFactory sessionFactory = configuracion.configure().buildSessionFactory();
+//        Session session = HibernateUtil.getSessionFactory().openSession();
+//        
+//        return false;
+//    }
 }
