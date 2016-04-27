@@ -9,14 +9,13 @@
         <h:graphicImage value ="encabezado-unam.gif" />
         <br></br>
         <h:form>
-            <a href="faces/index.xhtml">Volver a la Página Principal</a>
-            <br></br>
+
           <h:outputText value="Introduce tu nombre: "/> &nbsp;
           <h:inputText value="#{alumnoBean.ANombre}"/> <br/>
             <h:outputText value="Introduce tu correo: "/> &nbsp;
             <h:inputText value="#{alumnoBean.ACorreo}"/> <br/>
             <h:outputText value="Introduce tu contraseña: "/> &nbsp;
-            <h:inputSecret value="#{alumnoBean.AContrasenha}"/> <br/>
+            <h:inputText value="#{alumnoBean.AContrasenha}"/> <br/>
 
             <h:commandButton action="#{alumnoBean.guardarAlumno()}" value="Registarse"/>
 
