@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/primeraiteracion</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">heracross</property>
+    <mapping resource="modelo/sql/Solicitud.hbm.xml"/>
+    <mapping resource="modelo/sql/Profesor.hbm.xml"/>
+    <mapping resource="modelo/sql/Area.hbm.xml"/>
+    <mapping resource="modelo/sql/Alumno.hbm.xml"/>
+    <mapping resource="modelo/sql/Actividad.hbm.xml"/>
+    <mapping resource="modelo/sql/Tipo.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>
