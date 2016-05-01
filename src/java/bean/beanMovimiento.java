@@ -38,4 +38,7 @@ public class beanMovimiento {
     public String modificar(){
         return "Modificar";
     }
+    public String exito(){
+        return "Exito";
+    }
 }

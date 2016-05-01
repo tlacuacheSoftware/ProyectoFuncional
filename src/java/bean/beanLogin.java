@@ -75,6 +75,7 @@ public class beanLogin {
                 p=log.VerificarP(this.profesor);
                 if(p!=null){
                 httpServletRequest.getSession().setAttribute("sessionSNombre", p.getSNombre());
+                httpServletRequest.getSession().setAttribute("sessionidProfesor", p.getIdProfesor());
                   resultado="Profesor";     
             }else{
                 resultado="Login";

@@ -9,6 +9,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 import Dao.ProfesorDao;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  *
@@ -23,9 +25,12 @@ public class ProfesorBean {
      private String AContrasenha;
      private String ACorreo;
      private ProfesorDao c;
-
+     private final HttpServletRequest httpServletRequest;
+     private final FacesContext faceContext;
     public ProfesorBean() {
         c = new ProfesorDao();
+        faceContext = FacesContext.getCurrentInstance();
+        httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
     }
 
     public int getIdProfesor() {

@@ -21,7 +21,7 @@ public class ProfesorDao {
     private  static Session session;
     private Transaction tx;
     private Integer idProfesor;
-    
+
     private void init(){
         session = HibernateUtil.getSessionFactory().openSession();
         tx = session.beginTransaction();
@@ -79,7 +79,6 @@ public class ProfesorDao {
         n.setSNombre(nombre);
         n.setSContrasenha(contrasena);
         n.setSCorreo(correo);
-
         try {
             session.beginTransaction();
             session.save(n);
@@ -141,7 +140,7 @@ public class ProfesorDao {
         session.getTransaction().begin();
         try{
 //            init();
-            String s = "FROM Profesor WHERE id_Profesor=" + id;
+            String s = "FROM Profesor WHERE id_profesor=" + id;
             Query query = session.createQuery(s);
             if(!query.list().isEmpty()){
                 p=(Profesor)query.list().get(0);

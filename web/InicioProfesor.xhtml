@@ -8,10 +8,10 @@
     <h:body>
         <h:graphicImage value ="encabezado-unam.gif" />
         <h:form id="formInicioProfesor">
-            <p><h:outputLabel value="Ingreso con el usuario: "/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold"/></p>
-             <h:commandButton id="Modificar" value="Modificar" action="#{beanMovimiento.modificar()}"/> 
+            <p><h:outputLabel value="Ingreso con el usuario: "/><h:outputText value="#{beanProfesor.nombre}" style="font-weight:bold"/></p>
+             <h:commandButton id="Modificar" value="Modificar" action="#{beanMovimiento.modificar}"/> 
              <br></br>
-            <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSessiones()}"/> 
+            <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSessiones}"/> 
       </h:form>
     </h:body>
 </html>
