@@ -16,9 +16,13 @@
             <h:outputText value="Ingresa tu nuevo correo."/> &nbsp;
             <h:inputText value="#{beanProfesor.PCorreo}"/> <br/>
             <h:outputText value="Ingresa tu nueva contraseña."/> &nbsp;
-            <h:inputSecret value="#{beanProfesor.PContrasenha}"/> <br/>
+            <h:inputSecret value="#{beanProfesor.PContrasenha1}"/> <br/>
+            <h:outputText value="Vuelve a ingresar tu nueva contraseña."/> &nbsp;
+            <h:inputSecret value="#{beanProfesor.PContrasenha2}"/> <br/>
             <h:commandButton action="#{beanProfesor.modificarProfesor()}" value="Guardar"/>
             <h:link value="Regresar" outcome="InicioProfesor.xhtml" />
+            
+            <h:outputText value="#{beanProfesor.messa}"/>
         </h:form>
     </h:body>
 </html>

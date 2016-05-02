@@ -26,13 +26,17 @@ public class beanProfesor {
    private FacesMessage message;
    private int idProfesor;
    private String PNombre;
-   private String PContrasenha;
+   private String PContrasenha1;
+   private String PContrasenha2;
    private String PCorreo;
    private final ProfesorDao dao = new ProfesorDao();
      
+   private String messa;
+   
    public beanProfesor(){
         faceContext = FacesContext.getCurrentInstance();
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+        messa = "";
     }
     public Profesor getProfesor() {
         return profesor;
@@ -80,30 +84,66 @@ public class beanProfesor {
             checkContrasenha();
             p.setSNombre(PNombre);
             p.setSCorreo(PCorreo);
-            p.setSContrasenha(PContrasenha);
+            p.setSContrasenha(PContrasenha1);
             resultado = dao.update(p);
-        }catch(Exception e){    
+        }catch(Exception e){  
+            messa = cutException(e.toString());
             return "Modificar";
         }
-        
+        messa = "";
         return "Profesor";
     }
-    
+   
+    private String cutException(String e){
+        int i = e.indexOf(":");
+        return e.substring(i+1);
+    }
+   
     private void checkNombre(){
+        String s;
+        String check = "QWERTYUIOPASDFGHJKLÑZXCVBNMqwertyuiopasdfghjklñzxcvbnm";
         if(PNombre == null || PNombre.equals("")){
             throw new NullPointerException("El nombre esta vacio.");
+        }
+        for(int i = 0; i < PNombre.length(); i++){
+            s = PNombre.substring(i, i+1);
+            if(!check.contains(s)){
+                throw new NullPointerException("El nombre contiene caracteres invalidos. Solo letras.");
+            }
         }
     }
     
     private void checkCorreo(){
+        String s;
+        String check = "QWERTYUIOPASDFGHJKLÑZXCVBNMqwertyuiopasdfghjklñzxcvbnm1234567890.-_@";
         if(PCorreo == null || PCorreo.equals("")){
             throw new NullPointerException("El correo esta vacio.");
+        }
+        for(int i = 0; i < PCorreo.length(); i++){
+            s = PCorreo.substring(i, i+1);
+            if(!check.contains(s)){
+                throw new NullPointerException("El correo contiene caracteres invalidos. Solo alfanumericos y . - _ @");
+            }
         }
     }
 
     private void checkContrasenha(){
-        if(PContrasenha == null || PContrasenha.equals("")){
+        String s;
+        String check = "QWERTYUIOPASDFGHJKLÑZXCVBNMqwertyuiopasdfghjklñzxcvbnm1234567890";
+        if(PContrasenha1 == null || PContrasenha1.equals("")){
             throw new NullPointerException("La contraseña esta vacia.");
+        }
+        if(PContrasenha2 == null || PContrasenha2.equals("")){
+            throw new NullPointerException("La contraseña esta vacia.");
+        }
+        if(!PContrasenha1.equals(PContrasenha2)){
+            throw new NullPointerException("Las contraseña no son iguales.");
+        }
+        for(int i = 0; i < PContrasenha1.length(); i++){
+            s = PContrasenha1.substring(i, i+1);
+            if(!check.contains(s)){
+                throw new NullPointerException("La contraseña contiene caracteres invalidos. Solo alfanumericos.");
+            }
         }
     }
     
@@ -123,12 +163,20 @@ public class beanProfesor {
         this.PNombre = PNombre;
     }
 
-    public String getPContrasenha() {
-        return PContrasenha;
+    public String getPContrasenha1() {
+        return PContrasenha1;
     }
 
-    public void setPContrasenha(String PContrasenha) {
-        this.PContrasenha = PContrasenha;
+    public void setPContrasenha1(String PContrasenha) {
+        this.PContrasenha1 = PContrasenha;
+    }
+
+    public String getPContrasenha2() {
+        return PContrasenha2;
+    }
+
+    public void setPContrasenha2(String PContrasenha2) {
+        this.PContrasenha2 = PContrasenha2;
     }
 
     public String getPCorreo() {
@@ -137,6 +185,14 @@ public class beanProfesor {
 
     public void setPCorreo(String PCorreo) {
         this.PCorreo = PCorreo;
+    }
+
+    public String getMessa() {
+        return messa;
+    }
+
+    public void setMessa(String messa) {
+        this.messa = messa;
     }
     
 }
