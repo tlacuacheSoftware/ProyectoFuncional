@@ -6,6 +6,7 @@
 package bean;
 
 import Dao.LoginDao;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
@@ -20,6 +21,7 @@ public class beanLogin {
    private Profesor profesor=new Profesor();
    private final HttpServletRequest httpServletRequest;
    private final FacesContext faceContext;
+   private FacesMessage message;
 
     public String getSCorreo() {
         return SCorreo;
@@ -70,14 +72,21 @@ public class beanLogin {
             a=log.VerificarA(this.alumno);
             if(a!=null){
                 httpServletRequest.getSession().setAttribute("sessionSNombre", a.getSNombre());
+                httpServletRequest.getSession().setAttribute("Id", a.getIdAlumno());
+                message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Acceso Correcto", null);
+                faceContext.addMessage(null, message);
                   resultado="Alumno";     
             }else{
                 p=log.VerificarP(this.profesor);
                 if(p!=null){
                 httpServletRequest.getSession().setAttribute("sessionSNombre", p.getSNombre());
-                httpServletRequest.getSession().setAttribute("sessionidProfesor", p.getIdProfesor());
+                httpServletRequest.getSession().setAttribute("Id", p.getIdProfesor());
+                message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Acceso Correcto", null);
+                faceContext.addMessage(null, message);
                   resultado="Profesor";     
             }else{
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario o contraseña incorrecto", null);
+                faceContext.addMessage(null, message);
                 resultado="Login";
             }
     }

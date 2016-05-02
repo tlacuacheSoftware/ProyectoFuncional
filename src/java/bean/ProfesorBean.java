@@ -6,27 +6,29 @@
 package bean;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 
 import Dao.ProfesorDao;
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
+import modelo.Profesor;
 
 /**
  *
  * @author luis
  */
 @ManagedBean
-@ViewScoped
+@RequestScoped
 public class ProfesorBean {
-
     private int idProfesor;
      private String ANombre;
      private String AContrasenha;
      private String ACorreo;
-     private ProfesorDao c;
+     private final ProfesorDao c;
      private final HttpServletRequest httpServletRequest;
      private final FacesContext faceContext;
+     private FacesMessage message;
     public ProfesorBean() {
         c = new ProfesorDao();
         faceContext = FacesContext.getCurrentInstance();
@@ -66,8 +68,54 @@ public class ProfesorBean {
     }
 
     public String guardarProfesor(){
-        c.indroducirProfesor(ANombre, AContrasenha, ACorreo);
-        return "Index";
+        ProfesorDao prof=new ProfesorDao();
+        int d=0;
+        String Z="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+        for(int i=0;i<Z.length();i++){
+            for(int j=0;j<ANombre.length();j++){
+                if(ANombre.charAt(j)==Z.charAt(i)){
+                    d++;
+                }
+            }
+        }
+        if(d!=ANombre.length()){
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Nombre no valido", null);
+            faceContext.addMessage(null, message);
+            return "RP";
+        }else{
+            if(ANombre==null || "".equals(ANombre)){
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Introduce un nombre", null);
+            faceContext.addMessage(null, message);                
+                return "RP";
+            }else{
+                if(AContrasenha==null || "".equals(AContrasenha)){
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Introduce una contraseña", null);
+                    faceContext.addMessage(null, message);
+                    return "RP";
+                }else{
+                    if(ACorreo==null || "".equals(ACorreo)){
+                        message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Introduce un correo", null);
+                        faceContext.addMessage(null, message);
+                        return "RP";
+                    }else{
+                        if(prof.Existe(ACorreo)){
+                            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Correo ya registrado", null);
+                            faceContext.addMessage(null, message);
+                            return "RP";
+                        }else{
+                            if(AContrasenha.length()<6){
+                                message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"La contraseña debe tener al menos 6 caaracteres", null);
+                                faceContext.addMessage(null, message);
+                                return "RP";
+                            }
+                        }
+                        c.introducirProfesor(ANombre, AContrasenha, ACorreo);
+                        return "Index";
+                    }
+                }
+            }
+        }
+        
     }
     
 }

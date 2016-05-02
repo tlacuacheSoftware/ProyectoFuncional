@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package bean;
 import Dao.ProfesorDao;
 import javax.faces.application.FacesMessage;
@@ -53,8 +48,8 @@ public class beanProfesor {
     }
 
    public String modificarProfesor(){
-        if (httpServletRequest.getSession().getAttribute("sessionidProfesor") != null) {
-         id=(int)httpServletRequest.getSession().getAttribute("sessionidProfesor");
+        if (httpServletRequest.getSession().getAttribute("Id") != null) {
+         id=(int)httpServletRequest.getSession().getAttribute("Id");
         }else{
             return "Modificar";
         }
