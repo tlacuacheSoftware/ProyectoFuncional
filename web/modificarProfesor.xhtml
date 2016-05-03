@@ -2,9 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
-        <title>Bienvenido</title>
+        <title>Pagina de IS</title>
         <style type="text/css">
             html, body {
                 height: 100%;
@@ -56,17 +58,26 @@
         <div >
 
         </div>
-        <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/computer-10.jpg"  />
+        <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/slide3.jpg"  />
         <div class="form ">
-        <h:form id="formLogin" >
+
+            <h:form id="formLogin" >
                 <p:growl id="messages" showDetail="true" />
                 <div class="campos">
-        <h:commandButton id="LoginProfesorCB" value="Login" action="#{beanMovimiento.login()}" style="background: #002047; color: #FFFFFF;"/> 
-        <h:commandButton id="RegistrarAlumnoCB" value="Registrar Alumno" action="#{beanMovimiento.registrarAlumno()}" style="background: #232323; color: #FFFFFF;"/>
-        <h:commandButton id="RegistrarProfesorCB" value="Registrar Profesor" action="#{beanMovimiento.registrarProfesor()}" style="background: #000000; color: #FFFFFF;"/>
+                    <h:outputText value="Ingresa tu nuevo nombre"/>
+                    <h:inputText value="#{beanProfesor.PNombre}"/>
+                    <h:outputText value="Ingresa tu nuevo correo"/>
+                    <h:inputText value="#{beanProfesor.PCorreo}"/> 
+                    <h:outputText value="Ingresa tu nueva contraseña"/> 
+                    <h:inputSecret value="#{beanProfesor.PContrasenha}"/> 
+                    <h:commandButton action="#{beanProfesor.modificarProfesor}" value="Guardar" style="background: #4CAF50;"/>
+                    <h:commandButton action="#{beanMovimiento.profesor()}" value="Cancelar" style="background: #FF0000;"/>
+                </div>
+
+
+
+            </h:form>
         </div>
-      </h:form>
-        </div>
+
     </h:body>
 </html>
-

@@ -64,22 +64,7 @@
                 cursor: pointer;
             }
 
-            .boton {
-                font-family: "Roboto", sans-serif;
-                text-transform: uppercase;
-                box-sizing: border-box;
-                outline: 0;
-                position: relative;
-                background: #4CAF50;
-                width: 100%;
-                border: 0;
-                padding: 7px;
-                color: #FFFFFF;
-                font-size: 14px;
-                -webkit-transition: all 0.3 ease;
-                transition: all 0.3 ease;
-                cursor: pointer;
-            }
+            
 
         </style>
     </h:head>
@@ -91,6 +76,7 @@
         <div class="form ">
 
             <h:form id="formLogin" >
+                <p:growl id="messages" showDetail="true" />
                 <div class="campos">
                 <h3>Bienvenido al sistema</h3>
                 <h4>Correo</h4>
@@ -100,8 +86,8 @@
                     <h:inputSecret  value="#{beanLogin.SContrasenha}"/>
                 </div>
                 <div class="boton">
-                <h:commandButton id ="boton" value="Ingresar" action="#{beanLogin.login()}"
-                                 style="background: #4CAF50;"/>   
+                <h:commandButton id ="boton" value="Ingresar" action="#{beanLogin.login()}" style="background: #4CAF50;"/>
+                <h:commandButton id ="boton1" value="Cancelar" action="#{beanMovimiento.salir()}" style="background: #FF0000;"/>
                 </div>
             </h:form>
         </div>

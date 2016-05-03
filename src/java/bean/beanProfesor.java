@@ -54,42 +54,105 @@ public class beanProfesor {
             return "Modificar";
         }
         profesor = dao.getByID(id);     
-        boolean resultado;
         Profesor p;
         p = new Profesor();
         p.setIdProfesor(profesor.getIdProfesor());
         httpServletRequest.getSession().setAttribute("sessionSNombre", PNombre);
         try{
-            checkNombre();
-            checkCorreo();
-            checkContrasenha();
+            String cadena1 = checkNombre();
+            String cadena2 = checkCorreo();
+            String cadena3 =checkContrasenha();
+            System.out.println(cadena1 + cadena2 + cadena3);
+            if("Exito".equals(cadena1) && "Exito".equals(cadena2) && "Exito".equals(cadena3)){
             p.setSNombre(PNombre);            
             p.setSCorreo(PCorreo);
             p.setSContrasenha(PContrasenha);
             dao.update(p);
             this.Nombre = PNombre;
+            }else{
+                return "Modificar";
+            }
         }catch(Exception e){    
             return "Modificar";
         }
-        
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Información modificada correctamente", null);
+        faceContext.addMessage(null, message);
         return "Exito";
     }
     
-    private void checkNombre(){
+    private String checkNombre(){
         if(PNombre == null || PNombre.equals("")){
-            throw new NullPointerException("El nombre esta vacio.");
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Nombre no válido", null);
+            faceContext.addMessage(null, message);
+            return "Modificar";
+        }else{
+            if(!revisaNombre()){
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"El nombre sólo puede contener caracteres", null);
+                faceContext.addMessage(null, message);
+                return "Modificar";
+            }else{
+                if(PNombre.length()<4 || PNombre.length()>20){
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"El nombre debe tener entre 4 y 20 caracteres", null);
+                    faceContext.addMessage(null, message);
+                    return "Modificar";
+                }else{
+                    return "Exito";
+                }
+            }
+        }
+        
+    }
+    
+    private boolean revisaNombre(){
+        boolean resultado = true;
+        String alfa = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+        for(int i = 0; i < PNombre.length(); i++){
+            String temp = ""+PNombre.charAt(i);
+            if(!alfa.contains(temp)){
+                resultado = false;
+            }
+        }
+        return resultado;
+    }
+    
+    private String checkCorreo(){
+        if(PCorreo == null || PCorreo.equals("")){
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Correo no válido", null);
+            faceContext.addMessage(null, message);
+            return "Modificar";
+            }else{
+                if(!revisaCorreo()){
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"El correo debe de ser del dominio de Ciencias", null);
+                    faceContext.addMessage(null, message);
+                    return "Modificar";
+                }else{
+                    return "Exito";
+                }
         }
     }
     
-    private void checkCorreo(){
-        if(PCorreo == null || PCorreo.equals("")){
-            throw new NullPointerException("El correo esta vacio.");
+    private boolean revisaCorreo(){
+        boolean resultado = true;
+        String prueba = "@ciencias.unam.mx";
+        if(!PCorreo.contains(prueba)){
+            resultado = false;
         }
+        return resultado;
     }
 
-    private void checkContrasenha(){
+    private String checkContrasenha(){
         if(PContrasenha == null || PContrasenha.equals("")){
-            throw new NullPointerException("La contraseña esta vacia.");
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Contraseña no válida", null);
+            faceContext.addMessage(null, message);
+        return "Modificar";
+        }else{
+            if(PContrasenha.length() < 6 || PContrasenha.length() > 20){
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"La contraseña debe tener al menos 6 caracteres y máximo 20", null);
+                faceContext.addMessage(null, message);
+                return "Modificar"   ;
+            }else{
+            return "Exito";
+            }
         }
     }
     

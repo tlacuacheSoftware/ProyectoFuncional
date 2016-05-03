@@ -62,6 +62,7 @@
         <div class="form ">
 
             <h:form id="formLogin" >
+                <p:growl id="messages" showDetail="true" />
                 <div class="campos">
                    <h4>Nombre</h4>
                     <h:inputText  value="#{profesorBean.ANombre}" />
@@ -72,8 +73,8 @@
                     <h4>Confirmar contraseña</h4>
                     <h:inputSecret  value="falta contraseña"/>
                     
-                    <h:commandButton  value="crear cuenta" action="#{profesorBean.guardarProfesor()}"
-                                      style="background:#4CAF50; color: #FFFFFF" />
+                    <h:commandButton  value="Registrarse" action="#{profesorBean.guardarProfesor()}" style="background:#4CAF50; color: #FFFFFF" />
+                    <h:commandButton  value="Cancelar" action="#{beanMovimiento.salir}" style="background:#FF0000; color: #FFFFFF" />
                 </div>
 
 
