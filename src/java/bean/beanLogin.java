@@ -71,16 +71,20 @@ public class beanLogin {
         String resultado;
             a=log.VerificarA(this.alumno);
             if(a!=null){
-                httpServletRequest.getSession().setAttribute("sessionSNombre", a.getSNombre());
                 httpServletRequest.getSession().setAttribute("Id", a.getIdAlumno());
+                httpServletRequest.getSession().setAttribute("sessionSNombre", a.getSNombre());
+                httpServletRequest.getSession().setAttribute("sessionSCorreo", a.getSCorreo());
+                httpServletRequest.getSession().setAttribute("sessionSContrasenha", a.getSContrasenha());
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Acceso Correcto", null);
                 faceContext.addMessage(null, message);
                   resultado="Alumno";     
             }else{
                 p=log.VerificarP(this.profesor);
                 if(p!=null){
-                httpServletRequest.getSession().setAttribute("sessionSNombre", p.getSNombre());
                 httpServletRequest.getSession().setAttribute("Id", p.getIdProfesor());
+                httpServletRequest.getSession().setAttribute("sessionSNombre", p.getSNombre());
+                httpServletRequest.getSession().setAttribute("sessionSCorreo", p.getSCorreo());
+                httpServletRequest.getSession().setAttribute("sessionSContrasenha", p.getSContrasenha());
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Acceso Correcto", null);
                 faceContext.addMessage(null, message);
                   resultado="Profesor";     

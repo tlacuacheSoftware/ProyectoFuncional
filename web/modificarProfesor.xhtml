@@ -71,10 +71,11 @@
             <h:form id="formLogin" >
                 <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
+                    Nombre:
                     <h:outputText value="Ingresa tu nuevo nombre"/>
-                    <h:inputText value="#{beanProfesor.PNombre}"/>
+                    <h:outputText value="#{beanProfesor.nombre}"/>
                     <h:outputText value="Ingresa tu nuevo correo"/>
-                    <h:inputText value="#{beanProfesor.PCorreo}"/> 
+                    <h:outputText value="#{beanProfesor.PCorreo}"/> 
                     <h:outputText value="Ingresa tu nueva contraseña"/> 
                     <h:inputSecret value="#{beanProfesor.PContrasenha}"/> 
                     <h:commandButton action="#{beanProfesor.modificarProfesor}" value="Guardar" style="background: #4CAF50;"/>
