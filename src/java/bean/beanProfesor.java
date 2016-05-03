@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package bean;
 import Dao.ProfesorDao;
 import javax.faces.application.FacesMessage;
@@ -28,10 +23,14 @@ public class beanProfesor {
    private String PContrasenha;
    private String PCorreo;
    private final ProfesorDao dao = new ProfesorDao();
-     
+   private int id;
+   private String Nombre;
+ 
+   
    public beanProfesor(){
         faceContext = FacesContext.getCurrentInstance();
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+        this.Nombre = httpServletRequest.getSession().getAttribute("sessionSNombre").toString();
     }
     public Profesor getProfesor() {
         return profesor;
@@ -40,51 +39,40 @@ public class beanProfesor {
     public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
     }
-   public String login(){
-        ProfesorDao prof=new ProfesorDao();
-        Profesor p = null;
-        String resultado;
-            p=prof.Verificar(this.profesor);
-            if(p!=null){
-                
-                httpServletRequest.getSession().setAttribute("idUsuario", p.getIdProfesor());
-                httpServletRequest.getSession().setAttribute("sessionSNombre", this.profesor.getSCorreo());
-                resultado="InicioProfesor";
-            }else{
-                resultado="Profesor";
-            }
+       public String getNombre() {
+        return Nombre;
+    }
 
-        return resultado;
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
-   
-   private void defineProfesor(){
-        int id;
-       id = (int) httpServletRequest.getSession().getAttribute("idUsuario");
-        System.out.println("El id es " + id);
-        idProfesor = id;
-        profesor = dao.getByID(idProfesor);
-    }
-   
+
    public String modificarProfesor(){
-       defineProfesor();       
+        if (httpServletRequest.getSession().getAttribute("Id") != null) {
+         id=(int)httpServletRequest.getSession().getAttribute("Id");
+        }else{
+            return "Modificar";
+        }
+        profesor = dao.getByID(id);     
         boolean resultado;
         Profesor p;
         p = new Profesor();
         p.setIdProfesor(profesor.getIdProfesor());
-        
+        httpServletRequest.getSession().setAttribute("sessionSNombre", PNombre);
         try{
             checkNombre();
             checkCorreo();
             checkContrasenha();
-            p.setSNombre(PNombre);
+            p.setSNombre(PNombre);            
             p.setSCorreo(PCorreo);
             p.setSContrasenha(PContrasenha);
-            resultado = dao.update(p);
+            dao.update(p);
+            this.Nombre = PNombre;
         }catch(Exception e){    
-            return "modificar";
+            return "Modificar";
         }
         
-        return "LoginProfesor";
+        return "Exito";
     }
     
     private void checkNombre(){

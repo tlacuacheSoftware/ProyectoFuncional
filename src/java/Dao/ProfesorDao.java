@@ -6,6 +6,7 @@
 package Dao;
 
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import org.hibernate.Session;
 
 import logica.HibernateUtil;
@@ -21,18 +22,34 @@ public class ProfesorDao {
     private  static Session session;
     private Transaction tx;
     private Integer idProfesor;
-    
+    private FacesMessage message;
     private void init(){
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().openSession();
         tx = session.beginTransaction();
     }
             
 
     public ProfesorDao(){
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().openSession();
     }
 
-    
+    public boolean Existe(String correo){
+        session.getTransaction().begin();
+        boolean f=false;
+        try{
+     String hql= "from Profesor where s_correo= '"+correo+"'";
+     Query query=session.createQuery(hql);
+     if(!query.list().isEmpty()){
+         f=true;
+         
+     }  
+        }catch(Exception e){
+            throw e;
+        }
+        session.getTransaction().commit();
+     
+     return f;
+    }
 
     public Profesor Verificar(Profesor profesor){
         session.getTransaction().begin();
@@ -70,16 +87,13 @@ public class ProfesorDao {
         return b;
     }
     
-    public void indroducirProfesor(String nombre, String contrasena, String correo) {
-
+    public void introducirProfesor(String nombre, String contrasena, String correo) {
         session = HibernateUtil.getSessionFactory().openSession();
-
         Profesor n = new Profesor();
-
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Perfil modificado correctamente", null);
         n.setSNombre(nombre);
         n.setSContrasenha(contrasena);
         n.setSCorreo(correo);
-
         try {
             session.beginTransaction();
             session.save(n);
@@ -141,7 +155,7 @@ public class ProfesorDao {
         session.getTransaction().begin();
         try{
 //            init();
-            String s = "FROM Profesor WHERE id_Profesor=" + id;
+            String s = "FROM Profesor WHERE id_profesor=" + id;
             Query query = session.createQuery(s);
             if(!query.list().isEmpty()){
                 p=(Profesor)query.list().get(0);

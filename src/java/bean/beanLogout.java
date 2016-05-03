@@ -46,8 +46,8 @@ public class beanLogout {
      * @return El nombre de la vista que va a responder.
      */
     public String cerrarSessiones() {
-        httpServletRequest.getSession().removeAttribute("sessionUsuario");
-        httpServletRequest.getSession().removeAttribute("idUsuario");
+        httpServletRequest.getSession().removeAttribute("sessionSNombre");
+        httpServletRequest.getSession().removeAttribute("Id");
         message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Session cerrada correctamente", null);
         faceContext.addMessage(null, message);
         System.out.println("saliendo");
