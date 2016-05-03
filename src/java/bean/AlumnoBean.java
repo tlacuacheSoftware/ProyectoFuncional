@@ -24,6 +24,7 @@ public class AlumnoBean {
      private int idAlumno;
      private String ANombre;
      private String AContrasenha;
+     private String AContrasenha2;
      private String ACorreo;
      private AlumnoDao c;
      private final FacesContext faceContext;
@@ -37,6 +38,14 @@ public class AlumnoBean {
 
     public int getIdAlumno() {
         return idAlumno;
+    }
+
+    public String getAContrasenha2() {
+        return AContrasenha2;
+    }
+
+    public void setAContrasenha2(String AContrasenha2) {
+        this.AContrasenha2 = AContrasenha2;
     }
 
     public void setIdAlumno(int idAlumno) {
@@ -71,7 +80,7 @@ public class AlumnoBean {
         String cadena1 = checaNombre();
         String cadena2 = checaCorreo();
         String cadena3 = checaContraseña();
-        if("Index".equals(cadena1) && "Index".equals(cadena2) && "Index".equals(cadena3)){
+        if("index".equals(cadena1) && "index".equals(cadena2) && "index".equals(cadena3)){
             c.introducirAlumno(ANombre, AContrasenha, ACorreo);
             message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Cuenta creda correctamente", null);
             faceContext.addMessage(null, message);
@@ -165,7 +174,13 @@ public class AlumnoBean {
                 faceContext.addMessage(null, message);
                 return "RP"   ;
             }else{
-            return "index";
+                if(!AContrasenha.equals(AContrasenha2)){
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Las contraseñas no coinciden", null);
+                    faceContext.addMessage(null, message);
+                    return "RP";
+                }else{
+                    return "index";
+                }
             }
         }
     }

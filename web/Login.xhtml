@@ -63,6 +63,13 @@
                 transition: all 0.3 ease;
                 cursor: pointer;
             }
+            
+            .ui-growl {
+                position:absolute;
+                top:50%;
+                left:39%;
+                z-index:9999;
+            }
 
             
 
@@ -76,7 +83,7 @@
         <div class="form ">
 
             <h:form id="formLogin" >
-                <p:growl id="messages" showDetail="true" />
+                <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
                 <h3>Bienvenido al sistema</h3>
                 <h4>Correo</h4>

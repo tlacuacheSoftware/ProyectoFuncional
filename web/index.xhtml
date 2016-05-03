@@ -47,6 +47,13 @@
                 box-sizing: border-box;
                 font-size: 13px;
             }
+            
+            .ui-growl {
+                position:absolute;
+                top:50%;
+                left:39%;
+                z-index:9999;
+            }
 
 
 
@@ -59,7 +66,7 @@
         <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/computer-10.jpg"  />
         <div class="form ">
         <h:form id="formLogin" >
-                <p:growl id="messages" showDetail="true" />
+                <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
         <h:commandButton id="LoginProfesorCB" value="Login" action="#{beanMovimiento.login()}" style="background: #002047; color: #FFFFFF;"/> 
         <h:commandButton id="RegistrarAlumnoCB" value="Registrar Alumno" action="#{beanMovimiento.registrarAlumno()}" style="background: #232323; color: #FFFFFF;"/>
