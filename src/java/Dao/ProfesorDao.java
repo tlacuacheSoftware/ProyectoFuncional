@@ -164,7 +164,7 @@ public class ProfesorDao {
                 throw e;
             }
             session.getTransaction().commit();
-            System.out.println(p.getIdProfesor()+" "+p.getSNombre()+p.getSCorreo()+p.getSContrasenha());
+//            System.out.println(p.getIdProfesor()+" "+p.getSNombre()+p.getSCorreo()+p.getSContrasenha());
             return p;
     }
     

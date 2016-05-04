@@ -5,15 +5,68 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Bienvenido</title>
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            #full-screen-background-image {
+                z-index: -999;
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            .login-page {
+                width: 360px;
+                padding: 8% 0 0;
+                margin: auto;
+            }
+            .form {
+                position: relative;
+                z-index: 1;
+                background: #FFFFFF;
+                max-width: 250px;
+                margin: 0 auto 100px;
+                padding: 30px;
+                text-align: center;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            }
+            .form input {
+                font-family: "Roboto", sans-serif;
+                outline: 0;
+                background: #f2f2f2;
+                width: 100%;
+                border: 0;
+                margin: 0 0 15px;
+                padding: 15px;
+                box-sizing: border-box;
+                font-size: 13px;
+            }
+
+
+
+        </style>
     </h:head>
     <h:body>
-        <h:form id="formIndex">
-          <img src="encabezado-unam.gif" width="1312" height="102" alt="encabezado-unam"/>
-        <h3>Bienvenido al sistema</h3>
-        <h:commandButton id="LoginProfesorCB" value="Login" action="#{beanMovimiento.login}"/> 
-        <h:commandButton id="RegistrarAlumnoCB" value="Registrar Alumno" action="#{beanMovimiento.registrarAlumno}"/>
-        <h:commandButton id="RegistrarProfesorCB" value="Registrar Profesor" action="#{beanMovimiento.registrarProfesor}"/>
+        <div >
+
+        </div>
+        <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/computer-10.jpg"  />
+        <div class="form ">
+        <h:form id="formLogin" >
+                <p:growl id="messages" showDetail="true" />
+                <div class="campos">
+        <h:commandButton id="LoginProfesorCB" value="Login" action="#{beanMovimiento.login()}" style="background: #002047; color: #FFFFFF;"/> 
+        <h:commandButton id="RegistrarAlumnoCB" value="Registrar Alumno" action="#{beanMovimiento.registrarAlumno()}" style="background: #232323; color: #FFFFFF;"/>
+        <h:commandButton id="RegistrarProfesorCB" value="Registrar Profesor" action="#{beanMovimiento.registrarProfesor()}" style="background: #000000; color: #FFFFFF;"/>
+        </div>
       </h:form>
+        </div>
     </h:body>
 </html>
 

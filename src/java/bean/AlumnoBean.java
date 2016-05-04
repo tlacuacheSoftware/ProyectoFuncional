@@ -68,54 +68,105 @@ public class AlumnoBean {
     }
 
     public String guardarAlumno(){
-        AlumnoDao prof=new AlumnoDao();
-        int d=0;
-        String Z="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-        for(int i=0;i<Z.length();i++){
-            for(int j=0;j<ANombre.length();j++){
-                if(ANombre.charAt(j)==Z.charAt(i)){
-                    d++;
-                }
-            }
+        String cadena1 = checaNombre();
+        String cadena2 = checaCorreo();
+        String cadena3 = checaContraseña();
+        if("Index".equals(cadena1) && "Index".equals(cadena2) && "Index".equals(cadena3)){
+            c.introducirAlumno(ANombre, AContrasenha, ACorreo);
+            message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Cuenta creda correctamente", null);
+            faceContext.addMessage(null, message);
+            return "Index";
+        }else{
+            return "RP";
         }
-        if(d!=ANombre.length()){
-            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Nombre no valido", null);
+    }
+    
+    private String checaNombre(){
+        if(ANombre == null || ANombre.equals("")){
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Nombre no válido", null);
             faceContext.addMessage(null, message);
             return "RP";
         }else{
-            if(ANombre==null || "".equals(ANombre)){
-            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Introduce un nombre", null);
-            faceContext.addMessage(null, message);                
+            if(!revisaNombre()){
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"El nombre sólo puede contener caracteres", null);
+                faceContext.addMessage(null, message);
                 return "RP";
             }else{
-                if(AContrasenha==null || "".equals(AContrasenha)){
-                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Introduce una contraseña", null);
+                if(ANombre.length()<4 || ANombre.length()>20){
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"El nombre debe tener entre 4 y 20 caracteres", null);
                     faceContext.addMessage(null, message);
                     return "RP";
                 }else{
-                    if(ACorreo==null || "".equals(ACorreo)){
-                        message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Introduce un correo", null);
-                        faceContext.addMessage(null, message);
-                        return "RP";
-                    }else{
-                        if(prof.Existe(ACorreo)){
-                            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Correo ya registrado", null);
-                            faceContext.addMessage(null, message);
-                            return "RP";
-                        }else{
-                            if(AContrasenha.length()<6){
-                                message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"La contraseña debe tener al menos 6 caaracteres", null);
-                                faceContext.addMessage(null, message);
-                                return "RP";
-                            }
-                        }
-                        
-    }
-
-}
+                    return "Index";
+                }
             }
         }
-        c.introducirAlumno(ANombre, AContrasenha, ACorreo);
-                        return "index";
+    }
+    
+    private boolean revisaNombre(){
+        boolean resultado = true;
+        String alfa = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+        for(int i = 0; i < ANombre.length(); i++){
+            String temp = ""+ANombre.charAt(i);
+            if(!alfa.contains(temp)){
+                resultado = false;
+            }
+        }
+        return resultado;
+    }
+    
+    private String checaCorreo(){
+        if(ACorreo == null || ACorreo.equals("")){
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Correo no válido", null);
+            faceContext.addMessage(null, message);
+            return "RP";
+            }else{
+                if(!revisaCorreo()){
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"El correo debe de ser del dominio de Ciencias", null);
+                    faceContext.addMessage(null, message);
+                    return "RP";
+                }else{
+                    if(correoExiste()){
+                        return "RP";
+                    }else{
+                        return "Index";
+                    }
+                }
+        }
+    }
+    
+    private boolean revisaCorreo(){
+        boolean resultado = true;
+        String prueba = "@ciencias.unam.mx";
+        if(!ACorreo.contains(prueba)){
+            resultado = false;
+        }
+        return resultado;
+    }
+    
+    private boolean correoExiste(){
+        boolean resultado = false;
+        AlumnoDao prof = new AlumnoDao();
+        if(prof.Existe(ACorreo)){
+            resultado = true;
+        }
+        
+        return resultado;
+    }
+    
+    private String checaContraseña(){
+        if(AContrasenha == null || AContrasenha.equals("")){
+            message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Contraseña no válida", null);
+            faceContext.addMessage(null, message);
+        return "RP";
+        }else{
+            if(AContrasenha.length() < 6 || AContrasenha.length() > 20){
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"La contraseña debe tener al menos 6 caracteres y máximo 20", null);
+                faceContext.addMessage(null, message);
+                return "RP"   ;
+            }else{
+            return "Index";
+            }
+        }
     }
 }

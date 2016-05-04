@@ -1,26 +1,83 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
-        <title>Editar Perfil</title>
+        <title>Pagina de IS</title>
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            #full-screen-background-image {
+                z-index: -999;
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            .login-page {
+                width: 360px;
+                padding: 8% 0 0;
+                margin: auto;
+            }
+            .form {
+                position: relative;
+                z-index: 1;
+                background: #FFFFFF;
+                max-width: 250px;
+                margin: 0 auto 100px;
+                padding: 30px;
+                text-align: center;
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            }
+            .form input {
+                font-family: "Roboto", sans-serif;
+                outline: 0;
+                background: #f2f2f2;
+                width: 100%;
+                border: 0;
+                margin: 0 0 15px;
+                padding: 15px;
+                box-sizing: border-box;
+                font-size: 13px;
+            }
+
+
+
+        </style>
     </h:head>
     <h:body>
-        <h:graphicImage value ="encabezado-unam.gif" />
-        <h1> Editar profesor</h1>
-        
-        <h:form id="formmodifica">           
-            <br></br>
-            <a href="faces/InicioProfesor.xhtml">Volver</a>
-            <br></br>
-            <h:outputText value="Ingresa tu nuevo nombre."/> &nbsp;
-            <h:inputText value="#{beanProfesor.PNombre}"/> <br/>
-            <h:outputText value="Ingresa tu nuevo correo."/> &nbsp;
-            <h:inputText value="#{beanProfesor.PCorreo}"/> <br/>
-            <h:outputText value="Ingresa tu nueva contraseña."/> &nbsp;
-            <h:inputSecret value="#{beanProfesor.PContrasenha}"/> <br/>
-            <h:commandButton action="#{beanProfesor.modificarProfesor}" value="Guardar"/>
-        </h:form>
+        <div >
+
+        </div>
+        <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/slide3.jpg"  />
+        <div class="form ">
+
+            <h:form id="formLogin" >
+                <p:growl id="messages" showDetail="true" />
+                <div class="campos">      
+                    <p><h:outputText value="#{beanProfesor.nombre}" style="font-weight:bold; color: black;"/></p>
+                    <h:outputText value="Ingresa tu nuevo nombre"/>
+                    <h:inputText value="#{beanProfesor.PNombre}"/> <h:commandButton action="#{beanProfesor.modificarNombreProfesor}" value="Guardar" style="background: #4CAF50;"/>
+                    <h:outputText value="Ingresa tu nuevo correo"/>
+                    <h:inputText value="#{beanProfesor.PCorreo}"/> <h:commandButton action="#{beanProfesor.modificarCorreoProfesor}" value="Guardar" style="background: #4CAF50;"/>
+                    <h:outputText value="Ingresa tu nueva contraseña"/> 
+                    <h:inputSecret value="#{beanProfesor.PContrasenha}"/><h:commandButton action="#{beanProfesor.modificarContraseñaProfesor}" value="Guardar" style="background: #4CAF50;"/>
+                    <h:commandButton action="#{beanMovimiento.profesor}" value="Regresar" style="background: #FF0000;"/>
+                </div>
+
+
+
+            </h:form>
+        </div>
+
     </h:body>
 </html>
-
