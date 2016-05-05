@@ -50,6 +50,13 @@
                 font-size: 13px;
             }
             
+            .ui-growl {
+                position:absolute;
+                top:50%;
+                left:39%;
+                z-index:9999;
+            }
+            
 
 
         </style>
@@ -62,7 +69,7 @@
         <div class="form ">
 
             <h:form id="formLogin" >
-                <p:growl id="messages" showDetail="true" />
+                <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
                    <h4>Nombre</h4>
                     <h:inputText  value="#{profesorBean.ANombre}" />
@@ -71,7 +78,7 @@
                     <h4>Contraseña</h4>
                     <h:inputSecret  value="#{profesorBean.AContrasenha}"/>
                     <h4>Confirmar contraseña</h4>
-                    <h:inputSecret  value="falta contraseña"/>
+                    <h:inputSecret  value="#{profesorBean.AContrasenha2}"/>
                     
                     <h:commandButton  value="Registrarse" action="#{profesorBean.guardarProfesor()}" style="background:#4CAF50; color: #FFFFFF" />
                     <h:commandButton  value="Cancelar" action="#{beanMovimiento.salir}" style="background:#FF0000; color: #FFFFFF" />

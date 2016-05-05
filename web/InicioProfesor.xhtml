@@ -31,6 +31,13 @@
                 font-size: 25px;
                 z-index: 50;
             }
+            
+            .ui-growl {
+                position:absolute;
+                top:50%;
+                left:39%;
+                z-index:9999;
+            }
 
 
         </style>
@@ -43,7 +50,7 @@
 
         <div class="menu">
             <h:form>
-                <p:growl id="messages" showDetail="true" />
+                <p:growl id="messages" showDetail="true" sticky="true"  />
                 <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: black;"/><h:outputText value="#{beanProfesor.nombre}" style="font-weight:bold; color: black;"/></p>
                 <p:menuButton  value="Menú"   >
                     <p:menuitem value="Modificar Datos" action="#{beanMovimiento.modificar()}" update="messages" />

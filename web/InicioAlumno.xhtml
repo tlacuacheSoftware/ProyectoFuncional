@@ -5,12 +5,43 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Home Alumno</title>
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            #pantalla-completa {
+                z-index: -999;
+                width: 100%;
+                height: auto;
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+            
+            .menu{
+                position: fixed;
+                left: 5%;
+                top: 5%;
+                color: white;
+                font-size: 25px;
+                z-index: 50;
+            }
+
+
+        </style>
+
     </h:head>
+    
     <h:body>
-        <h:graphicImage value ="encabezado-unam.gif" />
+        <img id="pantalla-completa" alt="pantalla-completa" src="img/slider/computer-10.jpg" />
         <h:form id="formInicioAlumno">
-            <p:growl id="messages" showDetail="true" />
-        <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
+            <p:growl id="messages" showDetail="true" sticky="true"  />
+            
+        <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: white;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: white;"/></p>
         <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSessiones()}"/> 
       </h:form>
     </h:body>

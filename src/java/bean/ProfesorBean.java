@@ -24,6 +24,7 @@ public class ProfesorBean {
     private int idProfesor;
      private String ANombre;
      private String AContrasenha;
+     private String AContrasenha2;
      private String ACorreo;
      private final ProfesorDao c;
      private final HttpServletRequest httpServletRequest;
@@ -165,8 +166,22 @@ public class ProfesorBean {
                 faceContext.addMessage(null, message);
                 return "RP"   ;
             }else{
-            return "Index";
+                if(!AContrasenha.equals(AContrasenha2)){
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Las contraseñas no coinciden", null);
+                    faceContext.addMessage(null, message);
+                    return "RP";
+                }else{
+                    return "Index";
+                }
             }
         }
+    }
+
+    public String getAContrasenha2() {
+        return AContrasenha2;
+    }
+
+    public void setAContrasenha2(String AContrasenha2) {
+        this.AContrasenha2 = AContrasenha2;
     }
 }

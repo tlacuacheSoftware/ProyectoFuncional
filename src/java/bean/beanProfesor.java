@@ -25,12 +25,34 @@ public class beanProfesor {
    private final ProfesorDao dao = new ProfesorDao();
    private int id;
    private String Nombre;
+
+    public String getCorreo() {
+        return Correo;
+    }
+
+    public void setCorreo(String Correo) {
+        this.Correo = Correo;
+    }
+
+    public String getContrasenha() {
+        return Contrasenha;
+    }
+
+    public void setContrasenha(String Contrasenha) {
+        this.Contrasenha = Contrasenha;
+    }
+   private String Correo;
+   private String Contrasenha;
  
    
    public beanProfesor(){
         faceContext = FacesContext.getCurrentInstance();
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
         this.Nombre = httpServletRequest.getSession().getAttribute("sessionSNombre").toString();
+         id=(int)httpServletRequest.getSession().getAttribute("Id");
+        profesor = dao.getByID(id);     
+        this.Correo=profesor.getSCorreo();
+        this.Contrasenha=profesor.getSContrasenha();
     }
     public Profesor getProfesor() {
         return profesor;
@@ -47,6 +69,7 @@ public class beanProfesor {
         this.Nombre = Nombre;
     }
 
+   
    public String modificarNombreProfesor(){
         if (httpServletRequest.getSession().getAttribute("Id") != null) {
          id=(int)httpServletRequest.getSession().getAttribute("Id");
@@ -70,7 +93,7 @@ public class beanProfesor {
             }
         }catch(Exception e){    
         }
-        message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Información modificada correctamente", null);
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO,"InformaciÃ³n modificada correctamente", null);
         faceContext.addMessage(null, message);
         return "Modificar";
     }
@@ -93,10 +116,11 @@ public class beanProfesor {
             p.setSContrasenha(profesor.getSContrasenha());
             dao.update(p);
             }
+            this.Correo=PCorreo;
         }catch(Exception e){    
             return "Modificar";
         }
-        message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Información modificada correctamente", null);
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO,"InformaciÃ³n modificada correctamente", null);
         faceContext.addMessage(null, message);
         return "Modificar";
     }
@@ -122,13 +146,16 @@ public class beanProfesor {
             }else{
                 return "Modificar";
             }
+            this.Contrasenha=PContrasenha;
         }catch(Exception e){    
             return "Modificar";
         }
-        message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Información modificada correctamente", null);
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO,"InformaciÃ³n modificada correctamente", null);
         faceContext.addMessage(null, message);
         return "Modificar";
     }
+
+    
     private String checkNombre(){
         if(PNombre == null || PNombre.equals("")){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Nombre no válido", null);

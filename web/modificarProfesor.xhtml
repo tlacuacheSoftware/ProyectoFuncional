@@ -49,6 +49,13 @@
                 box-sizing: border-box;
                 font-size: 13px;
             }
+            
+            .ui-growl {
+                position:absolute;
+                top:50%;
+                left:39%;
+                z-index:9999;
+            }
 
 
 
@@ -62,16 +69,21 @@
         <div class="form ">
 
             <h:form id="formLogin" >
-                <p:growl id="messages" showDetail="true" />
-                <div class="campos">      
-                    <p><h:outputText value="#{beanProfesor.nombre}" style="font-weight:bold; color: black;"/></p>
+                <p:growl id="messages" showDetail="true" sticky="true"  />
+                <div class="campos">
+                    <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanProfesor.nombre}" style="font-weight:bold; color: black;"/></p>
                     <h:outputText value="Ingresa tu nuevo nombre"/>
-                    <h:inputText value="#{beanProfesor.PNombre}"/> <h:commandButton action="#{beanProfesor.modificarNombreProfesor}" value="Guardar" style="background: #4CAF50;"/>
+                    <h:inputText value="#{beanProfesor.PNombre}"/>
+                    <h:commandButton action="#{beanProfesor.modificarNombreProfesor()}" value="Guardar" style="background: #4CAF50;"/>
+                    <p><h:outputLabel value="Correo actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanProfesor.correo}" style="font-weight:bold; color: black;"/></p>
                     <h:outputText value="Ingresa tu nuevo correo"/>
-                    <h:inputText value="#{beanProfesor.PCorreo}"/> <h:commandButton action="#{beanProfesor.modificarCorreoProfesor}" value="Guardar" style="background: #4CAF50;"/>
-                    <h:outputText value="Ingresa tu nueva contraseña"/> 
-                    <h:inputSecret value="#{beanProfesor.PContrasenha}"/><h:commandButton action="#{beanProfesor.modificarContraseñaProfesor}" value="Guardar" style="background: #4CAF50;"/>
-                    <h:commandButton action="#{beanMovimiento.profesor}" value="Regresar" style="background: #FF0000;"/>
+                    <h:inputText value="#{beanProfesor.PCorreo}"/> 
+                    <h:commandButton action="#{beanProfesor.modificarCorreoProfesor()}" value="Guardar" style="background: #4CAF50;"/>
+                    <p><h:outputLabel value="Contraseña actual " style="font-weight:bold; color: black;"/><h:outputText value="#{beanProfesor.contrasenha}" style="font-weight:bold; color: black;"/></p>
+                    <h:outputText value="Ingresa tu nueva contraseña:"/> 
+                    <h:inputSecret value="#{beanProfesor.PContrasenha}"/> 
+                    <h:commandButton action="#{beanProfesor.modificarContraseñaProfesor()}" value="Guardar" style="background: #4CAF50;"/>
+                    <h:commandButton action="#{beanMovimiento.profesor()}" value="Regresar" style="background: #FF0000;"/>
                 </div>
 
 
