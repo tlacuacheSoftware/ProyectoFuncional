@@ -56,14 +56,13 @@
                 left:39%;
                 z-index:9999;
             }
-
+            
 
 
         </style>
     </h:head>
     <h:body>
         <div >
-
         </div>
         <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/slide3.jpg"  />
         <div class="form ">
@@ -71,26 +70,19 @@
             <h:form id="formLogin" >
                 <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
-                    <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.nombre}" style="font-weight:bold; color: black;"/></p>
-                    <h:outputText value="Ingresa tu nuevo nombre"/>
-                    <h:inputText value="#{beanModificarPerfil.nombre}"/>
+                   <h4>Nombre</h4>
+                   <h:inputText  value="#{beanRegistro.nombre}" />
+                    <h4>Correo</h4>
+                    <h:inputText  value="#{beanRegistro.correo}" />
+                    <h4>Contraseña</h4>
+                    <h:inputSecret  value="#{beanRegistro.contrasenha}"/>
+                    <h4>Confirmar contraseña</h4>
+                    <h:inputSecret  value="#{beanRegistro.contrasenha2}"/>
                     
-                    <p><h:outputLabel value="Correo actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.correo}" style="font-weight:bold; color: black;"/></p>
-                    <h:outputText value="Ingresa tu nuevo correo"/>
-                    <h:inputText value="#{beanModificarPerfil.correo}"/> 
-                    
-                    <h:outputText value="Ingresa tu nueva contraseña:"/> 
-                    <h:inputSecret value="#{beanModificarPerfil.contrasenha1}"/> 
-                    <h:outputText value="Ingresa tu nueva contraseña:"/> 
-                    <h:inputSecret value="#{beanModificarPerfil.contrasenha2}"/> 
-                    <h:commandButton action="#{beanModificarPerfil.modificarPerfil()}" value="Guardar" style="background: #4CAF50;"/>
-                    <h:commandButton action="#{beanIndex.INICIO_PROFESOR()}" value="Regresar" style="background: #FF0000;"/>
+                    <h:commandButton  value="Registrarse" action="#{beanRegistro.registrarProfesor()}" style="background:#4CAF50; color: #FFFFFF" />
+                    <h:commandButton  value="Cancelar" action="#{beanIndex.INDEX()}" style="background:#FF0000; color: #FFFFFF" />
                 </div>
-
-
-
             </h:form>
         </div>
-
     </h:body>
 </html>

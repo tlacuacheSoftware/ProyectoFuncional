@@ -1,20 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 24, 2016 2:06:58 PM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 8, 2016 10:24:12 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class name="modelo.Tipo" optimistic-lock="version" schema="public" table="tipo">
-    <id name="idTipo" type="int">
-      <column name="id_tipo"/>
-      <generator class="assigned"/>
-    </id>
-    <property name="STipo" type="string">
-      <column length="32" name="s_tipo"/>
-    </property>
-    <set fetch="select" inverse="true" lazy="true" name="actividads" table="actividad">
-      <key>
-        <column name="id_tipo"/>
-      </key>
-      <one-to-many class="modelo.Actividad"/>
-    </set>
-  </class>
+    <class name="modelo.Tipo" table="tipo" schema="public" optimistic-lock="version">
+        <id name="idTipo" type="int">
+            <column name="id_tipo" />
+            <generator class="increment" />
+        </id>
+        <property name="STipo" type="string">
+            <column name="s_tipo" length="32" />
+        </property>
+        <set name="actividads" table="actividad" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_tipo" />
+            </key>
+            <one-to-many class="modelo.Actividad" />
+        </set>
+    </class>
 </hibernate-mapping>

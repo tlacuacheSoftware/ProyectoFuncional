@@ -2,10 +2,10 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="tlacuachesoft" match-schema="public"/>
-  <table-filter match-name="tipo"/>
+  <table-filter match-name="actividad"/>
   <table-filter match-name="area"/>
   <table-filter match-name="profesor"/>
+  <table-filter match-name="tipo"/>
   <table-filter match-name="alumno"/>
   <table-filter match-name="solicitud"/>
-  <table-filter match-name="actividad"/>
 </hibernate-reverse-engineering>
