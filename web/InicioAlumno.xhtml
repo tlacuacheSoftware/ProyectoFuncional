@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:p="http://primefaces.org/ui">
+      
     <h:head>
         <title>Home Alumno</title>
         <style type="text/css">
@@ -30,20 +31,35 @@
                 font-size: 25px;
                 z-index: 50;
             }
+            
+            .ui-growl {
+                position:absolute;
+                top:50%;
+                left:39%;
+                z-index:9999;
+            }
 
 
         </style>
 
     </h:head>
-    
     <h:body>
-        <img id="pantalla-completa" alt="pantalla-completa" src="img/slider/computer-10.jpg" />
-        <h:form id="formInicioAlumno">
-            <p:growl id="messages" showDetail="true" sticky="true"  />
-            
-        <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: white;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: white;"/></p>
-        <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSessiones()}"/> 
-      </h:form>
+
+
+        <img id="pantalla-completa" alt="pantalla-completa" src="img/slider/p3.jpg" />
+
+        <div class="menu">
+            <h:form>
+                <p:growl id="messages" showDetail="true" sticky="true"  />
+                <p:menuButton  value="Menú"   >
+                    <p:menuitem value="Buscar" action="#{beanMovimiento.buscar()}" update="messages" />
+                    <p:menuitem value="Cerrar Sesión" action="#{beanLogout.cerrarSessiones()}" update="messages" />                    
+                </p:menuButton>
+            </h:form>
+        </div>
+        
+
+        
     </h:body>
 </html>
 

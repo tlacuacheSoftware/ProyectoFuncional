@@ -41,4 +41,10 @@ public class beanMovimiento {
     public String exito(){
         return "Exito";
     }
+    public String buscar(){
+        return "Buscar";
+    }
+    public String Mostrar(){
+        return "Mostrar";
+    }
 }

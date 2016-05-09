@@ -54,6 +54,10 @@
             <from-outcome>Index</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>Buscar</from-outcome>
+            <to-view-id>/Buscador.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/RegistraProfesor.xhtml</from-view-id>
@@ -86,6 +90,17 @@
         <navigation-case>
             <from-outcome>Profesor</from-outcome>
             <to-view-id>/InicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/Buscador.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Mostrar</from-outcome>
+            <to-view-id>/Buscador.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Exito</from-outcome>
+            <to-view-id>/InicioAlumno.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>
