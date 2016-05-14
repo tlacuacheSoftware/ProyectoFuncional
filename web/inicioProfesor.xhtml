@@ -54,6 +54,7 @@
                 <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
                 <p:menuButton  value="Menú"   >
                     <p:menuitem value="Modificar Datos" action="#{beanIndex.MODIFICAR_PERFIL()}" update="messages" />
+                    <p:menuitem value="Publicar Nueva Actividad" action="#{beanIndex.NUEVA_PUBLICACION()}" update="messages" />
                 </p:menuButton>
                 <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSesion()}"/> 
             </h:form>

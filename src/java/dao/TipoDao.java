@@ -1,6 +1,7 @@
 
 package dao;
 
+import java.util.List;
 import modelo.Tipo;
 
 /**
@@ -49,4 +50,13 @@ public class TipoDao {
         return obj;
     }
     
+    public List<Tipo> obtenerPorTipo(String tipo){
+        List<Tipo> list = null;
+        try{
+            list = dao.buscarPorAtributo("s_tipo", tipo);
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

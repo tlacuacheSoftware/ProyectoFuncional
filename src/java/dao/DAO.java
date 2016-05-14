@@ -49,6 +49,21 @@ public class DAO<E> {
         return l;
     }
     
+    public List<E> buscarPorAtributo(String atributo,String valor){
+        List<E> list = null;
+        String[] atributos,valores;
+        atributos = new String[1];
+        valores = new String[1];
+        atributos[0] = atributo;
+        valores[0] = valor;
+        try{
+            list = this.buscar(atributos, valores);
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
+    
     public boolean verificarExistencia(String atributos[], String valores[]){ 
         List<E> l = buscar(atributos, valores);
         if(l == null){

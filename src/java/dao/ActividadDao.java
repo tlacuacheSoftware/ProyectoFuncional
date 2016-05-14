@@ -1,6 +1,7 @@
 
 package dao;
 
+import java.util.List;
 import modelo.Actividad;
 
 /**
@@ -49,4 +50,33 @@ public class ActividadDao {
         return obj;
     }
     
+    public List<Actividad> obtenerPorProfesor(int id){
+        List<Actividad> list = null;
+        try{
+            list = dao.buscarPorAtributo("id_profesor", "" + id);
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
+    
+    public List<Actividad> obtenerPorArea(int id){
+        List<Actividad> list = null;
+        try{
+            list = dao.buscarPorAtributo("id_area", "" + id);
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
+    
+    public List<Actividad> obtenerPorTipo(int id){
+        List<Actividad> list = null;
+        try{
+            list = dao.buscarPorAtributo("id_tipo", "" + id);
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

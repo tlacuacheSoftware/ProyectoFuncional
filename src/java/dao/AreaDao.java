@@ -1,6 +1,7 @@
 
 package dao;
 
+import java.util.List;
 import modelo.Area;
 
 /**
@@ -49,4 +50,13 @@ public class AreaDao {
         return obj;
     }
     
+    public List<Area> obtenerPorArea(String area){
+        List<Area> list = null;
+        try{
+            list = dao.buscarPorAtributo("s_area", area);
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

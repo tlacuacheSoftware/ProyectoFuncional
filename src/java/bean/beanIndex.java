@@ -19,6 +19,7 @@ public class beanIndex {
     public static final String INICIO_ALUMNO = "inicioalumno";
     public static final String INICIO_PROFESOR = "inicioprofesor";
     public static final String MODIFICAR_PERFIL = "modificarperfil";
+    public static final String NUEVA_PUBLICACION = "nuevapublicacion";
     
     public String INDEX() {
         return INDEX;
@@ -46,5 +47,9 @@ public class beanIndex {
 
     public String MODIFICAR_PERFIL() {
         return MODIFICAR_PERFIL;
+    }
+    
+    public String NUEVA_PUBLICACION(){
+        return NUEVA_PUBLICACION;
     }
 }
