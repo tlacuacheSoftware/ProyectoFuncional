@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
+// Generated May 8, 2016 10:24:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -17,7 +17,7 @@ public class Actividad  implements java.io.Serializable {
      private Tipo tipo;
      private Integer ICupomaximo;
      private String SDescripciom;
-     private Set<Solicitud> solicituds = new HashSet<Solicitud>(0);
+     private Set solicituds = new HashSet(0);
 
     public Actividad() {
     }
@@ -26,7 +26,7 @@ public class Actividad  implements java.io.Serializable {
     public Actividad(int idActividad) {
         this.idActividad = idActividad;
     }
-    public Actividad(int idActividad, Area area, Profesor profesor, Tipo tipo, Integer ICupomaximo, String SDescripciom, Set<Solicitud> solicituds) {
+    public Actividad(int idActividad, Area area, Profesor profesor, Tipo tipo, Integer ICupomaximo, String SDescripciom, Set solicituds) {
        this.idActividad = idActividad;
        this.area = area;
        this.profesor = profesor;
@@ -78,11 +78,11 @@ public class Actividad  implements java.io.Serializable {
     public void setSDescripciom(String SDescripciom) {
         this.SDescripciom = SDescripciom;
     }
-    public Set<Solicitud> getSolicituds() {
+    public Set getSolicituds() {
         return this.solicituds;
     }
     
-    public void setSolicituds(Set<Solicitud> solicituds) {
+    public void setSolicituds(Set solicituds) {
         this.solicituds = solicituds;
     }
 

@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
+// Generated May 8, 2016 10:24:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -15,8 +15,8 @@ public class Profesor  implements java.io.Serializable {
      private String SNombre;
      private String SContrasenha;
      private String SCorreo;
-     private Set<Solicitud> solicituds = new HashSet<Solicitud>(0);
-     private Set<Actividad> actividads = new HashSet<Actividad>(0);
+     private Set solicituds = new HashSet(0);
+     private Set actividads = new HashSet(0);
 
     public Profesor() {
     }
@@ -25,7 +25,7 @@ public class Profesor  implements java.io.Serializable {
     public Profesor(int idProfesor) {
         this.idProfesor = idProfesor;
     }
-    public Profesor(int idProfesor, String SNombre, String SContrasenha, String SCorreo, Set<Solicitud> solicituds, Set<Actividad> actividads) {
+    public Profesor(int idProfesor, String SNombre, String SContrasenha, String SCorreo, Set solicituds, Set actividads) {
        this.idProfesor = idProfesor;
        this.SNombre = SNombre;
        this.SContrasenha = SContrasenha;
@@ -62,18 +62,18 @@ public class Profesor  implements java.io.Serializable {
     public void setSCorreo(String SCorreo) {
         this.SCorreo = SCorreo;
     }
-    public Set<Solicitud> getSolicituds() {
+    public Set getSolicituds() {
         return this.solicituds;
     }
     
-    public void setSolicituds(Set<Solicitud> solicituds) {
+    public void setSolicituds(Set solicituds) {
         this.solicituds = solicituds;
     }
-    public Set<Actividad> getActividads() {
+    public Set getActividads() {
         return this.actividads;
     }
     
-    public void setActividads(Set<Actividad> actividads) {
+    public void setActividads(Set actividads) {
         this.actividads = actividads;
     }
 

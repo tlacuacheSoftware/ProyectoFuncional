@@ -71,15 +71,20 @@
             <h:form id="formLogin" >
                 <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
-                    Nombre:
+                    <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.nombre}" style="font-weight:bold; color: black;"/></p>
                     <h:outputText value="Ingresa tu nuevo nombre"/>
-                    <h:outputText value="#{beanProfesor.nombre}"/>
+                    <h:inputText value="#{beanModificarPerfil.nombre}"/>
+                    
+                    <p><h:outputLabel value="Correo actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.correo}" style="font-weight:bold; color: black;"/></p>
                     <h:outputText value="Ingresa tu nuevo correo"/>
-                    <h:outputText value="#{beanProfesor.PCorreo}"/> 
-                    <h:outputText value="Ingresa tu nueva contraseña"/> 
-                    <h:inputSecret value="#{beanProfesor.PContrasenha}"/> 
-                    <h:commandButton action="#{beanProfesor.modificarProfesor}" value="Guardar" style="background: #4CAF50;"/>
-                    <h:commandButton action="#{beanMovimiento.profesor()}" value="Cancelar" style="background: #FF0000;"/>
+                    <h:inputText value="#{beanModificarPerfil.correo}"/> 
+                    
+                    <h:outputText value="Ingresa tu nueva contraseña:"/> 
+                    <h:inputSecret value="#{beanModificarPerfil.contrasenha1}"/> 
+                    <h:outputText value="Ingresa tu nueva contraseña:"/> 
+                    <h:inputSecret value="#{beanModificarPerfil.contrasenha2}"/> 
+                    <h:commandButton action="#{beanModificarPerfil.modificarPerfil()}" value="Guardar" style="background: #4CAF50;"/>
+                    <h:commandButton action="#{beanIndex.INICIO_PROFESOR()}" value="Regresar" style="background: #FF0000;"/>
                 </div>
 
 

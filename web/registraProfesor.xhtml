@@ -63,7 +63,6 @@
     </h:head>
     <h:body>
         <div >
-
         </div>
         <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/slide3.jpg"  />
         <div class="form ">
@@ -72,22 +71,18 @@
                 <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
                    <h4>Nombre</h4>
-                    <h:inputText  value="#{profesorBean.ANombre}" />
+                   <h:inputText  value="#{beanRegistro.nombre}" />
                     <h4>Correo</h4>
-                    <h:inputText  value="#{profesorBean.ACorreo}" />
+                    <h:inputText  value="#{beanRegistro.correo}" />
                     <h4>Contraseña</h4>
-                    <h:inputSecret  value="#{profesorBean.AContrasenha}"/>
+                    <h:inputSecret  value="#{beanRegistro.contrasenha}"/>
                     <h4>Confirmar contraseña</h4>
-                    <h:inputSecret  value="#{profesorBean.AContrasenha2}"/>
+                    <h:inputSecret  value="#{beanRegistro.contrasenha2}"/>
                     
-                    <h:commandButton  value="Registrarse" action="#{profesorBean.guardarProfesor()}" style="background:#4CAF50; color: #FFFFFF" />
-                    <h:commandButton  value="Cancelar" action="#{beanMovimiento.salir}" style="background:#FF0000; color: #FFFFFF" />
+                    <h:commandButton  value="Registrarse" action="#{beanRegistro.registrarProfesor()}" style="background:#4CAF50; color: #FFFFFF" />
+                    <h:commandButton  value="Cancelar" action="#{beanIndex.INDEX()}" style="background:#FF0000; color: #FFFFFF" />
                 </div>
-
-
-
             </h:form>
         </div>
-
     </h:body>
 </html>

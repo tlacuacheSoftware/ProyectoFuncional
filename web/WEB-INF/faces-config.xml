@@ -6,90 +6,292 @@
     <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>Login</from-outcome>
-            <to-view-id>/Login.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Index</from-outcome>
+            <from-outcome>index</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>RegistrarProfesor</from-outcome>
-            <to-view-id>/RegistraProfesor.xhtml</to-view-id>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>RegistrarAlumno</from-outcome>
-            <to-view-id>/RegistraAlumno.xhtml</to-view-id>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/Login.xhtml</from-view-id>
-        <navigation-case>
-            <from-outcome>Alumno</from-outcome>
-            <to-view-id>/InicioAlumno.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Profesor</from-outcome>
-            <to-view-id>/InicioProfesor.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>Index</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
-        </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/InicioProfesor.xhtml</from-view-id>
+        <from-view-id>/login.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>index</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>Modificar</from-outcome>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
             <to-view-id>/modificarProfesor.xhtml</to-view-id>
         </navigation-case>
-    </navigation-rule>
-    <navigation-rule>
-        <from-view-id>/InicioAlumno.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>Index</from-outcome>
-            <to-view-id>/index.xhtml</to-view-id>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/RegistraProfesor.xhtml</from-view-id>
+        <from-view-id>/registraAlumno.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>Index</from-outcome>
+            <from-outcome>index</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>RP</from-outcome>
-            <to-view-id>/RegistraProfesor.xhtml</to-view-id>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
-        <from-view-id>/RegistraAlumno.xhtml</from-view-id>
+        <from-view-id>/registraProfesor.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>Index</from-outcome>
+            <from-outcome>index</from-outcome>
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>RP</from-outcome>
-            <to-view-id>/RegistraAlumno.xhtml</to-view-id>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/inicioAlumno.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/inicioProfesor.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/modificarProfesor.xhtml</from-view-id>
         <navigation-case>
-            <from-outcome>Modificar</from-outcome>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
             <to-view-id>/modificarProfesor.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>Exito</from-outcome>
-            <to-view-id>/InicioProfesor.xhtml</to-view-id>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/nuevaPublicacion.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-outcome>Profesor</from-outcome>
-            <to-view-id>/InicioProfesor.xhtml</to-view-id>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/misActividades.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>

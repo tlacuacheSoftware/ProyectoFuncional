@@ -72,16 +72,16 @@
                 <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
                    <h4>Nombre</h4>
-                    <h:inputText  value="#{alumnoBean.ANombre}" />
+                   <h:inputText  value="#{beanRegistro.nombre}" />
                     <h4>Correo</h4>
-                    <h:inputText  value="#{alumnoBean.ACorreo}" />
+                    <h:inputText  value="#{beanRegistro.correo}" />
                     <h4>Contraseña</h4>
-                    <h:inputSecret value="#{alumnoBean.AContrasenha}" id="contra1"/>
+                    <h:inputSecret  value="#{beanRegistro.contrasenha}"/>
                     <h4>Confirmar contraseña</h4>
-                    <h:inputSecret  value="#{alumnoBean.AContrasenha2}" id="contra2"/>
+                    <h:inputSecret  value="#{beanRegistro.contrasenha2}"/>
                     
-                    <h:commandButton  value="Registrarse" action="#{alumnoBean.guardarAlumno()}" style="background:#4CAF50; color: #FFFFFF" />
-                    <h:commandButton  value="Cancelar" action="#{beanMovimiento.salir}" style="background:#FF0000; color: #FFFFFF" />
+                    <h:commandButton  value="Registrarse" action="#{beanRegistro.registrarAlumno()}" style="background:#4CAF50; color: #FFFFFF" />
+                    <h:commandButton  value="Cancelar" action="#{beanIndex.INDEX()}" style="background:#FF0000; color: #FFFFFF" />
                 </div>
 
 

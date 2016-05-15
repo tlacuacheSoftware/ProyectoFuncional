@@ -88,13 +88,13 @@
                 <h3>Bienvenido al sistema</h3>
                 <h4>Correo</h4>
                 
-                    <h:inputText  value="#{beanLogin.SCorreo}" />
+                <h:inputText  value="#{beanLogin.correo}" />
                     <h4>Contraseña</h4>
-                    <h:inputSecret  value="#{beanLogin.SContrasenha}"/>
+                    <h:inputSecret  value="#{beanLogin.contrasenha}"/>
                 </div>
                 <div class="boton">
-                <h:commandButton id ="boton" value="Ingresar" action="#{beanLogin.login()}" style="background: #4CAF50;"/>
-                <h:commandButton id ="boton1" value="Cancelar" action="#{beanMovimiento.salir()}" style="background: #FF0000;"/>
+                    <h:commandButton id ="boton" value="Ingresar" action="#{beanLogin.login()}" style="background: #4CAF50;"/>
+                    <h:commandButton id ="boton1" value="Cancelar" action="#{beanIndex.INDEX()}" style="background: #FF0000;"/>
                 </div>
             </h:form>
         </div>
