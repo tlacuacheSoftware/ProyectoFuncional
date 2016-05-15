@@ -177,6 +177,10 @@
             <from-outcome>nuevapublicacion</from-outcome>
             <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/inicioProfesor.xhtml</from-view-id>
@@ -292,6 +296,13 @@
         <navigation-case>
             <from-outcome>inicioprofesor</from-outcome>
             <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/verActividades.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>

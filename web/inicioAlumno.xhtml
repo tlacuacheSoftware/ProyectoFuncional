@@ -38,12 +38,16 @@
     
     <h:body>
         <img id="pantalla-completa" alt="pantalla-completa" src="img/slider/computer-10.jpg" />
-        <h:form id="formInicioAlumno">
-            <p:growl id="messages" showDetail="true" sticky="true"  />
-            
-        <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: white;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: white;"/></p>
-        <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSesion()}"/> 
-      </h:form>
+        <div class="menu">
+            <h:form>
+                <p:growl id="messages" showDetail="true" sticky="true"  />
+                <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
+                <p:menuButton  value="Menú"   >
+                    <p:menuitem value="Ver Todas las Actividades" action="#{beanIndex.VER_ACTIVIDADES}" update="messages" />
+                </p:menuButton>
+                <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSesion()}"/> 
+            </h:form>
+        </div>
     </h:body>
 </html>
 

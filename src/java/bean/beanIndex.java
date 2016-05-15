@@ -21,6 +21,7 @@ public class beanIndex {
     public static final String MODIFICAR_PERFIL = "modificarperfil";
     public static final String NUEVA_PUBLICACION = "nuevapublicacion";
     public static final String MIS_ACTIVIDADES = "misactividades";
+    public static final String VER_ACTIVIDADES = "veractividades";
     
     public String INDEX() {
         return INDEX;
@@ -56,5 +57,9 @@ public class beanIndex {
     
     public String MIS_ACTIVIDADES(){
         return MIS_ACTIVIDADES;
+    }
+    
+    public String VER_ACTIVIDADES(){
+        return VER_ACTIVIDADES;
     }
 }

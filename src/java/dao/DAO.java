@@ -27,6 +27,25 @@ public class DAO<E> {
         this.id = id;
     }
     
+    public List<E> getAll(){
+        List<E> l = null;
+        String hql;
+        Query query; 
+        try{
+            session.getTransaction().begin();
+            hql = "from " + tabla;
+            query = session.createQuery(hql);
+            if(!query.list().isEmpty()){
+                l = (List<E>)query.list();
+            }  
+            session.getTransaction().commit();
+        }catch(Exception e){
+            session.getTransaction().rollback();
+            throw e;
+        }
+        return l;
+    }
+    
     public List<E> buscar(String[] atributos,String[] valores){
         List<E> l = null;
         String hql;

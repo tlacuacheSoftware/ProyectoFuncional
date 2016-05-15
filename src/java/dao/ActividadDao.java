@@ -79,4 +79,14 @@ public class ActividadDao {
         }
         return list;
     }
+    
+    public List<Actividad> obtenerTodas(){
+        List<Actividad> list = null;
+        try{
+            list = dao.getAll();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

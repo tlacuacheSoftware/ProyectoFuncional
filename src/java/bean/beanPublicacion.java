@@ -136,6 +136,12 @@ public class beanPublicacion {
         resultado = dao.obtenerPorProfesor(id);
         return resultado;
     }
+    
+    public List<Actividad> mostrarPublicacionesAlumno(){
+        List<Actividad> resultado;
+        resultado = dao.obtenerTodas();
+        return resultado;
+    }
 
     private String checkCampos(boolean flag){
         try{
