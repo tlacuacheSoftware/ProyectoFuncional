@@ -1,4 +1,3 @@
-
 package bean;
 
 
@@ -17,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 public class beanLogout {
 
     private String usuario;
+    private int id;
     private final HttpServletRequest httpServletRequest;
     private final FacesContext faceContext;
     private FacesMessage message;
@@ -25,6 +25,7 @@ public class beanLogout {
         faceContext = FacesContext.getCurrentInstance();
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
         usuario = httpServletRequest.getSession().getAttribute("sesionNombre").toString();
+        id = (int)httpServletRequest.getSession().getAttribute("id");
     }
 
     public String cerrarSesion() {
@@ -42,4 +43,13 @@ public class beanLogout {
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
 }

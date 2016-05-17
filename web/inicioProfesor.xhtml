@@ -56,8 +56,8 @@
                     <p:menuitem value="Modificar Datos" action="#{beanIndex.MODIFICAR_PERFIL()}" update="messages" />
                     <p:menuitem value="Publicar Nueva Actividad" action="#{beanIndex.NUEVA_PUBLICACION()}" update="messages" />
                     <p:menuitem value="Mis Actividades" action="#{beanIndex.MIS_ACTIVIDADES()}" update="messages" />
+                    <p:menuitem value="Salir" action="#{beanLogout.cerrarSesion()}" update="messages" />
                 </p:menuButton>
-                <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSesion()}"/> 
             </h:form>
         </div>
         

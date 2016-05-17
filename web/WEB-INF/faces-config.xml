@@ -181,6 +181,10 @@
             <from-outcome>veractividades</from-outcome>
             <to-view-id>/verActividades.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>misolicitud</from-outcome>
+            <to-view-id>/miSolicitud.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/inicioProfesor.xhtml</from-view-id>
@@ -300,6 +304,17 @@
     </navigation-rule>
     <navigation-rule>
         <from-view-id>/verActividades.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/miSolicitud.xhtml</from-view-id>
         <navigation-case>
             <from-outcome>inicioalumno</from-outcome>
             <to-view-id>/inicioAlumno.xhtml</to-view-id>

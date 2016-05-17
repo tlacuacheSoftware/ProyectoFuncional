@@ -12,7 +12,6 @@
                 padding: 0;
                 margin: 0;
             }
-
             #pantalla-completa {
                 z-index: -999;
                 width: 100%;
@@ -30,8 +29,6 @@
                 font-size: 25px;
                 z-index: 50;
             }
-
-
         </style>
 
     </h:head>
@@ -41,13 +38,17 @@
         <div class="menu">
             <h:form>
                 <p:growl id="messages" showDetail="true" sticky="true"  />
-                <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
+                <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color:#ffffff;"/>
+                    <h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: #ffffff;"/>
+                </p>
                 <p:menuButton  value="Menú"   >
-                    <p:menuitem value="Ver Todas las Actividades" action="#{beanIndex.VER_ACTIVIDADES}" update="messages" />
+                    <p:menuitem value="Mi Solicitud" action="#{beanIndex.MI_SOLICITUD()}" />
+                    <p:menuitem value="Actividades" action="#{beanIndex.VER_ACTIVIDADES()}" />
+                    <p:menuitem value="Salir " action="#{beanLogout.cerrarSesion()}"/>
+                    
                 </p:menuButton>
-                <h:commandButton id="Salir" value="Salir" action="#{beanLogout.cerrarSesion()}"/> 
+                
             </h:form>
         </div>
     </h:body>
 </html>
-

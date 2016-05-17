@@ -1,8 +1,10 @@
 
 package dao;
 
+import java.util.LinkedList;
 import java.util.List;
 import modelo.Alumno;
+import modelo.Solicitud;
 
 /**
  * WRAPPER para DAO en la tabla alumno.
@@ -87,4 +89,40 @@ public class AlumnoDao {
         }
         return aux;
     }
+    
+    public List<Alumno> recuperarNombres(List<Solicitud> lista){
+        List<Alumno> resultado = new LinkedList<Alumno>();
+        Solicitud temporal = new Solicitud();
+        Alumno temp = new Alumno();
+        int i = 0;
+        int tamaño = lista.size();
+//        resultado = aux(lista, temporal, temp);
+        while(i < tamaño && lista.get(i)!= null ){
+            temporal = lista.get(i);
+            temp = temporal.getAlumno();
+            System.out.println(temp.getSNombre());
+            resultado.add(temp);
+            System.out.println("Entre "+ i + " veces");
+            i++;
+        }
+        return resultado;
+    }
+    
+//    public List<Alumno> aux(List<Solicitud> list, Solicitud temporal, Alumno tempo){
+//        System.out.println("Entre aquí otra vez");
+//        List<Alumno> resultado = new LinkedList<>();
+//        int i = 0;
+//        int tamaño = list.size();
+//        while(i<tamaño){
+//            temporal = list.get(i);
+//            //list.add(i, temporal);
+//            tempo = temporal.getAlumno();
+//            System.out.println(tempo.getSNombre());
+//            resultado.add(tempo);
+//            System.out.println("Entre "+ i + " veces");
+//            i++;
+//        }
+//        
+//        return resultado;
+//    }
 }
