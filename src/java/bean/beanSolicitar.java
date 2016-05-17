@@ -120,6 +120,13 @@ public class beanSolicitar {
         daoSolicitud.borrar(daoSolicitud.obtenerPorID(id));
         message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Solicitud eliminada correctamente", null);
         faceContext.addMessage(null, message);
+        return beanIndex.MIS_ACTIVIDADES;
+    }
+    
+    public String eliminarSolicitudA(int id){
+        daoSolicitud.borrar(daoSolicitud.obtenerPorID(id));
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Solicitud eliminada correctamente", null);
+        faceContext.addMessage(null, message);
         return beanIndex.INICIO_ALUMNO;
     }
     
