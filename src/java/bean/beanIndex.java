@@ -3,10 +3,12 @@ package bean;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+  
+
 
 /**
  *
- * @author esmeralda
+ * @author 
  */
 @ManagedBean
 @RequestScoped
