@@ -32,9 +32,9 @@
                 position: relative;
                 z-index: 1;
                 background: #FFFFFF;
-                max-width: 250px;
+                max-width: 360px;
                 margin: 0 auto 100px;
-                padding: 30px;
+                padding: 45px;
                 text-align: center;
                 box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
             }
@@ -47,7 +47,21 @@
                 margin: 0 0 15px;
                 padding: 15px;
                 box-sizing: border-box;
-                font-size: 13px;
+                font-size: 14px;
+            }
+            .campos {
+                font-family: "Roboto", sans-serif;
+                text-transform: uppercase;
+                outline: 0;
+                background: #fff;
+                width: 100%;
+                border: 0;
+                padding: 15px;
+                color: black;
+                font-size: 14px;
+                -webkit-transition: all 0.3 ease;
+                transition: all 0.3 ease;
+                cursor: pointer;
             }
             
             .ui-growl {
@@ -56,8 +70,8 @@
                 left:39%;
                 z-index:9999;
             }
-            
 
+            
 
         </style>
     </h:head>
@@ -65,29 +79,31 @@
         <div >
 
         </div>
-        <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/slide3.jpg"  />
+        <img id="full-screen-background-image" alt="full-screen-background-image" src="img/slider/slide2.jpg"  />
         <div class="form ">
 
             <h:form id="formLogin" >
                 <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
-                   <h4>Nombre</h4>
-                   <h:inputText  value="#{beanRegistro.nombre}" />
-                    <h4>Correo</h4>
-                    <h:inputText  value="#{beanRegistro.correo}" />
+                <h3>Bienvenido al sistema</h3>
+                <h4>Correo</h4>
+                
+                <h:inputText  value="#{beanLogin.correo}" />
                     <h4>Contraseña</h4>
-                    <h:inputSecret  value="#{beanRegistro.contrasenha}"/>
-                    <h4>Confirmar contraseña</h4>
-                    <h:inputSecret  value="#{beanRegistro.contrasenha2}"/>
-                    
-                    <h:commandButton  value="Registrarse" action="#{beanRegistro.registrarAlumno()}" style="background:#4CAF50; color: #FFFFFF" />
-                    <h:commandButton  value="Cancelar" action="#{beanIndex.INDEX()}" style="background:#FF0000; color: #FFFFFF" />
+                    <h:inputSecret  value="#{beanLogin.contrasenha}"/>
                 </div>
-
-
-
+                <div class="boton">
+                    <h:commandButton id ="boton" value="Ingresar" action="#{beanLogin.login()}" style="background: #4CAF50;"/>
+                    <h:commandButton id ="boton1" value="Cancelar" action="#{beanIndex.INDEX()}" style="background: #FF0000;"/>
+                </div>
             </h:form>
         </div>
 
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jPushMenu.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script src="js/main.js"></script>
     </h:body>
 </html>

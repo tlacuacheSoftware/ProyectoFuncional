@@ -1,73 +1,90 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Dao;
 
-import org.hibernate.Session;
+package dao;
 
-import logica.HibernateUtil;
+import java.util.List;
 import modelo.Alumno;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
 
 /**
- *
- * @author luis
+ * WRAPPER para DAO en la tabla alumno.
+ * @author esmeralda
  */
 public class AlumnoDao {
-    
-    private  static Session session;
-    private Transaction tx;
-    
-//    private void init(){
-//        session = HibernateUtil.getSessionFactory().getCurrentSession();
-//        tx = session.beginTransaction();
-//    }
-            
 
-    public AlumnoDao(){
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
+    private DAO<Alumno> dao;
+    
+    public AlumnoDao() {
+        dao = new DAO("Alumno", "id_alumno");
     }
-
-    public void indroducirAlumno(String nombre, String contrasena, String correo) {
-
-        Session session = HibernateUtil.getSessionFactory().openSession();
-
-        Alumno n = new Alumno();
-
-        n.setSNombre(nombre);
-        n.setSContrasenha(contrasena);
-        n.setSCorreo(correo);
-
+    
+    public void insertar (Alumno obj){
         try {
-            session.beginTransaction();
-            session.save(n);
-            session.getTransaction().commit();
+            dao.insertar(obj);
         } catch (Exception e) {
-            System.out.println("Error del dao de Alumno");
-            session.getTransaction().rollback();
+            throw e;
         }
     }
     
-    public Alumno Verificar(Alumno alumno){
-        session.getTransaction().begin();
-        Alumno f=null;
+    public void actualizar (Alumno obj){
+        try {
+            dao.actualizar(obj);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+    
+    public void borrar (Alumno obj){
+        try {
+            dao.borrar(obj);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+    
+    public Alumno obtenerPorID(int id){
+        Alumno obj;
         try{
-     String hql= "from Alumno where s_correo= '" +alumno.getSCorreo()+"' and s_contrasenha= '"+alumno.getSContrasenha()+"'";
-     Query query=session.createQuery(hql);
-     if(!query.list().isEmpty()){
-         f=(Alumno)query.list().get(0);
-         
-     }  
+            obj = dao.obtenerPorID(id);
         }catch(Exception e){
             throw e;
         }
-        session.getTransaction().commit();
-     
-     return f;
+        return obj;
     }
-
+    
+    public boolean existeCorreo(String correo){
+        String[] atributos,valores;
+        boolean existe;
+        atributos = new String[1];
+        valores = new String[1];
+        atributos[0] = "s_correo";
+        valores[0] = correo;
+        try{
+            existe = dao.verificarExistencia(atributos, valores);
+        }catch(Exception e){
+            throw e;
+        }
+        return existe;
+    }
+    
+    public Alumno verificarAlumno(Alumno obj){
+        String[] atributos,valores;
+        List<Alumno> list;
+        Alumno aux = null;
+        atributos = new String[2];
+        valores = new String[2];
+        atributos[0] = "s_correo";
+        valores[0] = obj.getSCorreo();
+        atributos[1] = "s_contrasenha";
+        valores[1] = obj.getSContrasenha();
+        try{
+            list = dao.buscar(atributos, valores);
+            if(list != null){
+                if(!list.isEmpty()){
+                    aux = list.get(0);
+                }
+            }
+        }catch(Exception e){
+            throw e;
+        }
+        return aux;
+    }
 }
