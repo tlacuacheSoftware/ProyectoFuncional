@@ -41,9 +41,14 @@
         <div class="menu">
             <h:form>
                 <p:growl id="messages" showDetail="true" sticky="true"  />
-                <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
+                <p><h:outputLabel value="Bienvenido " style="font-weight:bold; color:#ffffff;"/>
+                    <h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: #ffffff;"/>
+                    <h:outputText value="   #{beanLogout.id}" style="color: #ffffff"/>
+                </p>
                 <p:menuButton  value="Menú"   >
-                    <p:menuitem value="Ver Todas las Actividades" action="#{beanIndex.VER_ACTIVIDADES}" update="messages" />
+                    <p:menuitem value="Actividades" action="#{beanIndex.VER_ACTIVIDADES()}" />
+                    
+                   
                     <p:menuitem value="Salir " action="#{beanLogout.cerrarSesion()}"/>
                     
                 </p:menuButton>

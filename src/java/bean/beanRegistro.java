@@ -138,12 +138,17 @@ public class beanRegistro {
         }
         return "";
     }
-    
+    /**
+     * validar correo
+     * @param c
+     * @param tabla
+     * @return 
+     */
     public static String validarCorreo(String c, boolean tabla){
-        AlumnoDao daoA;
-        ProfesorDao daoP;
+        AlumnoDao daoA; //crea un alumnodao para validar
+        ProfesorDao daoP; //crea un alumnodao para validar
         String aux;
-        if(c == null){
+        if(c == null){ // si es vacaio 
             return "Correo vacio.";
         }
         if(!c.endsWith(DOMINIO)){

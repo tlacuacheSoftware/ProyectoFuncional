@@ -304,5 +304,9 @@
             <from-outcome>inicioalumno</from-outcome>
             <to-view-id>/inicioAlumno.xhtml</to-view-id>
         </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
     </navigation-rule>
 </faces-config>
