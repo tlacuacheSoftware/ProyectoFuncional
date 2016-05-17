@@ -86,7 +86,7 @@ public class Actividad  implements java.io.Serializable {
         this.solicituds = solicituds;
     }
 
-
+    
 
 
 }

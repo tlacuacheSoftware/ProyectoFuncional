@@ -4,6 +4,7 @@ package bean;
 import dao.ActividadDao;
 import dao.AreaDao;
 import dao.ProfesorDao;
+import dao.SolicitudDao;
 import dao.TipoDao;
 import java.util.List;
 import javax.faces.application.FacesMessage;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import modelo.Actividad;
 import modelo.Area;
 import modelo.Profesor;
+import modelo.Solicitud;
 import modelo.Tipo;
 
 /**
@@ -31,6 +33,7 @@ public class beanPublicacion {
     private int cupoMaximo;
     private String descripcion;
     private final ActividadDao dao;
+    private final SolicitudDao solicitud;
     private final TipoDao daoT;
     private final AreaDao daoA;
     private final ProfesorDao daoP;
@@ -42,6 +45,7 @@ public class beanPublicacion {
         faceContext = FacesContext.getCurrentInstance();
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
         dao = new ActividadDao();
+        solicitud = new SolicitudDao();
         daoA = new AreaDao();
         daoT = new TipoDao();
         daoP = new ProfesorDao();
@@ -207,5 +211,18 @@ public class beanPublicacion {
         this.descripcion = descripcion;
     }
     
+    public int disponibles(int id){
+        List<Solicitud> resultado;
+        int respuesta;
+        resultado = solicitud.obtenerPorActividad(id);
+        if(resultado == null){
+            respuesta = 0;
+        }else{
+            
+            respuesta = resultado.size();
+        }
+        
+        return respuesta;
+    }
     
 }

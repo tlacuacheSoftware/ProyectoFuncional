@@ -78,9 +78,12 @@
             <h:form id="formLogin" >
                 <p:growl id="messages" showDetail="true" sticky="true"  />
                 <div class="campos">
-                    <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.nombre}" style="font-weight:bold; color: black;"/></p>
+                    <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
                     
                     <p:dataTable var="publicaciones" value="#{beanPublicacion.mostrarPublicacionesAlumno()}" resizableColumns="true" style="margin-top: 20px">
+                        <p:column style="width:16px">
+                            <p:rowToggler />
+                        </p:column>
                         <p:column headerText="Profesor">
                             <h:outputText value="#{publicaciones.profesor}" />
                         </p:column>
@@ -96,6 +99,21 @@
                         <p:column headerText="Cupo">
                             <h:outputText value="#{publicaciones.ICupomaximo}" />
                         </p:column>
+                        <p:rowExpansion>
+                            <p:panelGrid  columns="2" columnClasses="label,value" style="width:300px"> 
+                                <h:outputText value="Id:" />
+                                <h:outputText value="#{publicaciones.idActividad}" />
+                                
+                                <h:outputText value="Lugares Disponibles" />
+                                <h:outputText value="#{publicaciones.ICupomaximo-beanPublicacion.disponibles(publicaciones.idActividad)}" />
+ 
+                                <h:outputText value="Descripción" />
+                                <h:outputText value="#{publicaciones.SDescripciom}" />
+                                
+                                <h:commandButton value="Solicitar" actionListener="#{beanPublicacion.solicitar(publicaciones.idActividad)}"/>
+                                
+                            </p:panelGrid>
+                        </p:rowExpansion>
  
                     </p:dataTable>
                 </div>
