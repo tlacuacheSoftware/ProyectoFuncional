@@ -81,6 +81,10 @@
                     <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.nombre}" style="font-weight:bold; color: black;"/></p>
                     
                     <p:dataTable var="publicaciones" value="#{beanPublicacion.mostrarPublicacionesAlumno()}" resizableColumns="true" style="margin-top: 20px">
+                        <p:column headerText="Profesor">
+                            <h:outputText value="#{publicaciones.profesor}" />
+                        </p:column>
+                        
                         <p:column headerText="Tipo">
                             <h:outputText value="#{publicaciones.tipo}" />
                         </p:column>
@@ -93,9 +97,6 @@
                             <h:outputText value="#{publicaciones.ICupomaximo}" />
                         </p:column>
  
-                        <p:column headerText="Descripción">
-                            <h:outputText value="#{publicaciones.SDescripciom}" />
-                        </p:column>
                     </p:dataTable>
                 </div>
                 

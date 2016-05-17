@@ -49,6 +49,10 @@ public class Tipo  implements java.io.Serializable {
     public void setActividads(Set actividads) {
         this.actividads = actividads;
     }
+    
+    public String toString (){
+        return STipo;
+    }
 
 
 
