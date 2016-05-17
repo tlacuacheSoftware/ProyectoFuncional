@@ -59,4 +59,14 @@ public class AreaDao {
         }
         return list;
     }
+    
+    public List<Area> obtenerLista(){
+        List<Area> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

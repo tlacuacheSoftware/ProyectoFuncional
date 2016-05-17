@@ -87,4 +87,14 @@ public class ProfesorDao {
         }
         return aux;
     }
+    
+    public List<Profesor> obtenerLista(){
+        List<Profesor> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

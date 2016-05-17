@@ -84,6 +84,7 @@
             <h:form id="formLogin" >
                 <p:growl id="messages" showDetail="true" sticky="true"/>
                 <div class="campos">
+                    <h4>Actualizar Publicacion</h4>
                     <h:panelGrid columns="4">
 
                         <h:selectOneMenu value="#{beanPublicacion.area}" onchange="submit()"
@@ -106,7 +107,7 @@
                     <h:inputText value="#{beanPublicacion.descripcion}"/>
                 </div>
                 <div class="boton">
-                    <h:commandButton action="#{beanPublicacion.guardarPublicacion()}" value="Publicar" styleClass="boton" style="background: #4CAF50;"/>
+                    <h:commandButton action="#{beanPublicacion.actualizarPublicacion()}" value="Actualizar" styleClass="boton" style="background: #4CAF50;"/>
                     <h:commandButton action="#{beanIndex.INICIO_PROFESOR()}" value="Regresar" styleClass="boton" style="background: #FF0000;"/>
                 </div>
             </h:form>

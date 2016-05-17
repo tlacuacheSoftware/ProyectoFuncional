@@ -79,4 +79,14 @@ public class ActividadDao {
         }
         return list;
     }
+    
+    public List<Actividad> obtenerLista(){
+        List<Actividad> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

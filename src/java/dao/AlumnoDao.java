@@ -87,4 +87,14 @@ public class AlumnoDao {
         }
         return aux;
     }
+    
+    public List<Alumno> obtenerLista(){
+        List<Alumno> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

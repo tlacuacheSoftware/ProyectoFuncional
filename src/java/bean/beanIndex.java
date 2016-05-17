@@ -3,10 +3,12 @@ package bean;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+  
+
 
 /**
  *
- * @author esmeralda
+ * @author 
  */
 @ManagedBean
 @RequestScoped
@@ -20,7 +22,10 @@ public class beanIndex {
     public static final String INICIO_PROFESOR = "inicioprofesor";
     public static final String MODIFICAR_PERFIL = "modificarperfil";
     public static final String NUEVA_PUBLICACION = "nuevapublicacion";
-    
+    public static final String MIS_ACTIVIDADES = "misactividades";
+    public static final String VER_ACTIVIDADES = "veractividades";
+    public static final String BORRAR_PUBLICACION = "borrarpublicacion";
+    public static final String ACTUALIZAR_PUBLICACION = "actualizarpublicacion";
     public String INDEX() {
         return INDEX;
     }
@@ -52,4 +57,22 @@ public class beanIndex {
     public String NUEVA_PUBLICACION(){
         return NUEVA_PUBLICACION;
     }
+    
+    public String MIS_ACTIVIDADES(){
+        return MIS_ACTIVIDADES;
+    }
+    
+    public String VER_ACTIVIDADES(){
+        return VER_ACTIVIDADES;
+    }
+    
+    public String BORRAR_PUBLICACION(){
+        return BORRAR_PUBLICACION;
+    }
+    
+    public String ACTUALIZAR_PUBLICACION(){
+        return ACTUALIZAR_PUBLICACION;
+    }
+    
+    
 }

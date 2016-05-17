@@ -79,4 +79,14 @@ public class SolicitudDao {
         }
         return list;
     }
+    
+    public List<Solicitud> obtenerLista(){
+        List<Solicitud> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
 }

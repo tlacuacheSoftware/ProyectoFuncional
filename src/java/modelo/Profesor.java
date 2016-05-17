@@ -77,6 +77,9 @@ public class Profesor  implements java.io.Serializable {
         this.actividads = actividads;
     }
 
+    public String toString(){
+        return SNombre;
+    }
 
 
 

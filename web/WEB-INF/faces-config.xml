@@ -35,7 +35,23 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -70,7 +86,23 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -105,7 +137,23 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -140,7 +188,23 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -175,7 +239,23 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -210,7 +290,23 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -245,7 +341,23 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     <navigation-rule>
@@ -280,7 +392,227 @@
         </navigation-case>
         <navigation-case>
             <from-outcome>nuevapublicacion</from-outcome>
-            <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/misActividades.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/verActividades.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/borrarPublicacion.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/actualizarPublicacion.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroalumno</from-outcome>
+            <to-view-id>/registraAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>registroprofesor</from-outcome>
+            <to-view-id>/registraProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioalumno</from-outcome>
+            <to-view-id>/inicioAlumno.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>inicioprofesor</from-outcome>
+            <to-view-id>/inicioProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>modificarperfil</from-outcome>
+            <to-view-id>/modificarProfesor.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>nuevapublicacion</from-outcome>
+        <to-view-id>/nuevaPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>misactividades</from-outcome>
+            <to-view-id>/misActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>veractividades</from-outcome>
+            <to-view-id>/verActividades.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>borrarpublicacion</from-outcome>
+        <to-view-id>/borrarPublicacion.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>actualizarpublicacion</from-outcome>
+        <to-view-id>/actualizarPublicacion.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 </faces-config>
