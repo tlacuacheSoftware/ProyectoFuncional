@@ -80,44 +80,49 @@
                 <div class="campos">
                     <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.nombre}" style="font-weight:bold; color: black;"/></p>
                     
-                    <p:dataTable var="publicaciones" value="#{beanPublicacion.mostrarPublicaciones()}" resizableColumns="true" style="margin-top: 20px">
+                    <p:dataTable var="publicacion" value="#{beanPublicacion.mostrarPublicacionesProfesor()}" resizableColumns="true" style="margin-top: 20px">
                         <p:column style="width:16px">
                             <p:rowToggler />
                         </p:column>
                         <p:column headerText="Id Actividad">
-                            <h:outputText value="#{publicaciones.idActividad}" />
+                            <h:outputText value="#{publicacion.idActividad}" />
                         </p:column>
                         <p:column headerText="Tipo">
-                            <h:outputText value="#{publicaciones.tipo}" />
+                            <h:outputText value="#{publicacion.tipo}" />
                         </p:column>
  
                         <p:column headerText="Area">
-                            <h:outputText value="#{publicaciones.area}" />
+                            <h:outputText value="#{publicacion.area}" />
                         </p:column>
                         
                         <p:column headerText="Cupo">
-                            <h:outputText value="#{publicaciones.ICupomaximo}" />
+                            <h:outputText value="#{publicacion.ICupomaximo}" />
                         </p:column>
                         
                         <p:rowExpansion >
                             <p:panelGrid   columns="2" columnClasses="label,value" style="width:960px"> 
-                                <p:dataTable var="solicitudes" value="#{beanSolicitar.mostrarSolicitudP(publicaciones.idActividad)}">
+                                <p:dataTable var="solicitud" value="#{beanSolicitar.mostrarSolicitudP(publicacion.idActividad)}">
                                     <p:column headerText="Nombre">
-                                        <h:outputText value="#{solicitudes.alumno.SNombre}" />
+                                        <h:outputText value="#{solicitud.alumno.SNombre}" />
                                     </p:column>
                                     <p:column headerText="">
                                         <h:commandButton value="Cancelar Solicitud" 
-                                                         action ="#{beanSolicitar.eliminarSolicitud(solicitudes.idSolicitud)}"/>
+                                                         action ="#{beanSolicitar.eliminarSolicitud(solicitud.idSolicitud)}"/>
                                     </p:column>
                                 </p:dataTable>                                
                             </p:panelGrid>
                         </p:rowExpansion>
+                        <p:column headerText="Actualizar">
+                            <h:commandButton value="Actualizar" action="#{beanPublicacion.definirActividad(publicacion, true)}" />
+                        </p:column>
+                        <p:column headerText="Eliminar">
+                            <h:commandButton value="Eliminar" action="#{beanPublicacion.definirActividad(publicacion, false)}" />
+                        </p:column>
                     </p:dataTable>
                 </div>
-                
             </h:form>
-            <h:form id="boton">
-            <h:commandButton action="#{beanIndex.INICIO_PROFESOR()}" value="Regresar" style="background: #FF0000;"/>
+                <h:form id="boton">
+                <h:commandButton action="#{beanIndex.INICIO_PROFESOR()}" value="Regresar" style="background: #FF0000;"/>
             </h:form>
         </div>
 

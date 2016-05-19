@@ -70,13 +70,15 @@ public class beanPublicacion {
     private void definirActividad(){
         int idA;
         try{
-            idA = (int)httpServletRequest.getSession().getAttribute("sesionActividad");
-            actividad = dao.obtenerPorID(idA);
-            tipo = actividad.getTipo();
-            area = actividad.getArea();
-            descripcion = actividad.getSDescripciom();
-            cupoMaximo = actividad.getICupomaximo();
-            cupo = "" + cupoMaximo;
+            if(actividad == null){
+                idA = (int)httpServletRequest.getSession().getAttribute("sesionActividad");
+                actividad = dao.obtenerPorID(idA);
+                tipo = actividad.getTipo();
+                area = actividad.getArea();
+                descripcion = actividad.getSDescripciom();
+                cupoMaximo = actividad.getICupomaximo();
+                cupo = "" + cupoMaximo;
+            }
         }catch(Exception e){
         
         }
@@ -121,34 +123,39 @@ public class beanPublicacion {
                 profesor = daoP.obtenerPorID(id);
                 actividad.setICupomaximo(cupoMaximo);
                 actividad.setSDescripciom(descripcion);
-                actividad.setArea(area);
+                if(area != null){
+                    actividad.setArea(area);
+                }
+                if(tipo != null){
+                    actividad.setTipo(tipo);
+                }
                 actividad.setProfesor(profesor);
-                actividad.setTipo(tipo);
                 dao.actualizar(actividad);
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad actualizada exitosamente.", null);
                 faceContext.addMessage(null, message);
-                return beanIndex.NUEVA_PUBLICACION;
+                return beanIndex.ACTUALIZAR_PUBLICACION;
             }else{
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR,error, null);
                 faceContext.addMessage(null, message);
-                return beanIndex.NUEVA_PUBLICACION;
+                return beanIndex.ACTUALIZAR_PUBLICACION;
             }
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
-            return beanIndex.NUEVA_PUBLICACION;
+            return beanIndex.ACTUALIZAR_PUBLICACION;
         }
     }
     
     public String borrarPublicacion(){
         try{
+            dao.borrar(actividad);
             message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad borrada exitosamente.", null);
             faceContext.addMessage(null, message);
-            return beanIndex.NUEVA_PUBLICACION;
+            return beanIndex.BORRAR_PUBLICACION;
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
-            return beanIndex.NUEVA_PUBLICACION;
+            return beanIndex.BORRAR_PUBLICACION;
         }
     }
     
@@ -235,7 +242,6 @@ public class beanPublicacion {
             return beanIndex.MIS_ACTIVIDADES;
         }else{
             httpServletRequest.getSession().setAttribute("sesionActividad", actividad.getIdActividad());
-            int idA = (int)httpServletRequest.getSession().getAttribute("sesionActividad");
             if(actualizar){
                 return beanIndex.ACTUALIZAR_PUBLICACION;
             }else{
@@ -253,6 +259,7 @@ public class beanPublicacion {
     }
 
     public String getTipoSeleccionado(){
+        definirActividad();
         if(tipo == null){
             return "No se ha seleccionado tipo.";
         }else{
@@ -261,6 +268,7 @@ public class beanPublicacion {
     }
     
     public String getAreaSeleccionada(){
+        definirActividad();
         if(area == null){
             return "No se ha seleccionado area.";
         }else{
@@ -270,23 +278,31 @@ public class beanPublicacion {
     
     public void listenerArea(ValueChangeEvent e){
         Area aux;
-        String a = e.getNewValue().toString();
-        for(int i = 0; i < areas.size(); i++){
-            aux = areas.get(id);
-            if(aux.getSArea().equals(a)){
-                area = aux;
+        try{
+            String a = e.getNewValue().toString();
+            for(int i = 0; i < areas.size(); i++){
+                aux = areas.get(id);
+                if(aux.getSArea().equals(a)){
+                    area = aux;
+                }
             }
+        }catch(Exception ex){
+        
         }
     }
     
     public void listenerTipo(ValueChangeEvent e){
         Tipo aux;
-        String a = e.getNewValue().toString();
-        for(int i = 0; i < tipos.size(); i++){
-            aux = tipos.get(id);
-            if(aux.getSTipo().equals(a)){
-                tipo = aux;
+        try{
+            String a = e.getNewValue().toString();
+            for(int i = 0; i < tipos.size(); i++){
+                aux = tipos.get(id);
+                if(aux.getSTipo().equals(a)){
+                    tipo = aux;
+                }
             }
+        }catch(Exception ex){
+        
         }
     }
     
@@ -295,7 +311,9 @@ public class beanPublicacion {
     }
 
     public void setArea(Area area) {
-        this.area = area;
+        if(area != null){
+            this.area = area;
+        }
     }
 
     public Tipo getTipo() {
@@ -303,7 +321,9 @@ public class beanPublicacion {
     }
 
     public void setTipo(Tipo tipo) {
-        this.tipo = tipo;
+        if(tipo != null){
+            this.tipo = tipo;
+        }
     }
 
     public int getCupoMaximo() {

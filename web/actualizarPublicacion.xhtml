@@ -90,6 +90,7 @@
                         <h:selectOneMenu value="#{beanPublicacion.area}" onchange="submit()"
                             valueChangeListener="#{beanPublicacion.listenerArea}">
                             <f:converter converterId="areaConverter"/>
+                            <f:selectItem itemLabel="---Selecciona Area---" itemValue=""/>
                             <f:selectItems value="#{beanPublicacion.areas}" var="area" itemValue="#{area.SArea}"/>
                         </h:selectOneMenu>
                         <h:outputLabel value="#{beanPublicacion.areaSeleccionada}"/>
@@ -97,6 +98,7 @@
                         <h:selectOneMenu value="#{beanPublicacion.tipo}" onchange="submit()"
                             valueChangeListener="#{beanPublicacion.listenerTipo}">
                             <f:converter converterId="tipoConverter"/>
+                            <f:selectItem itemLabel="---Selecciona Tipo---" itemValue=""/>
                             <f:selectItems value="#{beanPublicacion.tipos}" var="area" itemValue="#{area.STipo}"/>
                         </h:selectOneMenu>
                         <h:outputLabel value="#{beanPublicacion.tipoSeleccionado}"/>
