@@ -10,7 +10,7 @@ import modelo.Tipo;
  */
 public class TipoDao {
 
-    private DAO<Tipo> dao;
+    private final DAO<Tipo> dao;
     
     public TipoDao() {
         dao = new DAO("Tipo", "id_tipo");
@@ -69,4 +69,5 @@ public class TipoDao {
         }
         return list;
     }
+    
 }

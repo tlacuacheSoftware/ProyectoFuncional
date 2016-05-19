@@ -1,8 +1,10 @@
 
 package dao;
 
+import java.util.LinkedList;
 import java.util.List;
 import modelo.Alumno;
+import modelo.Solicitud;
 
 /**
  * WRAPPER para DAO en la tabla alumno.
@@ -10,7 +12,7 @@ import modelo.Alumno;
  */
 public class AlumnoDao {
 
-    private DAO<Alumno> dao;
+    private final DAO<Alumno> dao;
     
     public AlumnoDao() {
         dao = new DAO("Alumno", "id_alumno");
@@ -88,6 +90,24 @@ public class AlumnoDao {
         return aux;
     }
     
+    public List<Alumno> recuperarNombres(List<Solicitud> lista){
+        List<Alumno> resultado = new LinkedList<>();
+        Solicitud temporal;
+        Alumno temp;
+        int i = 0;
+        int tamaño = lista.size();
+//        resultado = aux(lista, temporal, temp);
+        while(i < tamaño && lista.get(i)!= null ){
+            temporal = lista.get(i);
+            temp = temporal.getAlumno();
+            System.out.println(temp.getSNombre());
+            resultado.add(temp);
+            System.out.println("Entre "+ i + " veces");
+            i++;
+        }
+        return resultado;
+    }
+    
     public List<Alumno> obtenerLista(){
         List<Alumno> list = null;
         try{
@@ -97,4 +117,5 @@ public class AlumnoDao {
         }
         return list;
     }
+    
 }

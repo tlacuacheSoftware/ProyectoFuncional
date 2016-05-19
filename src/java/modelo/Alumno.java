@@ -10,7 +10,6 @@ import java.util.Set;
  */
 public class Alumno  implements java.io.Serializable {
 
-
      private int idAlumno;
      private String SNombre;
      private String SContrasenha;
@@ -68,9 +67,4 @@ public class Alumno  implements java.io.Serializable {
         this.solicituds = solicituds;
     }
 
-
-
-
 }
-
-

@@ -93,15 +93,40 @@ public class beanSolicitar {
         daoSolicitudDao = new SolicitudDao();
         // guardamos la la lista de los alumnos que estas en ese curso
         List<Solicitud> lis = daoSolicitudDao.obtenerPorAlumno(id_Alumno);
-
+        return lis == null;
+    }
+    
+    public Solicitud buscarIdPorIdAlumno(int id_Alumno){
+        Solicitud resultado;
+        resultado = daoSolicitud.obtenerPorAlumno(id_Alumno).get(0);
+        return resultado;
+    }
+    
+    public List<Solicitud> mostrarSolicitud(){
+        List<Solicitud> resultado;
+        resultado = daoSolicitud.obtenerPorAlumno(id);
+        return resultado;
+    }
+    
+    public String eliminarSolicitud(int id){
+        daoSolicitud.borrar(daoSolicitud.obtenerPorID(id));
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Solicitud eliminada correctamente", null);
+        faceContext.addMessage(null, message);
+        return beanIndex.MIS_ACTIVIDADES;
+    }
+    
+    public String eliminarSolicitudA(int id){
+        daoSolicitud.borrar(daoSolicitud.obtenerPorID(id));
+        message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Solicitud eliminada correctamente", null);
+        faceContext.addMessage(null, message);
+        return beanIndex.INICIO_ALUMNO;
+    }
+    
+    public List<Solicitud> mostrarSolicitudP(int idPublicacion){
+        List<Solicitud> solicitudes;
+        solicitudes = daoSolicitud.obtenerPorActividad(idPublicacion);
+        return solicitudes;
         
-        if (lis == null) { // si no 
-
-            return true;
-
-        }
-
-        return false;
     }
 
 }

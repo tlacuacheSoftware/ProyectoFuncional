@@ -10,7 +10,7 @@ import modelo.Area;
  */
 public class AreaDao {
 
-    private DAO<Area> dao;
+    private final DAO<Area> dao;
     
     public AreaDao() {
         dao = new DAO("Area", "id_area");
@@ -69,4 +69,5 @@ public class AreaDao {
         }
         return list;
     }
+    
 }

@@ -8,7 +8,6 @@ package modelo;
  */
 public class Solicitud  implements java.io.Serializable {
 
-
      private int idSolicitud;
      private Actividad actividad;
      private Alumno alumno;
@@ -56,10 +55,5 @@ public class Solicitud  implements java.io.Serializable {
     public void setProfesor(Profesor profesor) {
         this.profesor = profesor;
     }
-
-
-
-
+    
 }
-
-

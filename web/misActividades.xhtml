@@ -6,7 +6,7 @@
 
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
-        <title>Pagina de IS</title>
+        <title>Mis Actividades</title>
         <style type="text/css">
             html, body {
                 height: 100%;
@@ -80,9 +80,12 @@
                 <div class="campos">
                     <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.nombre}" style="font-weight:bold; color: black;"/></p>
                     
-                    <p:dataTable var="publicaciones" value="#{beanPublicacion.mostrarPublicacionesProfesor()}" resizableColumns="true" style="margin-top: 20px">
+                    <p:dataTable var="publicaciones" value="#{beanPublicacion.mostrarPublicaciones()}" resizableColumns="true" style="margin-top: 20px">
                         <p:column style="width:16px">
                             <p:rowToggler />
+                        </p:column>
+                        <p:column headerText="Id Actividad">
+                            <h:outputText value="#{publicaciones.idActividad}" />
                         </p:column>
                         <p:column headerText="Tipo">
                             <h:outputText value="#{publicaciones.tipo}" />
@@ -95,27 +98,18 @@
                         <p:column headerText="Cupo">
                             <h:outputText value="#{publicaciones.ICupomaximo}" />
                         </p:column>
- 
-                        <p:rowExpansion>
-                            <p:panelGrid  columns="2" columnClasses="label,value" style="width:960px"> 
-                                <h:outputText value="Id:" />
-                                <h:outputText value="#{publicaciones.idActividad}" />
-                                
-                                <h:outputText value="Nombre de profesor:" />
-                                <h:outputText value="#{publicaciones.profesor.SNombre}" />
-                                
-                                <h:outputText value="Lugares Disponibles" />
-                                <h:outputText value="#{publicaciones.ICupomaximo-beanPublicacion.disponibles(publicaciones.idActividad)}" />
- 
-                                <h:outputText value="Descripción" />
-                                <h:outputText value="#{publicaciones.SDescripciom}" />
-                                
-                                <h:commandButton value="Actualizar" 
-                                                 action ="#{beanPublicacion.definirActividad(publicaciones,true)}"/>
-                                
-                                <h:commandButton value="Borrar" 
-                                                 action ="#{beanPublicacion.definirActividad(publicaciones,false)}"/>
-                                
+                        
+                        <p:rowExpansion >
+                            <p:panelGrid   columns="2" columnClasses="label,value" style="width:960px"> 
+                                <p:dataTable var="solicitudes" value="#{beanSolicitar.mostrarSolicitudP(publicaciones.idActividad)}">
+                                    <p:column headerText="Nombre">
+                                        <h:outputText value="#{solicitudes.alumno.SNombre}" />
+                                    </p:column>
+                                    <p:column headerText="">
+                                        <h:commandButton value="Cancelar Solicitud" 
+                                                         action ="#{beanSolicitar.eliminarSolicitud(solicitudes.idSolicitud)}"/>
+                                    </p:column>
+                                </p:dataTable>                                
                             </p:panelGrid>
                         </p:rowExpansion>
                     </p:dataTable>

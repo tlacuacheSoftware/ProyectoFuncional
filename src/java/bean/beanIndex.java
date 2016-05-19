@@ -3,12 +3,10 @@ package bean;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-  
-
 
 /**
  *
- * @author 
+ * @author esmeralda
  */
 @ManagedBean
 @RequestScoped
@@ -22,56 +20,62 @@ public class beanIndex {
     public static final String INICIO_PROFESOR = "inicioprofesor";
     public static final String MODIFICAR_PERFIL = "modificarperfil";
     public static final String NUEVA_PUBLICACION = "nuevapublicacion";
+    public static final String ACTUALIZAR_PUBLICACION = "actualizarpublicacion";
+    public static final String BORRAR_PUBLICACION = "borrarpublicacion";
     public static final String MIS_ACTIVIDADES = "misactividades";
     public static final String VER_ACTIVIDADES = "veractividades";
-    public static final String BORRAR_PUBLICACION = "borrarpublicacion";
-    public static final String ACTUALIZAR_PUBLICACION = "actualizarpublicacion";
-    public String INDEX() {
+    public static final String MI_SOLICITUD = "misolicitud";
+
+    public static String INDEX() {
         return INDEX;
     }
 
-    public String LOGIN() {
+    public static String LOGIN() {
         return LOGIN;
     }
 
-    public String REGISTRO_ALUMNO() {
+    public static String REGISTRO_ALUMNO() {
         return REGISTRO_ALUMNO;
     }
 
-    public String REGISTRO_PROFESOR() {
+    public static String REGISTRO_PROFESOR() {
         return REGISTRO_PROFESOR;
     }
 
-    public String INICIO_ALUMNO() {
+    public static String INICIO_ALUMNO() {
         return INICIO_ALUMNO;
     }
 
-    public String INICIO_PROFESOR() {
+    public static String INICIO_PROFESOR() {
         return INICIO_PROFESOR;
     }
 
-    public String MODIFICAR_PERFIL() {
+    public static String MODIFICAR_PERFIL() {
         return MODIFICAR_PERFIL;
     }
-    
-    public String NUEVA_PUBLICACION(){
+
+    public static String NUEVA_PUBLICACION() {
         return NUEVA_PUBLICACION;
     }
-    
-    public String MIS_ACTIVIDADES(){
-        return MIS_ACTIVIDADES;
+
+    public static String ACTUALIZAR_PUBLICACION() {
+        return ACTUALIZAR_PUBLICACION;
     }
-    
-    public String VER_ACTIVIDADES(){
-        return VER_ACTIVIDADES;
-    }
-    
-    public String BORRAR_PUBLICACION(){
+
+    public static String BORRAR_PUBLICACION() {
         return BORRAR_PUBLICACION;
     }
-    
-    public String ACTUALIZAR_PUBLICACION(){
-        return ACTUALIZAR_PUBLICACION;
+
+    public static String MIS_ACTIVIDADES() {
+        return MIS_ACTIVIDADES;
+    }
+
+    public static String VER_ACTIVIDADES() {
+        return VER_ACTIVIDADES;
+    }
+
+    public static String MI_SOLICITUD() {
+        return MI_SOLICITUD;
     }
     
     

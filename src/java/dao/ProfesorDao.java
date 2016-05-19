@@ -10,7 +10,7 @@ import modelo.Profesor;
  */
 public class ProfesorDao {
 
-    private DAO<Profesor> dao;
+    private final DAO<Profesor> dao;
     
     public ProfesorDao() {
         dao = new DAO("Profesor", "id_profesor");
@@ -97,4 +97,5 @@ public class ProfesorDao {
         }
         return list;
     }
+    
 }

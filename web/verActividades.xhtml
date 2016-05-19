@@ -6,7 +6,7 @@
 
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
     <h:head>
-        <title>Pagina de IS</title>
+        <title>Ver Actividades</title>
         <style type="text/css">
             html, body {
                 height: 100%;
@@ -14,7 +14,6 @@
                 padding: 0;
                 margin: 0;
             }
-
             #full-screen-background-image {
                 z-index: -999;
                 width: 100%;
@@ -63,9 +62,6 @@
                 left:39%;
                 z-index:9999;
             }
-
-
-
         </style>
     </h:head>
     <h:body>
@@ -104,10 +100,7 @@
                                 <h:outputText value="Id:" />
                                 <h:outputText value="#{publicaciones.idActividad}" />
                                 
-                                <h:outputText value="Id profesor:" />
-                                <h:outputText value="#{publicaciones.profesor.SNombre}" />
-                                
-                                <h:outputText value="nombre:" />
+                                <h:outputText value="Nombre:" />
                                 <h:outputText value="#{beanLogout.usuario}" />
                                 
                                 <h:outputText value="Lugares Disponibles" />
@@ -116,8 +109,7 @@
                                 <h:outputText value="Descripción" />
                                 <h:outputText value="#{publicaciones.SDescripciom}" />
                                 
-                                <h:commandButton value="Solicitar" 
-                                                 action ="#{beanSolicitar.guardarSolicitud(publicaciones.idActividad, publicaciones.profesor.idProfesor, beanLogout.id)}"/>
+                                <h:commandButton value="Solicitar" action ="#{beanSolicitar.guardarSolicitud(publicaciones.idActividad, publicaciones.profesor.idProfesor, beanLogout.id)}"/>
                                 
                             </p:panelGrid>
                         </p:rowExpansion>

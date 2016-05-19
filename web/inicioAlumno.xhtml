@@ -12,7 +12,6 @@
                 padding: 0;
                 margin: 0;
             }
-
             #pantalla-completa {
                 z-index: -999;
                 width: 100%;
@@ -30,8 +29,6 @@
                 font-size: 25px;
                 z-index: 50;
             }
-
-
         </style>
 
     </h:head>
@@ -45,9 +42,8 @@
                     <h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: #ffffff;"/>
                 </p>
                 <p:menuButton  value="Menú"   >
+                    <p:menuitem value="Mi Solicitud" action="#{beanIndex.MI_SOLICITUD()}" />
                     <p:menuitem value="Actividades" action="#{beanIndex.VER_ACTIVIDADES()}" />
-                    
-                   
                     <p:menuitem value="Salir " action="#{beanLogout.cerrarSesion()}"/>
                     
                 </p:menuButton>
@@ -56,4 +52,3 @@
         </div>
     </h:body>
 </html>
-

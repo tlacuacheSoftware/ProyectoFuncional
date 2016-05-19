@@ -61,10 +61,8 @@ public class beanModificarPerfil {
 
             }
             if(contrasenha1 != null && contrasenha2 != null){
-                if(!contrasenha1.equals("") && contrasenha2.equals("")){
-                    if(errorContr.equals("")){
-                        profesor.setSContrasenha(contrasenha1);
-                    }
+                if(errorContr.equals("")){
+                    profesor.setSContrasenha(contrasenha1);
                 }
             }
             dao.actualizar(profesor);

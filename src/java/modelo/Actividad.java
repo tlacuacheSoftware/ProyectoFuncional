@@ -10,7 +10,6 @@ import java.util.Set;
  */
 public class Actividad  implements java.io.Serializable {
 
-
      private int idActividad;
      private Area area;
      private Profesor profesor;
@@ -86,9 +85,4 @@ public class Actividad  implements java.io.Serializable {
         this.solicituds = solicituds;
     }
 
-
-
-
 }
-
-

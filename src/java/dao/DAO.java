@@ -13,7 +13,7 @@ import org.hibernate.Session;
  */
 public class DAO<E> {
 
-    private  Session session;
+    private Session session;
     private String tabla;
     private String id;
 
@@ -126,7 +126,7 @@ public class DAO<E> {
     
     public E obtenerPorID(int id){
         E obj = null;
-        List<E> list = null;
+        List<E> list;
         String[] atributos = new String[1];
         String[] valores = new String[1];
         atributos[0] = this.id;

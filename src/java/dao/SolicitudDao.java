@@ -10,7 +10,7 @@ import modelo.Solicitud;
  */
 public class SolicitudDao {
 
-    private DAO<Solicitud> dao;
+    private final DAO<Solicitud> dao;
     
     public SolicitudDao() {
         dao = new DAO("Solicitud", "id_solicitud");
@@ -89,4 +89,5 @@ public class SolicitudDao {
         }
         return list;
     }
+    
 }

@@ -10,7 +10,6 @@ import java.util.Set;
  */
 public class Profesor  implements java.io.Serializable {
 
-
      private int idProfesor;
      private String SNombre;
      private String SContrasenha;
@@ -77,12 +76,11 @@ public class Profesor  implements java.io.Serializable {
         this.actividads = actividads;
     }
 
+     @Override
     public String toString(){
         return SNombre;
     }
-
-
-
+    
 }
 
 

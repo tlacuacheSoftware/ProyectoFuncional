@@ -10,7 +10,7 @@ import modelo.Actividad;
  */
 public class ActividadDao {
 
-    private DAO<Actividad> dao;
+    private final DAO<Actividad> dao;
     
     public ActividadDao() {
         dao = new DAO("Actividad", "id_actividad");
@@ -89,4 +89,5 @@ public class ActividadDao {
         }
         return list;
     }
+    
 }
