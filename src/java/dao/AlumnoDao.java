@@ -12,7 +12,7 @@ import modelo.Solicitud;
  */
 public class AlumnoDao {
 
-    private DAO<Alumno> dao;
+    private final DAO<Alumno> dao;
     
     public AlumnoDao() {
         dao = new DAO("Alumno", "id_alumno");
@@ -91,9 +91,9 @@ public class AlumnoDao {
     }
     
     public List<Alumno> recuperarNombres(List<Solicitud> lista){
-        List<Alumno> resultado = new LinkedList<Alumno>();
-        Solicitud temporal = new Solicitud();
-        Alumno temp = new Alumno();
+        List<Alumno> resultado = new LinkedList<>();
+        Solicitud temporal;
+        Alumno temp;
         int i = 0;
         int tamaño = lista.size();
 //        resultado = aux(lista, temporal, temp);
@@ -108,21 +108,14 @@ public class AlumnoDao {
         return resultado;
     }
     
-//    public List<Alumno> aux(List<Solicitud> list, Solicitud temporal, Alumno tempo){
-//        System.out.println("Entre aquí otra vez");
-//        List<Alumno> resultado = new LinkedList<>();
-//        int i = 0;
-//        int tamaño = list.size();
-//        while(i<tamaño){
-//            temporal = list.get(i);
-//            //list.add(i, temporal);
-//            tempo = temporal.getAlumno();
-//            System.out.println(tempo.getSNombre());
-//            resultado.add(tempo);
-//            System.out.println("Entre "+ i + " veces");
-//            i++;
-//        }
-//        
-//        return resultado;
-//    }
+    public List<Alumno> obtenerLista(){
+        List<Alumno> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
+    
 }

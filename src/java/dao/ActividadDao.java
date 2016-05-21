@@ -10,7 +10,7 @@ import modelo.Actividad;
  */
 public class ActividadDao {
 
-    private DAO<Actividad> dao;
+    private final DAO<Actividad> dao;
     
     public ActividadDao() {
         dao = new DAO("Actividad", "id_actividad");
@@ -80,13 +80,14 @@ public class ActividadDao {
         return list;
     }
     
-    public List<Actividad> obtenerTodas(){
+    public List<Actividad> obtenerLista(){
         List<Actividad> list = null;
         try{
-            list = dao.getAll();
+            list = dao.obtenerLista();
         }catch(Exception e){
             throw e;
         }
         return list;
     }
+    
 }

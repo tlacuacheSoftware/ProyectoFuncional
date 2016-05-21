@@ -10,7 +10,6 @@ import java.util.Set;
  */
 public class Area  implements java.io.Serializable {
 
-
      private int idArea;
      private String SArea;
      private Set actividads = new HashSet(0);
@@ -50,11 +49,9 @@ public class Area  implements java.io.Serializable {
         this.actividads = actividads;
     }
 
+     @Override
     public String toString (){
         return SArea;
     }
 
-
 }
-
-

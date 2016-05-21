@@ -10,7 +10,7 @@ import modelo.Solicitud;
  */
 public class SolicitudDao {
 
-    private DAO<Solicitud> dao;
+    private final DAO<Solicitud> dao;
     
     public SolicitudDao() {
         dao = new DAO("Solicitud", "id_solicitud");
@@ -79,4 +79,15 @@ public class SolicitudDao {
         }
         return list;
     }
+    
+    public List<Solicitud> obtenerLista(){
+        List<Solicitud> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
+    
 }

@@ -10,7 +10,7 @@ import modelo.Tipo;
  */
 public class TipoDao {
 
-    private DAO<Tipo> dao;
+    private final DAO<Tipo> dao;
     
     public TipoDao() {
         dao = new DAO("Tipo", "id_tipo");
@@ -59,4 +59,15 @@ public class TipoDao {
         }
         return list;
     }
+    
+    public List<Tipo> obtenerLista(){
+        List<Tipo> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
+    
 }

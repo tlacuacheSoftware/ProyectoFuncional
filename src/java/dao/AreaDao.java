@@ -10,7 +10,7 @@ import modelo.Area;
  */
 public class AreaDao {
 
-    private DAO<Area> dao;
+    private final DAO<Area> dao;
     
     public AreaDao() {
         dao = new DAO("Area", "id_area");
@@ -59,4 +59,15 @@ public class AreaDao {
         }
         return list;
     }
+    
+    public List<Area> obtenerLista(){
+        List<Area> list = null;
+        try{
+            list = dao.obtenerLista();
+        }catch(Exception e){
+            throw e;
+        }
+        return list;
+    }
+    
 }

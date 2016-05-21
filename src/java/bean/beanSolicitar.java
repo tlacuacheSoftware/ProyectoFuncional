@@ -93,15 +93,7 @@ public class beanSolicitar {
         daoSolicitudDao = new SolicitudDao();
         // guardamos la la lista de los alumnos que estas en ese curso
         List<Solicitud> lis = daoSolicitudDao.obtenerPorAlumno(id_Alumno);
-
-        
-        if (lis == null) { // si no 
-
-            return true;
-
-        }
-
-        return false;
+        return lis == null;
     }
     
     public Solicitud buscarIdPorIdAlumno(int id_Alumno){
@@ -132,9 +124,7 @@ public class beanSolicitar {
     
     public List<Solicitud> mostrarSolicitudP(int idPublicacion){
         List<Solicitud> solicitudes;
-//        List<Alumno> resultado;
         solicitudes = daoSolicitud.obtenerPorActividad(idPublicacion);
-//        resultado = daoAlumno.recuperarNombres(solicitudes);
         return solicitudes;
         
     }

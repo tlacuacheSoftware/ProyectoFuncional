@@ -10,7 +10,6 @@ import java.util.Set;
  */
 public class Tipo  implements java.io.Serializable {
 
-
      private int idTipo;
      private String STipo;
      private Set actividads = new HashSet(0);
@@ -50,13 +49,9 @@ public class Tipo  implements java.io.Serializable {
         this.actividads = actividads;
     }
     
+     @Override
     public String toString (){
         return STipo;
     }
 
-
-
-
 }
-
-
