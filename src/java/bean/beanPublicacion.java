@@ -101,15 +101,18 @@ public class beanPublicacion {
                 dao.insertar(actividad);
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad publicada exitosamente.", null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.NUEVA_PUBLICACION;
             }else{
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR,error, null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.NUEVA_PUBLICACION;
             }
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.NUEVA_PUBLICACION;
         }
     }
@@ -133,15 +136,18 @@ public class beanPublicacion {
                 dao.actualizar(actividad);
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad actualizada exitosamente.", null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.ACTUALIZAR_PUBLICACION;
             }else{
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR,error, null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.ACTUALIZAR_PUBLICACION;
             }
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.ACTUALIZAR_PUBLICACION;
         }
     }
@@ -151,10 +157,12 @@ public class beanPublicacion {
             dao.borrar(actividad);
             message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad borrada exitosamente.", null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.BORRAR_PUBLICACION;
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.BORRAR_PUBLICACION;
         }
     }
@@ -239,6 +247,7 @@ public class beanPublicacion {
         if(actividad == null){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Actividad invalida.", null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.MIS_ACTIVIDADES;
         }else{
             httpServletRequest.getSession().setAttribute("sesionActividad", actividad.getIdActividad());

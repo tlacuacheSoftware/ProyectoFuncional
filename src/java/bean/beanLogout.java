@@ -33,6 +33,7 @@ public class beanLogout {
         httpServletRequest.getSession().removeAttribute("id");
         message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Session cerrada correctamente", null);
         faceContext.addMessage(null, message);
+        faceContext.getExternalContext().getFlash().setKeepMessages(true);
         return beanIndex.INDEX;
     }
 

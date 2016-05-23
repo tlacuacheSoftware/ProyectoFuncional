@@ -51,12 +51,15 @@ public class beanRegistro {
         if(!errorCont.equals("")){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorCont, null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }else if(!errorNombre.equals("")){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorNombre, null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }else if(!errorCorreo.equals("")){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorCorreo, null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }else{
             p = new Profesor();
             p.setSContrasenha(contrasenha);
@@ -66,10 +69,12 @@ public class beanRegistro {
                 daoP.insertar(p);
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Cuenta creda correctamente.", null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.INDEX;
             }catch(Exception e){
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
             }
         }
         return beanIndex.REGISTRO_PROFESOR;
@@ -84,12 +89,15 @@ public class beanRegistro {
         if(!errorCont.equals("")){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorCont, null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }else if(!errorNombre.equals("")){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorNombre, null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }else if(!errorCorreo.equals("")){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorCorreo, null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }else{
             a = new Alumno();
             a.setSContrasenha(contrasenha);
@@ -99,10 +107,12 @@ public class beanRegistro {
                 daoA.insertar(a);
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Cuenta creda correctamente.", null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.INDEX;
             }catch(Exception e){
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
             }
         }
         return beanIndex.REGISTRO_ALUMNO;
@@ -134,7 +144,7 @@ public class beanRegistro {
         }
         aux = borrar(n, LETRAS);
         if(!aux.equals("")){
-            return "El nombre solo puede contener Letras.";
+            return "El nombre solo puede contener letras.";
         }
         return "";
     }

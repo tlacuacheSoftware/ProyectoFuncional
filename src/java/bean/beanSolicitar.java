@@ -72,11 +72,12 @@ public class beanSolicitar {
 
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "La solicitud fue aprobada exitosamente.", null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.INICIO_ALUMNO; // me regresa al home 
         }else{
             message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Solo te puedes incribir a una Modalidad.", null);
-            
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.VER_ACTIVIDADES;
         }
         
@@ -112,6 +113,7 @@ public class beanSolicitar {
         daoSolicitud.borrar(daoSolicitud.obtenerPorID(id));
         message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Solicitud eliminada correctamente", null);
         faceContext.addMessage(null, message);
+        faceContext.getExternalContext().getFlash().setKeepMessages(true);
         return beanIndex.MIS_ACTIVIDADES;
     }
     
@@ -119,6 +121,7 @@ public class beanSolicitar {
         daoSolicitud.borrar(daoSolicitud.obtenerPorID(id));
         message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Solicitud eliminada correctamente", null);
         faceContext.addMessage(null, message);
+        faceContext.getExternalContext().getFlash().setKeepMessages(true);
         return beanIndex.INICIO_ALUMNO;
     }
     

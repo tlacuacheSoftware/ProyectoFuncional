@@ -69,9 +69,11 @@ public class beanModificarPerfil {
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }
         message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Informacion modificada correctamente", null);
         faceContext.addMessage(null, message);
+        faceContext.getExternalContext().getFlash().setKeepMessages(true);
         return beanIndex.MODIFICAR_PERFIL;
     }
 

@@ -53,20 +53,24 @@ public class beanLogin {
                 httpServletRequest.getSession().setAttribute("sesionNombre", p2.getSNombre());
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Acceso Otorgado.", null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.INICIO_PROFESOR;
             }else if(a2 != null){
                 httpServletRequest.getSession().setAttribute("id", a2.getIdAlumno());
                 httpServletRequest.getSession().setAttribute("sesionNombre", a2.getSNombre());
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Acceso Otorgado.", null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
                 return beanIndex.INICIO_ALUMNO;
             }else{
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario o contraseña incorrecto.", null);
                 faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
             }
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
+            faceContext.getExternalContext().getFlash().setKeepMessages(true);
         }
         return beanIndex.LOGIN;
     }
