@@ -76,7 +76,7 @@
                 <div class="campos">
                     <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
                     
-                    <p:dataTable var="solicitudes" value="#{beanSolicitar.mostrarSolicitud()}" resizableColumns="true" style="margin-top: 20px">                        
+                    <p:dataTable var="solicitudes" value="#{beanSolicitar.mostrarSolicitud()}" resizableColumns="true" style="margin-top: 20px" emptyMessage="Todavía no solicitas ninguna actividad." >                        
                         <p:column headerText="Id">
                             <h:outputText value="#{solicitudes.idSolicitud}" />
                         </p:column>
