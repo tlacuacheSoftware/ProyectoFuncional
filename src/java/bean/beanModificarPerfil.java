@@ -42,13 +42,19 @@ public class beanModificarPerfil {
         String errorNombre,errorCorreo,errorContr;
         try{
             errorNombre = beanRegistro.validarNombre(nombre);
-            errorCorreo = beanRegistro.validarCorreo(correo, false);
+            errorCorreo = beanRegistro.validarCorreoMod(correo, false);
             errorContr = beanRegistro.validarContrasenha(contrasenha1, contrasenha2);
+            System.out.println(errorContr);
             if(nombre != null){
                 if(!nombre.equals("")){
                     if(errorNombre.equals("")){
                         profesor.setSNombre(nombre);
                         httpServletRequest.getSession().setAttribute("sessionSNombre", nombre);
+                    }else{
+                        message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorNombre, null);
+                        faceContext.addMessage(null, message);
+                        faceContext.getExternalContext().getFlash().setKeepMessages(true);
+                        return beanIndex.MODIFICAR_PERFIL;
                     }
                 }
             }
@@ -56,15 +62,27 @@ public class beanModificarPerfil {
                 if(!correo.equals("")){
                     if(errorCorreo.equals("")){
                         profesor.setSCorreo(correo);
+                    }else{
+                        message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorCorreo, null);
+                        faceContext.addMessage(null, message);
+                        faceContext.getExternalContext().getFlash().setKeepMessages(true);
+                        return beanIndex.MODIFICAR_PERFIL;
                     }
                 }
 
             }
-            if(contrasenha1 != null && contrasenha2 != null){
+            if(!"".equals(contrasenha1) && !"".equals(contrasenha2)){
                 if(errorContr.equals("")){
                     profesor.setSContrasenha(contrasenha1);
+                }else{
+                    message = new FacesMessage(FacesMessage.SEVERITY_ERROR,errorContr, null);
+                    faceContext.addMessage(null, message);
+                    faceContext.getExternalContext().getFlash().setKeepMessages(true);
+                    return beanIndex.MODIFICAR_PERFIL;
                 }
             }
+            profesor.setSContrasenha(profesor.getSContrasenha());
+            System.out.println(profesor.getSContrasenha());            
             dao.actualizar(profesor);
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
@@ -74,7 +92,7 @@ public class beanModificarPerfil {
         message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Informacion modificada correctamente", null);
         faceContext.addMessage(null, message);
         faceContext.getExternalContext().getFlash().setKeepMessages(true);
-        return beanIndex.MODIFICAR_PERFIL;
+        return beanIndex.INICIO_PROFESOR;
     }
 
     public String getNombre() {

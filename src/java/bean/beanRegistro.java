@@ -179,6 +179,24 @@ public class beanRegistro {
         return "";
     }
     
+    public static String validarCorreoMod(String c, boolean tabla){
+        ProfesorDao daoP;
+        String aux;
+        if(c == null){
+            return "Correo vacio.";
+        }
+        if(!c.endsWith(DOMINIO)){
+            return "El correo debe de ser del dominio de @ciencias.unam.mx";
+        }
+        aux = c.substring(0,c.length()-DOMINIO.length());
+        aux = borrar(aux, LETRAS);
+        aux = borrar(aux, NUMEROS);
+        if(!aux.equals("")){
+            return "El correo contiene caracteres invalidos.";
+        }
+        return "";
+    }
+    
     public static String borrar(String borrada, String b){
         String aux = new String(borrada);
         String sub;
