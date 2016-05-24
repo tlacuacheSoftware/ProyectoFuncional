@@ -1,192 +1,101 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Dao;
+
+package dao;
 
 import java.util.List;
-import javax.faces.application.FacesMessage;
-import org.hibernate.Session;
-
-import logica.HibernateUtil;
 import modelo.Profesor;
-import org.hibernate.Query;
-import org.hibernate.Transaction;
+
 /**
- *
- * @author luis
+ * WRAPPER para DAO en la tabla profesor.
+ * @author esmeralda
  */
 public class ProfesorDao {
+
+    private final DAO<Profesor> dao;
     
-    private  static Session session;
-    private Transaction tx;
-    private Integer idProfesor;
-    private FacesMessage message;
-    private void init(){
-        session = HibernateUtil.getSessionFactory().openSession();
-        tx = session.beginTransaction();
-    }
-            
-
-    public ProfesorDao(){
-        session = HibernateUtil.getSessionFactory().openSession();
-    }
-
-    public boolean Existe(String correo){
-        session.getTransaction().begin();
-        boolean f=false;
-        try{
-     String hql= "from Profesor where s_correo= '"+correo+"'";
-     Query query=session.createQuery(hql);
-     if(!query.list().isEmpty()){
-         f=true;
-         
-     }  
-        }catch(Exception e){
-            throw e;
-        }
-        session.getTransaction().commit();
-     
-     return f;
-    }
-
-    public Profesor Verificar(Profesor profesor){
-        session.getTransaction().begin();
-        Profesor f=null;
-        try{
-     String hql= "from Profesor where s_correo= '" +profesor.getSCorreo()+"' and s_contrasenha= '"+profesor.getSContrasenha()+"'";
-     Query query=session.createQuery(hql);
-     if(!query.list().isEmpty()){
-         f=(Profesor)query.list().get(0);
-         
-     }  
-        }catch(Exception e){
-            throw e;
-        }
-        session.getTransaction().commit();
-     
-     return f;
-    }
-   private void rollback(){
-        if(tx != null){
-            tx.rollback();
-        }
-    }
-
-    public Integer insert(Profesor obj){
-        Integer b = -1;
-        try{
-            init();
-            idProfesor = (Integer) session.save(obj);
-            tx.commit();
-            b = idProfesor;
-        }catch(Exception e){
-            rollback();         
-        }
-        return b;
+    public ProfesorDao() {
+        dao = new DAO("Profesor", "id_profesor");
     }
     
-    public void introducirProfesor(String nombre, String contrasena, String correo) {
-        session = HibernateUtil.getSessionFactory().openSession();
-        Profesor n = new Profesor();
-        message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Perfil modificado correctamente", null);
-        n.setSNombre(nombre);
-        n.setSContrasenha(contrasena);
-        n.setSCorreo(correo);
+    public void insertar (Profesor obj){
         try {
-            session.beginTransaction();
-            session.save(n);
-            session.getTransaction().commit();
+            dao.insertar(obj);
         } catch (Exception e) {
-            System.out.println("Error del dao de profesor");
-            session.getTransaction().rollback();
+            throw e;
         }
     }
     
+    public void actualizar (Profesor obj){
+        try {
+            dao.actualizar(obj);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
     
-    public List<Profesor> getAll(){
+    public void borrar (Profesor obj){
+        try {
+            dao.borrar(obj);
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+    
+    public Profesor obtenerPorID(int id){
+        Profesor obj;
+        try{
+            obj = dao.obtenerPorID(id);
+        }catch(Exception e){
+            throw e;
+        }
+        return obj;
+    }
+    
+    public boolean existeCorreo(String correo){
+        String[] atributos,valores;
+        boolean existe;
+        atributos = new String[1];
+        valores = new String[1];
+        atributos[0] = "s_correo";
+        valores[0] = correo;
+        try{
+            existe = dao.verificarExistencia(atributos, valores);
+        }catch(Exception e){
+            throw e;
+        }
+        return existe;
+    }
+    
+    public Profesor verificarProfesor(Profesor obj){
+        String[] atributos,valores;
+        List<Profesor> list;
+        Profesor aux = null;
+        atributos = new String[2];
+        valores = new String[2];
+        atributos[0] = "s_correo";
+        valores[0] = obj.getSCorreo();
+        atributos[1] = "s_contrasenha";
+        valores[1] = obj.getSContrasenha();
+        try{
+            list = dao.buscar(atributos, valores);
+            if(list != null){
+                if(!list.isEmpty()){
+                    aux = list.get(0);
+                }
+            }
+        }catch(Exception e){
+            throw e;
+        }
+        return aux;
+    }
+    
+    public List<Profesor> obtenerLista(){
         List<Profesor> list = null;
         try{
-            init();
-            String s = "from Profesor";
-            Query query = session.createQuery(s);
-            list = query.list();
+            list = dao.obtenerLista();
         }catch(Exception e){
-            e.printStackTrace();
+            throw e;
         }
         return list;
     }
     
-        public boolean update(Profesor obj){
-            boolean b = false;
-            try{
-                init();
-                session.update(obj);
-                tx.commit();
-                b = true;
-            }catch(Exception e){
-                session.getTransaction().rollback();
-            
-                
-            }
-            return b;
-        }
-    
-    
-    public boolean delete(Profesor obj){
-        boolean b = false;
-        try{
-            init();
-            session.delete(obj);
-            tx.commit();
-            b = true;
-        }catch(Exception e){
-            rollback();
-        
-            
-        }
-        return b;
-    }
-    
-    public Profesor getByID(int id){
-        Profesor p = null;
-        List<Profesor> list = null;
-        session.getTransaction().begin();
-        try{
-//            init();
-            String s = "FROM Profesor WHERE id_profesor=" + id;
-            Query query = session.createQuery(s);
-            if(!query.list().isEmpty()){
-                p=(Profesor)query.list().get(0);
-             }  
-            }catch(Exception e){
-                throw e;
-            }
-            session.getTransaction().commit();
-//            System.out.println(p.getIdProfesor()+" "+p.getSNombre()+p.getSCorreo()+p.getSContrasenha());
-            return p;
-    }
-    
-//    public List<Profesor> getByNameAppApm(String crit){
-//        List<Profesor> list = null;
-//        try{
-//            init();
-//            String s = crit;
-//            Query query = session.createQuery(s);
-//            list = query.list();
-//        }catch(Exception e){
-//            e.printStackTrace();
-//        }
-//        return list;
-//    }
-    
-//    public boolean actulizar(Profesor profesor){
-//        boolean bolean;
-//        Configuration configuracion = new Configuration();
-//        SessionFactory sessionFactory = configuracion.configure().buildSessionFactory();
-//        Session session = HibernateUtil.getSessionFactory().openSession();
-//        
-//        return false;
-//    }
 }

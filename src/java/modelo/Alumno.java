@@ -1,5 +1,5 @@
 package modelo;
-// Generated 23/04/2016 11:31:45 PM by Hibernate Tools 4.3.1
+// Generated May 8, 2016 10:24:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -10,12 +10,11 @@ import java.util.Set;
  */
 public class Alumno  implements java.io.Serializable {
 
-
      private int idAlumno;
      private String SNombre;
      private String SContrasenha;
      private String SCorreo;
-     private Set<Solicitud> solicituds = new HashSet<Solicitud>(0);
+     private Set solicituds = new HashSet(0);
 
     public Alumno() {
     }
@@ -24,7 +23,7 @@ public class Alumno  implements java.io.Serializable {
     public Alumno(int idAlumno) {
         this.idAlumno = idAlumno;
     }
-    public Alumno(int idAlumno, String SNombre, String SContrasenha, String SCorreo, Set<Solicitud> solicituds) {
+    public Alumno(int idAlumno, String SNombre, String SContrasenha, String SCorreo, Set solicituds) {
        this.idAlumno = idAlumno;
        this.SNombre = SNombre;
        this.SContrasenha = SContrasenha;
@@ -60,17 +59,12 @@ public class Alumno  implements java.io.Serializable {
     public void setSCorreo(String SCorreo) {
         this.SCorreo = SCorreo;
     }
-    public Set<Solicitud> getSolicituds() {
+    public Set getSolicituds() {
         return this.solicituds;
     }
     
-    public void setSolicituds(Set<Solicitud> solicituds) {
+    public void setSolicituds(Set solicituds) {
         this.solicituds = solicituds;
     }
 
-
-
-
 }
-
-

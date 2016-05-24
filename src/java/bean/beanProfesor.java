@@ -1,5 +1,5 @@
 package bean;
-import Dao.ProfesorDao;
+import dao.ProfesorDao;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -50,7 +50,7 @@ public class beanProfesor {
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
         this.Nombre = httpServletRequest.getSession().getAttribute("sessionSNombre").toString();
          id=(int)httpServletRequest.getSession().getAttribute("Id");
-        profesor = dao.getByID(id);     
+        profesor = dao.obtenerPorID(id);     
         this.Correo=profesor.getSCorreo();
         this.Contrasenha=profesor.getSContrasenha();
     }
@@ -76,7 +76,7 @@ public class beanProfesor {
         }else{
             return "Modificar";
         }
-        profesor = dao.getByID(id);     
+        profesor = dao.obtenerPorID(id);     
         Profesor p;
         p = new Profesor();
         p.setIdProfesor(profesor.getIdProfesor());
@@ -89,7 +89,7 @@ public class beanProfesor {
             p.setSNombre(PNombre);
             p.setSCorreo(profesor.getSCorreo());
             p.setSContrasenha(profesor.getSContrasenha());
-            dao.update(p);
+            dao.actualizar(p);
             }
         }catch(Exception e){    
         }
@@ -103,7 +103,7 @@ public class beanProfesor {
         }else{
             return "Modificar";
         }
-        profesor = dao.getByID(id);     
+        profesor = dao.obtenerPorID(id);     
         Profesor p;
         p = new Profesor();
         p.setIdProfesor(profesor.getIdProfesor());
@@ -114,7 +114,7 @@ public class beanProfesor {
             p.setSNombre(profesor.getSNombre());
             p.setSCorreo(PCorreo);
             p.setSContrasenha(profesor.getSContrasenha());
-            dao.update(p);
+            dao.actualizar(p);
             }
             this.Correo=PCorreo;
         }catch(Exception e){    
@@ -130,7 +130,7 @@ public class beanProfesor {
         }else{
             return "Modificar";
         }
-        profesor = dao.getByID(id);     
+        profesor = dao.obtenerPorID(id);     
         Profesor p;
         p = new Profesor();
         p.setIdProfesor(profesor.getIdProfesor());
@@ -142,7 +142,7 @@ public class beanProfesor {
             p.setSNombre(profesor.getSNombre());
             p.setSCorreo(profesor.getSCorreo());
             p.setSContrasenha(PContrasenha);
-            dao.update(p);
+            dao.actualizar(p);
             }else{
                 return "Modificar";
             }

@@ -1,13 +1,13 @@
 package bean;
 
-import Dao.AlumnoDao;
+import dao.AlumnoDao;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 import modelo.Alumno;
 import modelo.Profesor;
-import Dao.ProfesorDao;
+import dao.ProfesorDao;
 /**
  *
  * @author raul__000
@@ -56,7 +56,7 @@ public class beanAlumno {
         AlumnoDao prof=new AlumnoDao();
         Alumno p = null;
         String resultado;
-            p=prof.Verificar(this.alumno);
+            p=prof.verificarAlumno(this.alumno);
             if(p!=null){
                 httpServletRequest.getSession().setAttribute("sessionSNombre",p.getSNombre());
                 httpServletRequest.getSession().setAttribute("idUsuario", p.getIdAlumno());
@@ -72,11 +72,11 @@ public class beanAlumno {
        String cadena="";
        int Nid=1;
        while(bandera){
-       if (dao.getByID(Nid)==null) {
+       if (dao.obtenerPorID(Nid)==null) {
            bandera=false;
             return cadena;
         }else{  
-            Profesor p = dao.getByID(Nid);   
+            Profesor p = dao.obtenerPorID(Nid);   
            if(p.getSNombre().toUpperCase().equals(s.toUpperCase()) || p.getSNombre().toUpperCase().contains(s.toUpperCase())){
                cadena+=" "+p.getSNombre() +" "+p.getSCorreo()+"\n";
            }

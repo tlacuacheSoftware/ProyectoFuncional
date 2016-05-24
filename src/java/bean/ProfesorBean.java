@@ -7,7 +7,7 @@ package bean;
 
 import javax.faces.bean.ManagedBean;
 
-import Dao.ProfesorDao;
+import dao.ProfesorDao;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
@@ -72,8 +72,12 @@ public class ProfesorBean {
         String cadena1 = checaNombre();
         String cadena2 = checaCorreo();
         String cadena3 = checaContraseña();
+        Profesor p= new Profesor();
+        p.setSNombre(ANombre);
+        p.setSContrasenha(AContrasenha);
+        p.setSCorreo(ACorreo);
         if("Index".equals(cadena1) && "Index".equals(cadena2) && "Index".equals(cadena3)){
-            c.introducirProfesor(ANombre, AContrasenha, ACorreo);
+            c.insertar(p);
             message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Cuenta creda correctamente", null);
             faceContext.addMessage(null, message);
             return "Index";
@@ -148,7 +152,7 @@ public class ProfesorBean {
     private boolean correoExiste(){
         boolean resultado = false;
         ProfesorDao prof = new ProfesorDao();
-        if(prof.Existe(ACorreo)){
+        if(prof.existeCorreo(ACorreo)){
             resultado = true;
         }
         
