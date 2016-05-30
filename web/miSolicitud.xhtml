@@ -76,13 +76,25 @@
                 <div class="campos">
                     <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
                     
-                    <p:dataTable var="solicitudes" value="#{beanSolicitar.mostrarSolicitud()}" resizableColumns="true" style="margin-top: 20px" emptyMessage="Todavía no solicitas ninguna actividad." >                        
+                    <p:dataTable var="solicitudes" value="#{beanSolicitar.mostrarSolicitud()}" resizableColumns="false" style="margin-top: 20px" emptyMessage="Todavía no solicitas ninguna actividad o tu solicitud o la actividad fueron eliminadas por el profesor." >                        
                         <p:column headerText="Id">
                             <h:outputText value="#{solicitudes.idSolicitud}" />
                         </p:column>
                         
                         <p:column headerText="Profesor">
                             <h:outputText value="#{solicitudes.profesor}" />
+                        </p:column>
+                        
+                        <p:column headerText="Area">
+                            <h:outputText value="#{solicitudes.actividad.area}" />
+                        </p:column>
+                        
+                        <p:column headerText="Tipo">
+                            <h:outputText value="#{solicitudes.actividad.tipo}" />
+                        </p:column>
+                        
+                        <p:column headerText="Descripción">
+                            <h:outputText value="#{solicitudes.actividad.SDescripciom}" />
                         </p:column>
                         
                         <p:column headerText="">

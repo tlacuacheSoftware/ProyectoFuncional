@@ -29,22 +29,15 @@
                 padding: 8% 0 0;
                 margin: auto;
             }
-            #formLogin {
+            .form {
                 position: relative;
                 z-index: 1;
+                background: #FFFFFF;
+                max-width: 350px;
                 margin: 0 auto 100px;
                 padding: 30px;
                 text-align: center;
                 box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-            }
-            
-            #boton {
-                position: relative;
-                z-index: 1;
-                margin: 0 auto 10px;
-                padding: 1px;
-                text-align: center;
-                width: 20%;
             }
             .form input {
                 font-family: "Roboto", sans-serif;
@@ -64,12 +57,7 @@
                 left:39%;
                 z-index:9999;
             }
-            
-            .buttonPanel {
-                text-align: center;
-                width:30%;
-                margin:0px auto;
-            }
+
 
 
         </style>
@@ -93,20 +81,22 @@
                             <f:selectItem itemLabel="---Selecciona Area---" itemValue=""/>
                             <f:selectItems value="#{beanPublicacion.areas}" var="area" itemValue="#{area.SArea}"/>
                         </h:selectOneMenu>
+                        <br/>
                         <h:outputLabel value="#{beanPublicacion.areaSeleccionada}"/>
-
+                        <br/>
                         <h:selectOneMenu value="#{beanPublicacion.tipo}" onchange="submit()"
                             valueChangeListener="#{beanPublicacion.listenerTipo}">
                             <f:converter converterId="tipoConverter"/>
                             <f:selectItem itemLabel="---Selecciona Tipo---" itemValue=""/>
                             <f:selectItems value="#{beanPublicacion.tipos}" var="area" itemValue="#{area.STipo}"/>
                         </h:selectOneMenu>
+                        <br/>
                         <h:outputLabel value="#{beanPublicacion.tipoSeleccionado}"/>
                     </h:panelGrid>
                     <h4>Cupo</h4>
                     <h:inputText value="#{beanPublicacion.cupo}"/>
                     <h4>Descripcion</h4>
-                    <h:inputText value="#{beanPublicacion.descripcion}"/>
+                    <h:inputText value="#{beanPublicacion.descripcion}" style="resize: none;"/>
                 </div>
                 <div class="boton">
                     <h:commandButton action="#{beanPublicacion.actualizarPublicacion()}" value="Actualizar" styleClass="boton" style="background: #4CAF50;"/>

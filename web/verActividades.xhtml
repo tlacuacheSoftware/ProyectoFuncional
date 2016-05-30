@@ -76,7 +76,7 @@
                 <div class="campos">
                     <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanLogout.usuario}" style="font-weight:bold; color: black;"/></p>
                     
-                    <p:dataTable var="publicaciones" value="#{beanPublicacion.mostrarPublicacionesAlumno()}" resizableColumns="true" style="margin-top: 20px" emptyMessage="Todavía no hay actividades que mostrar">
+                    <p:dataTable var="publicaciones" value="#{beanPublicacion.mostrarPublicacionesAlumno()}" resizableColumns="false" style="margin-top: 20px" emptyMessage="Todavía no hay actividades que mostrar">
                         <p:column style="width:16px">
                             <p:rowToggler />
                         </p:column>

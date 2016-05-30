@@ -32,6 +32,7 @@ public class beanPublicacion {
     private final String CUPO_INVALIDO = "No se ha definido el cupo.";
     
     private final int id;
+    private final SolicitudDao daoSolicitud;
     private Actividad actividad;
     //@ManagedProperty(value = "#{area}")
     private Area area;
@@ -55,6 +56,7 @@ public class beanPublicacion {
     public beanPublicacion() {
         faceContext = FacesContext.getCurrentInstance();
         httpServletRequest = (HttpServletRequest) faceContext.getExternalContext().getRequest();
+        daoSolicitud = new SolicitudDao();
         dao = new ActividadDao();
         daoA = new AreaDao();
         daoT = new TipoDao();
@@ -102,7 +104,7 @@ public class beanPublicacion {
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad publicada exitosamente.", null);
                 faceContext.addMessage(null, message);
                 faceContext.getExternalContext().getFlash().setKeepMessages(true);
-                return beanIndex.NUEVA_PUBLICACION;
+                return beanIndex.INICIO_PROFESOR;
             }else{
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR,error, null);
                 faceContext.addMessage(null, message);
@@ -137,7 +139,7 @@ public class beanPublicacion {
                 message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad actualizada exitosamente.", null);
                 faceContext.addMessage(null, message);
                 faceContext.getExternalContext().getFlash().setKeepMessages(true);
-                return beanIndex.ACTUALIZAR_PUBLICACION;
+                return beanIndex.MIS_ACTIVIDADES;
             }else{
                 message = new FacesMessage(FacesMessage.SEVERITY_ERROR,error, null);
                 faceContext.addMessage(null, message);
@@ -154,17 +156,33 @@ public class beanPublicacion {
     
     public String borrarPublicacion(){
         try{
+            List<Solicitud> lista = mostrarSolicitudP(actividad.getIdActividad());
+            if(lista != null){
+                Solicitud sol = new Solicitud();
+                int e = lista.size();
+                for(int i = 0; i<e; i++){
+                    sol = lista.get(i);
+                    daoSolicitud.borrar(sol);
+                }
+            }
             dao.borrar(actividad);
             message = new FacesMessage(FacesMessage.SEVERITY_INFO,"Actividad borrada exitosamente.", null);
             faceContext.addMessage(null, message);
             faceContext.getExternalContext().getFlash().setKeepMessages(true);
-            return beanIndex.BORRAR_PUBLICACION;
+            return beanIndex.MIS_ACTIVIDADES;
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
             faceContext.addMessage(null, message);
             faceContext.getExternalContext().getFlash().setKeepMessages(true);
             return beanIndex.BORRAR_PUBLICACION;
         }
+    }
+    
+    public List<Solicitud> mostrarSolicitudP(int idPublicacion){
+        List<Solicitud> solicitudes;
+        solicitudes = daoSolicitud.obtenerPorActividad(idPublicacion);
+        return solicitudes;
+        
     }
     
     public List<Actividad> mostrarPublicacionesProfesor(){

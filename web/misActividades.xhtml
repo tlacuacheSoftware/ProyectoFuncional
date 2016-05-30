@@ -80,7 +80,7 @@
                 <div class="campos">
                     <p><h:outputLabel value="Nombre actual: " style="font-weight:bold; color: black;"/><h:outputText value="#{beanModificarPerfil.nombre}" style="font-weight:bold; color: black;"/></p>
                     
-                    <p:dataTable var="publicacion" value="#{beanPublicacion.mostrarPublicacionesProfesor()}" resizableColumns="true" style="margin-top: 20px" emptyMessage="Todavía no tienes actividades">
+                    <p:dataTable var="publicacion" value="#{beanPublicacion.mostrarPublicacionesProfesor()}" resizableColumns="false" style="margin-top: 20px" emptyMessage="Todavía no tienes actividades">
                         <p:column style="width:16px">
                             <p:rowToggler />
                         </p:column>

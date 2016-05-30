@@ -84,25 +84,30 @@
         <div class="form ">
 
             <h:form id="formLogin" >
+                Nueva Publicación
+                <br/>
                 <p:growl id="messages" showDetail="true" sticky="true"/>
                 <div class="campos">
+                    
                     <h:panelGrid columns="4">
 
                         <h:selectOneMenu value="#{beanPublicacion.area}"  onchange="submit()"
                             valueChangeListener="#{beanPublicacion.listenerArea}">
                             <f:converter converterId="areaConverter"/>
-                            <f:selectItems value="#{beanPublicacion.areas}" var="area" itemValue="#{area.SArea} "/>
+                            <f:selectItem itemLabel="---Selecciona Area---" itemValue=""/>
+                            <f:selectItems value="#{beanPublicacion.areas}" var="area" itemValue="#{area.SArea}"/>
                         </h:selectOneMenu>
-                        <br/>
-                        <h:outputLabel value="#{beanPublicacion.areaSeleccionada}"/>
-                        <br/>
+                    </h:panelGrid>
+                    <br/>
+                    <h:panelGrid columns="4">
+                        <!--<h:outputLabel value="#{beanPublicacion.areaSeleccionada}"/>-->
                          <h:selectOneMenu value="#{beanPublicacion.tipo}" onchange="submit()"
                             valueChangeListener="#{beanPublicacion.listenerTipo}">
                             <f:converter converterId="tipoConverter"/>
+                            <f:selectItem itemLabel="---Selecciona Tipo---" itemValue=""/>
                             <f:selectItems value="#{beanPublicacion.tipos}" var="area" itemValue="#{area.STipo}"/>
                         </h:selectOneMenu>
-                        <br/>
-                        <h:outputLabel value="#{beanPublicacion.tipoSeleccionado}"/>
+                        <!--<h:outputLabel value="#{beanPublicacion.tipoSeleccionado}"/>-->
                     </h:panelGrid>
                     <h4>Cupo</h4>
                     <h:inputText value="#{beanPublicacion.cupo}"/>
