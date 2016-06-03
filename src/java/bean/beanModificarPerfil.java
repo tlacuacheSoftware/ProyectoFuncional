@@ -38,13 +38,21 @@ public class beanModificarPerfil {
         correo = profesor.getSCorreo();
     }
     
+    public String revisar(String nombre, String correo, String contra1, String contra2){
+        if("".equals(nombre) && "".equals(correo) && "".equals(contra1) && "".equals(contra2)){
+            return "vacio";
+        }else{
+            return "novacio";
+        }
+    }
+    
     public String modificarPerfil(){
-        String errorNombre,errorCorreo,errorContr;
+        String errorNombre,errorCorreo,errorContr, errorgeneral;
         try{
+            errorgeneral = revisar(nombre, correo, contrasenha1, contrasenha2);
             errorNombre = beanRegistro.validarNombre(nombre);
             errorCorreo = beanRegistro.validarCorreoMod(correo, false);
             errorContr = beanRegistro.validarContrasenha(contrasenha1, contrasenha2);
-            System.out.println(errorContr);
             if(nombre != null){
                 if(!nombre.equals("")){
                     if(errorNombre.equals("")){
@@ -81,8 +89,13 @@ public class beanModificarPerfil {
                     return beanIndex.MODIFICAR_PERFIL;
                 }
             }
-            profesor.setSContrasenha(profesor.getSContrasenha());
-            System.out.println(profesor.getSContrasenha());            
+            if(errorgeneral.equals("vacio")){
+                message = new FacesMessage(FacesMessage.SEVERITY_ERROR,"Todos los campos vacios, no se modificará el perfil", null);
+                faceContext.addMessage(null, message);
+                faceContext.getExternalContext().getFlash().setKeepMessages(true);
+                return beanIndex.INICIO_PROFESOR;
+            }
+            profesor.setSContrasenha(profesor.getSContrasenha());          
             dao.actualizar(profesor);
         }catch(Exception e){
             message = new FacesMessage(FacesMessage.SEVERITY_ERROR,e.getLocalizedMessage(), null);
